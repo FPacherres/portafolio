@@ -14,8 +14,6 @@ export default {
 
 <style scoped>
 section {
-  width: 100%;
-  height: 100vh;
   background-color: #904f90;
 }
 </style>
