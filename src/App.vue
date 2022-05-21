@@ -83,6 +83,13 @@ body {
   border: none;
   background: transparent;
 }
+.circle {
+  border-radius: 50%;
+  box-shadow: var(--shadow);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .z-max {
   z-index: 999;
 }
