@@ -1,5 +1,7 @@
 <template>
-  <section>Experience</section>
+  <section>
+    <div class="cont">Experience</div>
+  </section>
 </template>
 
 <script>
@@ -14,6 +16,11 @@ export default {
 
 <style scoped>
 section {
-  background-color: #362f36;
+  padding: 80px 0 60px;
+  box-sizing: border-box;
+}
+.cont {
+  border: 1px solid #f132f1;
+  height: 100%;
 }
 </style>
