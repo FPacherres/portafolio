@@ -1,20 +1,31 @@
-<script setup>
+<script>
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Skills from "./views/Skills.vue";
 import Studies from "./views/Studies.vue";
 import Experience from "./views/Experience.vue";
 import FHeader from "./components/global/FHeader.vue";
+import NavMobile from "./components/global/NavMobile.vue";
+export default {
+  components: {Home, About, Skills, Studies, Experience, FHeader, NavMobile},
+  data() {
+    return {
+      MenuMobile: false
+    }
+  }
+}
 </script>
 
 <template>
-  <div class="container relative">
-    <f-header class="is-full-width absolute" />
+  <div class="container relative is-full-width-screen">
+    <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false" class="is-full-width-screen is-full-height absolute z-max" />
+    <f-header @openMenueMobile="MenuMobile = true" class="is-full-width absolute" />
     <home class="is-full-width is-full-height" />
     <about class="is-full-width is-full-height" />
     <skills class="is-full-width is-full-height" />
     <studies class="is-full-width is-full-height" />
     <experience class="is-full-width is-full-height" />
+    <h1>{{MenuMobile}}</h1>
   </div>
 </template>
 
@@ -34,7 +45,6 @@ body {
   background-color: var(--bg-5);
 }
 .container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +59,9 @@ body {
   width: 5px;
   border-radius: 4px;
   background-color: var(--bg-1);
+}
+.is-full-width-screen {
+  width: 100%;
 }
 .is-full-width {
   width: 1000px;
@@ -68,7 +81,9 @@ body {
   border: none;
   background: transparent;
 }
-
+.z-max {
+  z-index: 999;
+}
 html {
   --bg-1: #ef0070;
   --bg-2: #fac20b;
