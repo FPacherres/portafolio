@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <img src="../../assets/logo.svg" alt="" />
+    <img @click="open" src="../../assets/logo.svg" alt="" />
     <ul>
       <li>
         <span>Home</span>
@@ -42,6 +42,10 @@ export default {
     }
   },
   methods: {
+      open() {
+        window.innerWidth <= 870 ?
+            this.$emit('openMenueMobile') : ''
+      },
     changeTheme() {
       let newStyle = document.documentElement.style
       if (!this.colorScheme) {
@@ -147,6 +151,17 @@ li:hover .point {
 @media (max-width: 870px) {
   ul {
     display: none;
+  }
+  .theme {
+      width: 45px;
+      height: 45px;
+  }
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+  img {
+    cursor: pointer;
   }
 }
 </style>
