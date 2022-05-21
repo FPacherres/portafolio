@@ -92,4 +92,17 @@ html {
       #4c535d -3px -3px 6px 1px;
   }
 }
+@media (max-width: 1090px) {
+  .is-full-width {
+    width: 750px;
+  }
+}
+@media (max-width: 870px) {
+  .is-full-width {
+    width: 90vw;
+  }
+  #app::-webkit-scrollbar {
+  width: 0;
+  }
+}
 </style>
