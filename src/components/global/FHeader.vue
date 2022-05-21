@@ -23,7 +23,7 @@
         <div class="point"></div>
       </li>
     </ul>
-    <button class="btn theme" @click="changeTheme">
+    <button class="btn circle theme" @click="changeTheme">
       <SunIcon v-if="icon" class="icon" />
       <MoonIcon v-else class="icon" />
     </button>
@@ -124,13 +124,8 @@ li:hover .point {
   margin: -1px 0 0 1.5px;
 }
 .theme {
-  border-radius: 50%;
-  box-shadow: var(--shadow);
   height: 30px;
   width: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .point {
   background-color: var(--bg-3);
