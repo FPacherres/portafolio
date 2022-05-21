@@ -25,7 +25,6 @@ export default {
     <skills class="is-full-width is-full-height" />
     <studies class="is-full-width is-full-height" />
     <experience class="is-full-width is-full-height" />
-    <h1>{{MenuMobile}}</h1>
   </div>
 </template>
 
