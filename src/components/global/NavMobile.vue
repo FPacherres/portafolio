@@ -36,7 +36,6 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-  position: fixed;
   padding: 20px 50px;
   box-sizing: border-box;
 }
