@@ -1,0 +1,85 @@
+<template>
+  <nav>
+    <button class="btn" @click="closed">
+      <ChevronLeftIcon class="icon closed" />
+    </button>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Skills</li>
+      <li>Studies</li>
+      <li>Experience</li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+import { ChevronLeftIcon } from '@heroicons/vue/outline'
+export default {
+  name: 'NavMobile',
+  components: { ChevronLeftIcon },
+  data() {
+    return {}
+  },
+  methods: {
+    closed() {
+        this.$emit("close")
+    }
+  },
+}
+</script>
+
+<style scoped>
+nav {
+  background-color: var(--bg-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: fixed;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+img {
+  width: 40px;
+  height: auto;
+}
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 300;
+  transition: 0.4s;
+  color: var(--bg-3);
+  padding: 0px;
+}
+li {
+  width: 100%;
+  cursor: pointer;
+  text-align: end;
+}
+li:hover {
+  color: var(--bg-1);
+  transition: 0.4s;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  color: var(--bg-3);
+  margin: -1px 0 0 1.5px;
+}
+.closed {
+    margin-right: -20px;
+}
+
+@media (min-width: 870px) {
+  ul {
+    display: none;
+  }
+}
+</style>
