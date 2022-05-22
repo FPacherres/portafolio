@@ -6,27 +6,46 @@
           <h1>Hola soy</h1>
           <h1>Fabian Pacherres</h1>
           <h1>Front-End Developer</h1>
-          <div class="line"></div> 
+          <div class="line"></div>
         </div>
       </div>
-      <div class="photo circle shadow">
+      <div class="photo circle shadow relative">
         <div class="photo-sub circle shadow-inset">
-          <img src="../assets/photo.png" alt="">
+          <img src="../assets/photo.png" alt="" />
+        </div>
+        <div class="flag absolute">
+          <div></div>
         </div>
       </div>
     </div>
     <div class="socialNetwork">
-      <a href="https://twitter.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <fa class="icon" :icon="['fab','twitter']" />
+      <a
+        href="https://twitter.com/FabianXRL16"
+        target="blank"
+        class="btn circle shadow btnSocial"
+      >
+        <fa class="icon" :icon="['fab', 'twitter']" />
       </a>
-      <a href="https://codepen.io/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <fa class="icon" :icon="['fab','codepen']" />
+      <a
+        href="https://codepen.io/FabianXRL16"
+        target="blank"
+        class="btn circle shadow btnSocial"
+      >
+        <fa class="icon" :icon="['fab', 'codepen']" />
       </a>
-      <a href="https://github.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <fa class="icon" :icon="['fab','github']" />
+      <a
+        href="https://github.com/FabianXRL16"
+        target="blank"
+        class="btn circle shadow btnSocial"
+      >
+        <fa class="icon" :icon="['fab', 'github']" />
       </a>
-      <a href="https://www.linkedin.com/in/fabianxrl16/" target="blank" class="btn circle shadow btnSocial">
-        <fa class="icon" :icon="['fab','linkedin-in']" />
+      <a
+        href="https://www.linkedin.com/in/fabianxrl16/"
+        target="blank"
+        class="btn circle shadow btnSocial"
+      >
+        <fa class="icon" :icon="['fab', 'linkedin-in']" />
       </a>
     </div>
   </section>
@@ -74,6 +93,9 @@ section {
   display: flex;
   align-items: center;
 }
+.text div {
+  z-index: 10;
+}
 h1 {
   margin: 0px;
 }
@@ -108,6 +130,23 @@ h1 {
   background: var(--bg-5);
   border-radius: 50%;
 }
+.flag {
+  width: 100px;
+  height: 45px;
+  background-color: var(--red);
+  bottom: 40px;
+  right: 15px;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.flag div {
+  width: 35px;
+  height: 45px;
+  background-color: var(--white);
+  margin: 0 auto;
+}
 .photo-sub {
   width: 410px;
   height: 410px;
@@ -134,10 +173,21 @@ h1 {
   .photo-sub {
     width: 250px;
     height: 250px;
-    }
+  }
   .photo img {
     width: 250px;
     height: auto;
+  }
+  .flag {
+    width: 75px;
+    height: 35px;
+    bottom: 30px;
+    right: 10px;
+    border-radius: 4px;
+  }
+  .flag div {
+    width: 25px;
+    height: 35px;
   }
   .text {
     justify-content: center;
