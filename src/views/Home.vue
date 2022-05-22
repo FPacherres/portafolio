@@ -16,21 +16,18 @@
       </div>
     </div>
     <div class="socialNetwork">
-      <a href="https://codepen.io/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        A
-      </a>
-      <!-- <a href="https://twitter.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <i class="icon fa fa-twitter"></i>
+      <a href="https://twitter.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
+        <fa class="icon" :icon="['fab','twitter']" />
       </a>
       <a href="https://codepen.io/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <i class="icon fa fa-codepen"></i>
+        <fa class="icon" :icon="['fab','codepen']" />
       </a>
       <a href="https://github.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <i class="icon fa fa-github"></i>
+        <fa class="icon" :icon="['fab','github']" />
       </a>
       <a href="https://www.linkedin.com/in/fabianxrl16/" target="blank" class="btn circle shadow btnSocial">
-        <i class="icon fa fa-linkedin-in"></i>
-      </a> -->
+        <fa class="icon" :icon="['fab','linkedin-in']" />
+      </a>
     </div>
   </section>
 </template>
@@ -60,19 +57,17 @@ section {
 }
 .socialNetwork {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 .btnSocial {
   height: 50px;
   width: 50px;
 }
 .icon {
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  height: 20px;
   margin: -1px 0 0 1.5px;
-}
-.icon svg path {
-  fill: var(--bg-3);
+  color: var(--bg-3);
 }
 .text {
   text-align: start;
