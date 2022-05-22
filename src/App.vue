@@ -19,7 +19,7 @@ export default {
 <template>
   <div class="container relative is-full-width-screen">
     <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false" class="is-full-width-screen is-full-height fixed absolute z-max" />
-    <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute" />
+    <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute z-max" />
     <home class="is-full-width is-full-height" />
     <about class="is-full-width is-full-height" />
     <skills class="is-full-width is-full-height" />
@@ -63,7 +63,7 @@ body {
   width: 100%;
 }
 .is-full-width {
-  width: 1000px;
+  width: 800px;
 }
 .is-full-height {
   height: 100vh;
