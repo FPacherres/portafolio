@@ -85,10 +85,15 @@ body {
 }
 .circle {
   border-radius: 50%;
-  box-shadow: var(--shadow);  
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.shadow {
+  box-shadow: var(--shadow);  
+}
+.shadow-inset {
+  box-shadow: var(--shadow-inset);  
 }
 .z-max {
   z-index: 999;
@@ -101,6 +106,8 @@ html {
   --bg-5: #edf1fd;
   --shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
     rgba(255, 255, 255, 0.8) -3px -3px 6px 1px;
+  --shadow-inset: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+  rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -114,6 +121,8 @@ html {
     --bg-5: #404855;
     --shadow: #323842 3px 3px 6px 0px,
       #4c535d -3px -3px 6px 1px;
+    --shadow-inset: #323842 3px 3px 6px 0px inset,
+    #4c535d -3px -3px 6px 1px inset;
   }
 }
 @media (max-width: 1090px) {
