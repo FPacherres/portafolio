@@ -16,29 +16,29 @@
       </div>
     </div>
     <div class="socialNetwork">
-      <a href="https://twitter.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <MoonIcon class="icon" />
+      <a href="https://codepen.io/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
+        A
+      </a>
+      <!-- <a href="https://twitter.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
+        <i class="icon fa fa-twitter"></i>
       </a>
       <a href="https://codepen.io/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <MoonIcon class="icon" />
+        <i class="icon fa fa-codepen"></i>
       </a>
       <a href="https://github.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
-        <MoonIcon class="icon" />
+        <i class="icon fa fa-github"></i>
       </a>
       <a href="https://www.linkedin.com/in/fabianxrl16/" target="blank" class="btn circle shadow btnSocial">
-        <MoonIcon class="icon" />
-      </a>
+        <i class="icon fa fa-linkedin-in"></i>
+      </a> -->
     </div>
   </section>
 </template>
 
 <script>
-import { MoonIcon } from '@heroicons/vue/solid'
 export default {
   name: 'Home',
-  components: {
-    MoonIcon
-  },
+  components: {},
   data() {
     return {}
   },
@@ -69,8 +69,10 @@ section {
 .icon {
   width: 35px;
   height: 35px;
-  color: var(--bg-3);
   margin: -1px 0 0 1.5px;
+}
+.icon svg path {
+  fill: var(--bg-3);
 }
 .text {
   text-align: start;
