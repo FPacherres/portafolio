@@ -23,7 +23,7 @@
         <div class="point"></div>
       </li>
     </ul>
-    <button class="btn circle theme" @click="changeTheme">
+    <button class="btn circle shadow theme" @click="changeTheme">
       <SunIcon v-if="icon" class="icon" />
       <MoonIcon v-else class="icon" />
     </button>
@@ -58,6 +58,9 @@ export default {
           '--shadow',
           '#323842 3px 3px 6px 0px, #4c535d -3px -3px 6px 1px'
         )
+        newStyle.setProperty(
+          '--shadow-inset', 
+          '#323842 3px 3px 6px 0px inset, #4c535d -3px -3px 6px 1px inset')
         this.icon = true
       } else {
         newStyle.setProperty('--bg-1', '#ef0070')
@@ -69,6 +72,9 @@ export default {
           '--shadow',
           'rgb(204, 219, 232) 3px 3px 6px 0px, rgba(255, 255, 255, 0.8) -3px -3px 6px 1px'
         )
+        newStyle.setProperty(
+          '--shadow-inset', 
+          'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset')
         this.icon = false
       }
       this.colorScheme = !this.colorScheme
