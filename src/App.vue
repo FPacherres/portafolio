@@ -99,6 +99,9 @@ body {
   z-index: 999;
 }
 html {
+  --white: #ffffff;
+  --red:#ff2400;
+
   --bg-1: #ef0070;
   --bg-2: #fac20b;
   --bg-3: #35455E;
@@ -113,6 +116,7 @@ html {
 @media (prefers-color-scheme: dark) {
   html {
     --white: #ffffff;
+    --red:#ff2400;
 
     --bg-1: #fac20b;
     --bg-2: #ef0070;
