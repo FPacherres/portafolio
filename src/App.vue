@@ -101,7 +101,7 @@ body {
 html {
   --bg-1: #ef0070;
   --bg-2: #fac20b;
-  --bg-3: #404855;
+  --bg-3: #35455E;
   --bg-4: #b3b3b3;
   --bg-5: #edf1fd;
   --shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
@@ -118,11 +118,11 @@ html {
     --bg-2: #ef0070;
     --bg-3: #edf1fd;
     --bg-4: #b3b3b3;
-    --bg-5: #404855;
-    --shadow: #323842 3px 3px 6px 0px,
-      #4c535d -3px -3px 6px 1px;
-    --shadow-inset: #323842 3px 3px 6px 0px inset,
-    #4c535d -3px -3px 6px 1px inset;
+    --bg-5: #35455E;
+    --shadow: #212e42 3px 3px 6px 0px,
+      #495b79 -3px -3px 6px 1px;
+    --shadow-inset: #212e42 3px 3px 6px 0px inset,
+    #495b79 -3px -3px 6px 1px inset;
   }
 }
 @media (max-width: 1090px) {
