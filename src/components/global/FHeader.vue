@@ -131,8 +131,8 @@ li:hover .point {
   margin: -1px 0 0 1.5px;
 }
 .theme {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
 }
 .point {
   background-color: var(--bg-3);
