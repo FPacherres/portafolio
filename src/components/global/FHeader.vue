@@ -96,7 +96,7 @@ img {
   height: auto;
 }
 ul {
-  width: 550px;
+  width: 500px;
   display: flex;
   justify-content: space-between;
   list-style: none;
