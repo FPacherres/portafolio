@@ -53,19 +53,19 @@ export default {
         newStyle.setProperty('--bg-2', '#ef0070')
         newStyle.setProperty('--bg-3', '#edf1fd')
         newStyle.setProperty('--bg-4', '#b3b3b3')
-        newStyle.setProperty('--bg-5', '#404855')
+        newStyle.setProperty('--bg-5', '#35455E')
         newStyle.setProperty(
           '--shadow',
-          '#323842 3px 3px 6px 0px, #4c535d -3px -3px 6px 1px'
+          '#212e42 3px 3px 6px 0px, #495b79 -3px -3px 6px 1px'
         )
         newStyle.setProperty(
           '--shadow-inset', 
-          '#323842 3px 3px 6px 0px inset, #4c535d -3px -3px 6px 1px inset')
+          '#212e42 3px 3px 6px 0px inset, #495b79 -3px -3px 6px 1px inset')
         this.icon = true
       } else {
         newStyle.setProperty('--bg-1', '#ef0070')
         newStyle.setProperty('--bg-2', '#fac20b')
-        newStyle.setProperty('--bg-3', '#404855')
+        newStyle.setProperty('--bg-3', '#35455E')
         newStyle.setProperty('--bg-4', '#b3b3b3')
         newStyle.setProperty('--bg-5', '#edf1fd')
         newStyle.setProperty(
