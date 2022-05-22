@@ -7,21 +7,23 @@
         <h1>Front-End Developer</h1>
         <div class="line"></div> 
       </div>
-      <div class="photo circle">
-        <img src="../assets/photo.png" alt="">
+      <div class="photo circle shadow">
+        <div class="photo-sub circle shadow-inset">
+          <img src="../assets/photo.png" alt="">
+        </div>
       </div>
     </div>
     <div class="socialNetwork">
-      <a href="https://twitter.com/FabianXRL16" target="blank" class="btn circle btnSocial">
+      <a href="https://twitter.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
         <MoonIcon class="icon" />
       </a>
-      <a href="https://codepen.io/FabianXRL16" target="blank" class="btn circle btnSocial">
+      <a href="https://codepen.io/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
         <MoonIcon class="icon" />
       </a>
-      <a href="https://github.com/FabianXRL16" target="blank" class="btn circle btnSocial">
+      <a href="https://github.com/FabianXRL16" target="blank" class="btn circle shadow btnSocial">
         <MoonIcon class="icon" />
       </a>
-      <a href="https://www.linkedin.com/in/fabianxrl16/" target="blank" class="btn circle btnSocial">
+      <a href="https://www.linkedin.com/in/fabianxrl16/" target="blank" class="btn circle shadow btnSocial">
         <MoonIcon class="icon" />
       </a>
     </div>
@@ -49,7 +51,7 @@ section {
   grid-template-rows: 1fr 80px;
 }
 .content {
-  padding-top: 20px;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,10 +100,15 @@ h1 {
   margin-top: 10px;
 }
 .photo {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   background: var(--bg-5);
   border-radius: 50%;
+}
+.photo-sub {
+  width: 410px;
+  height: 410px;
+  background: var(--bg-5);
   overflow: hidden;
 }
 .photo img {
