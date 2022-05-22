@@ -1,11 +1,13 @@
 <template>
   <section>
-    <div class="content">
+    <div class="content relative">
       <div class="text">
-        <h1>Hola soy</h1>
-        <h1>Fabian Pacherres</h1>
-        <h1>Front-End Developer</h1>
-        <div class="line"></div> 
+        <div class="absolute">
+          <h1>Hola soy</h1>
+          <h1>Fabian Pacherres</h1>
+          <h1>Front-End Developer</h1>
+          <div class="line"></div> 
+        </div>
       </div>
       <div class="photo circle shadow">
         <div class="photo-sub circle shadow-inset">
@@ -72,12 +74,14 @@ section {
 }
 .text {
   text-align: start;
+  display: flex;
+  align-items: center;
 }
 h1 {
-  font-weight: 400;
   margin: 0px;
 }
 .text h1:nth-child(1) {
+  font-weight: 300;
   font-size: 25px;
   margin-bottom: -8px;
   margin-left: -2.5px;
@@ -85,10 +89,12 @@ h1 {
 .text h1:nth-child(2) {
   text-transform: uppercase;
   font-size: 50px;
+  font-weight: 500;
   color: var(--bg-1);
   margin-left: -4px;
 }
 .text h1:nth-child(3) {
+  font-weight: 400;
   font-size: 30px;
   margin-top: -8px;
   margin-left: -2.5px;
@@ -96,7 +102,7 @@ h1 {
 .line {
   width: 145px;
   height: 5px;
-  background-color: var(--bg-1);
+  background-color: var(--bg-2);
   margin-top: 10px;
 }
 .photo {
