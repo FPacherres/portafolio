@@ -9,14 +9,7 @@
           <div class="line"></div>
         </div>
       </div>
-      <div class="photo circle shadow relative">
-        <div class="photo-sub circle shadow-inset">
-          <img src="../assets/photo.png" alt="" />
-        </div>
-        <div class="flag absolute">
-          <div></div>
-        </div>
-      </div>
+      <avatar class="avatar" :flag="true" />
     </div>
     <div class="socialNetwork">
       <a
@@ -52,9 +45,10 @@
 </template>
 
 <script>
+import Avatar from "../components/global/Avatar.vue";
 export default {
   name: 'Home',
-  components: {},
+  components: { Avatar},
   data() {
     return {}
   },
@@ -124,39 +118,9 @@ h1 {
   background-color: var(--bg-2);
   margin-top: 10px;
 }
-.photo {
+.avatar {
   width: 450px;
   height: 450px;
-  background: var(--bg-5);
-  border-radius: 50%;
-}
-.flag {
-  width: 100px;
-  height: 45px;
-  background-color: var(--red);
-  bottom: 40px;
-  right: 15px;
-  border-radius: 6px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-.flag div {
-  width: 35px;
-  height: 45px;
-  background-color: var(--white);
-  margin: 0 auto;
-}
-.photo-sub {
-  width: 410px;
-  height: 410px;
-  background: var(--bg-5);
-  overflow: hidden;
-}
-.photo img {
-  width: 350px;
-  height: auto;
-  margin: 0 45px -180px 0;
 }
 @media (max-width: 870px) {
   .content {
@@ -164,30 +128,6 @@ h1 {
     margin-top: -60px;
     justify-content: center;
     flex-direction: column-reverse;
-  }
-  .photo {
-    position: relative !important;
-    width: 280px;
-    height: 280px;
-  }
-  .photo-sub {
-    width: 250px;
-    height: 250px;
-  }
-  .photo img {
-    width: 250px;
-    height: auto;
-  }
-  .flag {
-    width: 75px;
-    height: 35px;
-    bottom: 30px;
-    right: 10px;
-    border-radius: 4px;
-  }
-  .flag div {
-    width: 25px;
-    height: 35px;
   }
   .text {
     justify-content: center;
@@ -221,6 +161,10 @@ h1 {
   .socialNetwork {
     align-items: flex-end;
     justify-content: center;
+  }
+  .avatar {
+    width: 280px;
+    height: 280px;
   }
 }
 </style>
