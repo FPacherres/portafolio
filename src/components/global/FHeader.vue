@@ -90,6 +90,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  padding: 0 10px;
 }
 img {
   width: 40px;
