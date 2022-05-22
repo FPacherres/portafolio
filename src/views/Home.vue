@@ -119,4 +119,58 @@ h1 {
   height: auto;
   margin: 0 45px -180px 0;
 }
+@media (max-width: 870px) {
+  .content {
+    padding-top: 0;
+    margin-top: -60px;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .photo {
+    position: relative !important;
+    width: 280px;
+    height: 280px;
+  }
+  .photo-sub {
+    width: 250px;
+    height: 250px;
+    }
+  .photo img {
+    width: 250px;
+    height: auto;
+  }
+  .text {
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .text div {
+    z-index: 99;
+  }
+  .text h1:nth-child(1) {
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: -8px;
+    margin-left: 0;
+  }
+  .text h1:nth-child(2) {
+    font-size: 30px;
+    margin-left: 0;
+  }
+  .text h1:nth-child(3) {
+    font-size: 20px;
+    margin-top: -8px;
+    margin-left: 0;
+    text-align: end;
+  }
+  .line {
+    width: 100px;
+    height: 3px;
+    margin-top: 8px;
+    margin-left: auto;
+  }
+  .socialNetwork {
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
 </style>
