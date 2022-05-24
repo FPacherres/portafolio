@@ -111,9 +111,11 @@ html {
   --bg-4: #666666;
   --bg-5: #edf1fd;
   --shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
-    rgba(255, 255, 255, 0.8) -3px -3px 6px 1px;
+            rgba(255, 255, 255, 0.8) -3px -3px 6px 1px;
   --shadow-inset: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-  rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset;
+                  rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset;
+  --shadow-btn: #b4911d 3px 3px 6px 0px inset,
+                #ffe180 -3px -3px 6px 1px inset;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -127,9 +129,11 @@ html {
     --bg-4: #b3b3b3;
     --bg-5: #35455E;
     --shadow: #212e42 3px 3px 6px 0px,
-      #495b79 -3px -3px 6px 1px;
+              #495b79 -3px -3px 6px 1px;
     --shadow-inset: #212e42 3px 3px 6px 0px inset,
-    #495b79 -3px -3px 6px 1px inset;
+                    #495b79 -3px -3px 6px 1px inset;
+    --shadow-btn: #710d3c 3px 3px 6px 0px inset,
+                  #ff55a4 -3px -3px 6px 1px inset;
   }
 }
 @media (max-width: 1090px) {
