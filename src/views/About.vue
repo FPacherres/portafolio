@@ -33,7 +33,9 @@
         </div>
       </div>
     </div>
-    <div class="containerCV">About</div>
+    <div class="containerCV">
+      <button class="btn shadow">Descargar CV</button>
+    </div>
   </section>
 </template>
 
@@ -76,6 +78,9 @@ section {
 }
 .containerCV {
   grid-area: cv;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
 }
 .avatar {
   width: 250px;
@@ -133,6 +138,19 @@ section {
 .aboutMe strong {
   font-weight: 400;
 }
+.containerCV button {
+  height: 45px;
+  width: 160px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: var(--bg-2);
+  color: var(--white);
+  transition: .3s;
+}
+.containerCV button:hover {
+  transition: .3s;
+  box-shadow: var(--shadow-btn)
+}
 @media (max-width: 870px) {
   section {
     grid-template-columns: 1fr;
@@ -154,6 +172,11 @@ section {
   .aboutMe {
     font-size: 15px;
     padding: 25px 0 0;
+  }
+  .containerCV button {
+    height: 35px;
+    width: 130px;
+    font-size: 13px;
   }
 }
 </style>
