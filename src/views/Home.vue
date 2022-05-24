@@ -71,6 +71,15 @@ section {
 .socialNetwork {
   display: flex;
   gap: 15px;
+  transition: .3s;
+}
+.socialNetwork a:hover {
+  transition: .3s;
+  box-shadow: var(--shadow-inset);
+}
+.socialNetwork a:hover .icon {
+  transition: .3s;
+  color: var(--bg-1);
 }
 .btnSocial {
   height: 50px;
