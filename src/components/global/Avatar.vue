@@ -3,9 +3,7 @@
     <div class="photo-sub circle shadow-inset">
       <img src="../../assets/photo.png" alt="" />
     </div>
-    <div v-if="flag" class="flag absolute">
-      <div></div>
-    </div>
+    <div v-if="flag" class="flag absolute"></div>
   </div>
 </template>
 
@@ -16,8 +14,8 @@ export default {
   props: {
     flag: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {}
@@ -29,19 +27,25 @@ export default {
 .flag {
   width: 100px;
   height: 45px;
-  background-color: var(--red);
+  background: rgb(255, 36, 0);
+  background: linear-gradient(
+    90deg,
+    var(--red) 0%,
+    var(--red) 33%,
+    var(--white) 33%,
+    var(--white) 67%,
+    var(--red) 67%,
+    var(--red) 100%
+  );
   bottom: 40px;
   right: 15px;
   border-radius: 6px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-.flag div {
-  width: 35px;
-  height: 45px;
-  background-color: var(--white);
-  margin: 0 auto;
+  box-shadow: rgba(50, 50, 93, 0.8) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px,
+    rgba(0, 0, 0, 0.8) 0px 30px 60px -30px,
+    rgba(0, 0, 0, 0.8) 0px -2px 6px 0px inset;
 }
 .photo {
   background: var(--bg-5);
@@ -72,10 +76,6 @@ export default {
     bottom: 30px;
     right: 10px;
     border-radius: 4px;
-  }
-  .flag div {
-    width: 25px;
-    height: 35px;
   }
 }
 </style>
