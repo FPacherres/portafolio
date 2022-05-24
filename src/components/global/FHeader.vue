@@ -53,14 +53,14 @@ export default {
         newStyle.setProperty('--bg-2', '#ef0070')
         newStyle.setProperty('--bg-3', '#edf1fd')
         newStyle.setProperty('--bg-4', '#b3b3b3')
-        newStyle.setProperty('--bg-5', '#35455E')
+        newStyle.setProperty('--bg-5', '#0e0f34')
         newStyle.setProperty(
           '--shadow',
-          '#212e42 3px 3px 6px 0px, #495b79 -3px -3px 6px 1px'
+          '#060721 3px 3px 6px 0px, #161843 -3px -3px 6px 1px'
         )
         newStyle.setProperty(
           '--shadow-inset', 
-          '#212e42 3px 3px 6px 0px inset, #495b79 -3px -3px 6px 1px inset')
+          '#060721 3px 3px 6px 0px inset, #161843 -3px -3px 6px 1px inset')
         newStyle.setProperty(
           '--shadow-btn',
           '#710d3c 3px 3px 6px 0px inset, #ff55a4 -3px -3px 6px 1px inset'

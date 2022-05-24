@@ -127,11 +127,11 @@ html {
     --bg-2: #ef0070;
     --bg-3: #edf1fd;
     --bg-4: #b3b3b3;
-    --bg-5: #35455E;
-    --shadow: #212e42 3px 3px 6px 0px,
-              #495b79 -3px -3px 6px 1px;
-    --shadow-inset: #212e42 3px 3px 6px 0px inset,
-                    #495b79 -3px -3px 6px 1px inset;
+    --bg-5: #0e0f34;
+    --shadow: #060721 3px 3px 6px 0px,
+              #161843 -3px -3px 6px 1px;
+    --shadow-inset: #060721 3px 3px 6px 0px inset,
+                    #161843 -3px -3px 6px 1px inset;
     --shadow-btn: #710d3c 3px 3px 6px 0px inset,
                   #ff55a4 -3px -3px 6px 1px inset;
   }
