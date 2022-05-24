@@ -141,6 +141,11 @@ li:hover .point {
 .theme {
   height: 35px;
   width: 35px;
+  transition: .3s;
+}
+.theme:hover {
+  box-shadow: var(--shadow-inset);
+  transition: .3s;
 }
 .point {
   background-color: var(--bg-3);
