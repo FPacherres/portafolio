@@ -61,6 +61,10 @@ export default {
         newStyle.setProperty(
           '--shadow-inset', 
           '#212e42 3px 3px 6px 0px inset, #495b79 -3px -3px 6px 1px inset')
+        newStyle.setProperty(
+          '--shadow-btn',
+          '#710d3c 3px 3px 6px 0px inset, #ff55a4 -3px -3px 6px 1px inset'
+        )
         this.icon = true
       } else {
         newStyle.setProperty('--bg-1', '#ef0070')
@@ -75,6 +79,10 @@ export default {
         newStyle.setProperty(
           '--shadow-inset', 
           'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset')
+        newStyle.setProperty(
+          '--shadow-btn',
+          '#b4911d 3px 3px 6px 0px inset, #ffe180 -3px -3px 6px 1px inset'
+        )
         this.icon = false
       }
       this.colorScheme = !this.colorScheme
