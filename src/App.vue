@@ -108,7 +108,7 @@ html {
   --bg-1: #ef0070;
   --bg-2: #fac20b;
   --bg-3: #35455E;
-  --bg-4: #b3b3b3;
+  --bg-4: #666666;
   --bg-5: #edf1fd;
   --shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
     rgba(255, 255, 255, 0.8) -3px -3px 6px 1px;
