@@ -1,6 +1,12 @@
 <template>
   <section>
-    <div class="containerDescription">About</div>
+    <div class="containerDescription">
+      <div></div>
+      <p class="aboutMe">También soy un, apasionado por el <strong>diseño grafico</strong> y un <strong>gran aficionado del UI/UX.</strong><br /><br />
+        Me enfoco a la <strong>parte visual de una AppWeb,</strong> amo darle vida a los distintos componentes.<br /><br />
+        Pienso que <strong>para enamorar a un usuario,</strong> primero <strong>debo atraer su atención,</strong> 
+        y esto se consigue <strong>con una buena UI.</strong></p>
+    </div>
     <div class="containerSnippet">
       <Avatar class="avatar" />
       <div class="github">
@@ -120,6 +126,16 @@ section {
   font-weight: 600;
   color: var(--bg-1);
 }
+.aboutMe {
+  font-size: 18px;
+  /* line-height: 30px; */
+  color: var(--bg-4);
+  font-weight: 200;
+  text-align: start;
+}
+.aboutMe strong {
+  font-weight: 400;
+}
 @media (max-width: 870px) {
   section {
     grid-template-columns: 1fr;
@@ -137,6 +153,9 @@ section {
   }
   .avatar {
     display: none;
+  }
+  .aboutMe {
+    font-size: 15px;
   }
 }
 </style>
