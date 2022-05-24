@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="containerDescription">
-      <div></div>
+      <Title />
       <p class="aboutMe">También soy un, apasionado por el <strong>diseño grafico</strong> y un <strong>gran aficionado del UI/UX.</strong><br /><br />
         Me enfoco a la <strong>parte visual de una AppWeb,</strong> amo darle vida a los distintos componentes.<br /><br />
         Pienso que <strong>para enamorar a un usuario,</strong> primero <strong>debo atraer su atención,</strong> 
@@ -40,10 +40,11 @@
 <script>
 import { StarIcon } from '@heroicons/vue/outline'
 import Avatar from "../components/global/Avatar.vue";
+import Title from "../components/global/Title.vue";
 export default {
   name: 'About',
   components: { 
-    Avatar, StarIcon
+    Avatar, StarIcon, Title
   },
   data() {
     return {}
@@ -55,7 +56,6 @@ export default {
 section {
   padding: 80px 0 60px;
   box-sizing: border-box;
-  border: 1px solid #f132f1;
   display: grid;
   grid-template-columns: 1fr 300px;
   grid-template-rows: 1fr 120px;
@@ -63,11 +63,9 @@ section {
 }
 .containerDescription {
   grid-area: description;
-  border: 1px solid #000000;
 }
 .containerSnippet {
   grid-area: snippet;
-  border: 1px solid #000000;
   /* align-self: flex-end;
   justify-self: center; */
   display: flex;
@@ -78,7 +76,6 @@ section {
 }
 .containerCV {
   grid-area: cv;
-  border: 1px solid #000000;
 }
 .avatar {
   width: 250px;
@@ -128,7 +125,7 @@ section {
 }
 .aboutMe {
   font-size: 18px;
-  /* line-height: 30px; */
+  padding: 10px 30px 0 0;
   color: var(--bg-4);
   font-weight: 200;
   text-align: start;
@@ -156,6 +153,7 @@ section {
   }
   .aboutMe {
     font-size: 15px;
+    padding: 25px 0 0;
   }
 }
 </style>
