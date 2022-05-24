@@ -83,6 +83,9 @@ body {
   border: none;
   background: transparent;
 }
+h1 {
+  margin: 0px;
+}
 .circle {
   border-radius: 50%;
   display: flex;
