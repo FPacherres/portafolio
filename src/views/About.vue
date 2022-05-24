@@ -130,7 +130,7 @@ section {
 }
 .aboutMe {
   font-size: 18px;
-  padding: 10px 30px 0 0;
+  padding: 30px 30px 0 0;
   color: var(--bg-4);
   font-weight: 200;
   text-align: start;
