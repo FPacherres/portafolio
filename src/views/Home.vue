@@ -90,9 +90,6 @@ section {
 .text div {
   z-index: 10;
 }
-h1 {
-  margin: 0px;
-}
 .text h1:nth-child(1) {
   font-weight: 300;
   font-size: 25px;
