@@ -4,21 +4,21 @@
     <div class="containerSnippet">
       <Avatar class="avatar" />
       <div class="github">
-        <div class="relative circle shadow">
+        <div class="text relative circle shadow">
           <h1>Repositories</h1>
           <h1>43</h1>
           <div class="tag circle absolute shadow">
             <fa class="icon" :icon="['fa', 'book-bookmark']" />
           </div>
         </div>
-        <div class="relative circle shadow">
+        <div class="text relative circle shadow">
           <h1>Projects</h1>
           <h1>1</h1>
           <div class="tag circle absolute shadow">
             <fa class="icon" :icon="['fa', 'table']" />
           </div>
         </div>
-        <div class="relative circle shadow">
+        <div class="text relative circle shadow">
           <h1>Stars</h1>
           <h1>17</h1>
           <div class="tag circle absolute shadow">
@@ -95,9 +95,10 @@ section {
   justify-content: center;
   align-items: center;
 }
-.github div h1 {
+.github div h1:nth-child(1) {
+  margin-top: 4px;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
 }
 .github div .tag  {
   width: 30px;
@@ -114,10 +115,15 @@ section {
   width: 11px;
   height: 11px;
 }
+.github .text h1:nth-child(2){
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--bg-1);
+}
 @media (max-width: 870px) {
   section {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 120px 80px;
+    grid-template-rows: 1fr 110px 70px;
     grid-template-areas: "description" "snippet" "cv";
   }
   .containerDescription {
