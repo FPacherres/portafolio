@@ -6,7 +6,8 @@
         <div class="canva relative">
           <spinner class="score" />
           <div class="data circle shadow-inset absolute">
-            A
+            <img src="../assets/vue.svg" alt="">
+            <span>Vue.js</span>
           </div>
         </div>
         <div class="title">
@@ -25,7 +26,8 @@
         <div class="canva relative">
           <spinner class="score" />
           <div class="data circle shadow-inset absolute">
-            A
+            <img src="../assets/vue.svg" alt="">
+            <span>Vue.js</span>
           </div>
         </div>
         <div class="title">
@@ -88,6 +90,18 @@ section {
   width: 220px;
   height: 220px;
   background-color: var(--bg-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.data img {
+  width: 140px;
+}
+.data span {
+  font-size: 20px;
+  margin-top: -15px;
+  font-weight: 300;
 }
 .title {
   background: rgba(255, 255, 255, 0.177);
@@ -125,8 +139,15 @@ section {
   .container {
     grid-template-columns: 1fr;
   }
+  .card {
+    grid-template-rows: 250px 60px 1fr;
+    gap: 10px;
+  }
   .card:nth-child(2){
     display: none;
+  }
+  .data img {
+    width: 120px;
   }
 }
 </style>
