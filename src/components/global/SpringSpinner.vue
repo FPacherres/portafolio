@@ -70,16 +70,16 @@ export default {
 }
 @media (max-width: 870px) {
   .spring-spinner {
-    height: 280px;
-    width: 280px;
+    height: 250px;
+    width: 250px;
   }
   .spring-spinner .spring-spinner-part {
-    height: calc(280px / 2);
-    width: 280px;
+    height: calc(250px / 2);
+    width: 250px;
   }
   .spring-spinner .spring-spinner-rotator {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
   }
 }
 </style>
