@@ -86,7 +86,7 @@ section {
   width: 250px;
   height: 250px;
 }
-::v-deep .photo .photo-sub img {
+:deep(.photo .photo-sub img) {
   width: 200px;
   height: auto;
   margin: 0 30px -120px 0;
