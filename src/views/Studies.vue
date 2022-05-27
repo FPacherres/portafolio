@@ -71,10 +71,13 @@ section {
   grid-template-rows: 1fr 40px;
 }
 .studies div:nth-of-type(1){
+  background: red;
   }
 .studies div:nth-of-type(2){
+  background: rgb(158, 45, 45);
   }
 .studies div:nth-of-type(3){
+  background: rgb(67, 33, 33);
   }
 .studies div:nth-of-type(4){
   display: flex;
@@ -133,10 +136,11 @@ section {
     order: -5;
   }
   .studies div:nth-of-type(2){
-    order: 1;
+    order: -3;
   }
   .studies div:nth-of-type(3){
-  }
+    order: 1;
+    }
   .studies div:nth-of-type(4){
     display: flex;
     align-items: center;
