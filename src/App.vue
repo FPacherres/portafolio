@@ -6,8 +6,9 @@ import Studies from "./views/Studies.vue";
 import Experience from "./views/Experience.vue";
 import FHeader from "./components/global/FHeader.vue";
 import NavMobile from "./components/global/NavMobile.vue";
+import Loading from "./views/Loading.vue";
 export default {
-  components: {Home, About, Skills, Studies, Experience, FHeader, NavMobile},
+  components: {Home, About, Skills, Studies, Experience, FHeader, NavMobile, Loading},
   data() {
     return {
       MenuMobile: false
@@ -17,6 +18,7 @@ export default {
 </script>
 
 <template>
+  <loading />
   <div class="container relative is-full-width-screen">
     <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute z-max" />
     <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false" class="is-full-width-screen is-full-height fixed absolute z-max" />
@@ -99,7 +101,7 @@ h1 {
   box-shadow: var(--shadow-inset);  
 }
 .z-max {
-  z-index: 999;
+  z-index: 900;
 }
 html {
   --white: #ffffff;
