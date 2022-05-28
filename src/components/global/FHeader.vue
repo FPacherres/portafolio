@@ -2,6 +2,7 @@
   <nav>
     <svg
       class="img"
+      @click="open"
       width="709"
       height="653"
       viewBox="0 0 709 653"
