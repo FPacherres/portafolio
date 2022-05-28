@@ -92,6 +92,7 @@ section {
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 80px;
+  overflow: hidden;
 }
 .content {
   padding-top: 30px;
