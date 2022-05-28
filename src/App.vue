@@ -4,11 +4,12 @@ import About from "./views/About.vue";
 import Skills from "./views/Skills.vue";
 import Studies from "./views/Studies.vue";
 import Experience from "./views/Experience.vue";
+import Contact from "./views/Contact.vue";
 import FHeader from "./components/global/FHeader.vue";
 import NavMobile from "./components/global/NavMobile.vue";
 import Loading from "./views/Loading.vue";
 export default {
-  components: {Home, About, Skills, Studies, Experience, FHeader, NavMobile, Loading},
+  components: {Home, About, Skills, Studies, Experience, FHeader, NavMobile, Loading, Contact},
   data() {
     return {
       MenuMobile: false
@@ -22,11 +23,12 @@ export default {
   <div class="container relative is-full-width-screen">
     <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute z-max" />
     <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false" class="is-full-width-screen is-full-height fixed absolute z-max" />
-    <home id="home" class="is-full-width is-full-height" />
+    <home id="home" class="is-full-width is-full-height relative" />
     <about id="about" class="is-full-width is-full-height" />
     <skills id="skills" class="is-full-width is-full-height" />
     <studies id="studies" class="is-full-width is-full-height" />
     <experience id="experience" class="is-full-width is-full-height" />
+    <contact id="contact" class="is-full-width is-full-height" />
   </div>
 </template>
 
