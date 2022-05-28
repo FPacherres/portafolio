@@ -2,7 +2,7 @@
   <section>
     <div class="content relative">
       <div class="text">
-        <div class="absolute">
+        <div class="mainText absolute">
           <h1>Hola soy</h1>
           <h1>Fabian Pacherres</h1>
           <h1>Front-End Developer</h1>
@@ -104,6 +104,7 @@ section {
   align-items: flex-end;
   gap: 15px;
   transition: 0.3s;
+  animation: 1s animationSocialNetwork 8s ease-in;
 }
 .socialNetwork a:hover {
   transition: 0.3s;
@@ -127,6 +128,9 @@ section {
   text-align: start;
   display: flex;
   align-items: center;
+}
+.mainText {
+  animation: 1s animationMainText 8s ease-in;
 }
 .text div {
   z-index: 10;
@@ -159,6 +163,7 @@ section {
 .avatar {
   width: 450px;
   height: 450px;
+  animation: 1s animationAvatar 8s ease-in;
 }
 .down {
   right: -5px;
@@ -169,7 +174,7 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  animation: move-arrow-down 1s linear infinite;
+  animation: 1s move-arrow-down 8s linear infinite;
 }
 .down span {
   transform: rotate(180deg);
@@ -185,6 +190,30 @@ section {
 }
 #arrow-mobile {
   display: none;
+}
+@keyframes animationMainText {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes animationSocialNetwork {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes animationAvatar {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 @keyframes move-arrow-down {
   0% {
