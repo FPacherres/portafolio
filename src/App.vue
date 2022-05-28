@@ -22,11 +22,11 @@ export default {
   <div class="container relative is-full-width-screen">
     <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute z-max" />
     <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false" class="is-full-width-screen is-full-height fixed absolute z-max" />
-    <home class="is-full-width is-full-height" />
-    <about class="is-full-width is-full-height" />
-    <skills class="is-full-width is-full-height" />
-    <studies class="is-full-width is-full-height" />
-    <experience class="is-full-width is-full-height" />
+    <home id="home" class="is-full-width is-full-height" />
+    <about id="about" class="is-full-width is-full-height" />
+    <skills id="skills" class="is-full-width is-full-height" />
+    <studies id="studies" class="is-full-width is-full-height" />
+    <experience id="experience" class="is-full-width is-full-height" />
   </div>
 </template>
 
@@ -40,6 +40,8 @@ export default {
   color: var(--bg-3);
   width: 100%;
   height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: auto;
 }
 body {
   margin: 0px;
@@ -49,9 +51,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#app {
-  overflow-y: auto;
 }
 #app::-webkit-scrollbar {
   width: 5px;
@@ -118,6 +117,7 @@ html {
                   rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset;
   --shadow-btn: #b4911d 3px 3px 6px 0px inset,
                 #ffe180 -3px -3px 6px 1px inset;
+
 }
 
 @media (prefers-color-scheme: dark) {
