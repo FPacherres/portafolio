@@ -116,9 +116,9 @@ export default {
         }
         if (that.count == 165) {
           containerLoading.style.transform = 'scale(0)'
-          containerLoading.style.transition = '.3s'
+          containerLoading.style.transition = '.2s'
         }
-        if (that.count == 171) {
+        if (that.count == 169) {
           containerLoading.style.display = 'none'
           clearInterval(percentage)
         }
@@ -139,7 +139,7 @@ section {
   position: fixed;
   background: var(--bg-5);
   z-index: 999;
-  transition: 0.3s;
+  transition: 0.2s;
   transform: scale(1);
 }
 .center {
