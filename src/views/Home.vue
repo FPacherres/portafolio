@@ -92,7 +92,6 @@ section {
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 80px;
-  overflow: hidden;
 }
 .content {
   padding-top: 30px;
@@ -194,7 +193,7 @@ section {
 }
 @keyframes animationMainText {
   0% {
-    transform: translateX(-400px);
+    transform: translateX(-200px);
   }
   100% {
     transform: translateX(0px);
@@ -210,7 +209,7 @@ section {
 }
 @keyframes animationAvatar {
   0% {
-    transform: translateX(400px);
+    transform: translateX(200px);
   }
   100% {
     transform: translateX(0px);
