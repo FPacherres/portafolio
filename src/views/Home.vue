@@ -164,10 +164,19 @@ section {
 a {
   text-decoration: none;
 }
+.down:hover #arrow {
+  fill: var(--bg-1);
+  transition: .3s;
+}
+.down:hover span {
+  color: var(--bg-1);
+  transition: .3s;
+}
 .down span {
   transform: rotate(180deg);
   writing-mode: vertical-lr;
   font-size: 12px;
+  transition: .3s;
 }
 
 .down svg {
@@ -177,6 +186,7 @@ a {
 
 #arrow {
   fill: var(--bg-2);
+  transition: .3s;
 }
 
 #arrow-mobile {
