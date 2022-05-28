@@ -115,17 +115,28 @@ export default {
         newStyle.setProperty('--bg-3', '#edf1fd')
         newStyle.setProperty('--bg-4', '#b3b3b3')
         newStyle.setProperty('--bg-5', '#0e0f34')
+        newStyle.setProperty('--bg-6', '#2b2d68')
         newStyle.setProperty(
           '--shadow',
-          '#060721 3px 3px 6px 0px, #161843 -3px -3px 6px 1px'
+          `#060721 3px 3px 6px 0px, 
+           #161843 -3px -3px 6px 1px`
         )
         newStyle.setProperty(
           '--shadow-inset',
-          '#060721 3px 3px 6px 0px inset, #161843 -3px -3px 6px 1px inset'
+          `#060721 3px 3px 6px 0px inset, 
+           #161843 -3px -3px 6px 1px inset`
         )
         newStyle.setProperty(
           '--shadow-btn',
-          '#710d3c 3px 3px 6px 0px inset, #ff55a4 -3px -3px 6px 1px inset'
+          `#710d3c 3px 3px 6px 0px inset, 
+           #ff55a4 -3px -3px 6px 1px inset`
+        )
+        newStyle.setProperty(
+          '--shadow-total',
+          `#060721 3px 3px 6px 0px,
+           #161843 -3px -3px 6px 1px,
+           #060721 3px 3px 6px 0px inset,
+           #161843 -3px -3px 6px 1px inset`
         )
         this.icon = true
       } else {
@@ -134,17 +145,28 @@ export default {
         newStyle.setProperty('--bg-3', '#35455E')
         newStyle.setProperty('--bg-4', '#666666')
         newStyle.setProperty('--bg-5', '#edf1fd')
+        newStyle.setProperty('--bg-6', '#cacedb')
         newStyle.setProperty(
           '--shadow',
-          'rgb(204, 219, 232) 3px 3px 6px 0px, rgba(255, 255, 255, 0.8) -3px -3px 6px 1px'
+          `rgb(204, 219, 232) 3px 3px 6px 0px, 
+           rgba(255, 255, 255, 0.8) -3px -3px 6px 1px`
         )
         newStyle.setProperty(
           '--shadow-inset',
-          'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset'
+          `rgb(204, 219, 232) 3px 3px 6px 0px inset, 
+           rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset`
         )
         newStyle.setProperty(
           '--shadow-btn',
-          '#b4911d 3px 3px 6px 0px inset, #ffe180 -3px -3px 6px 1px inset'
+          `#b4911d 3px 3px 6px 0px inset, 
+           #ffe180 -3px -3px 6px 1px inset`
+        )
+        newStyle.setProperty(
+          '--shadow-total',
+          `rgb(204, 219, 232) 3px 3px 6px 0px, 
+           rgba(255, 255, 255, 0.8) -3px -3px 6px 1px, 
+           rgb(204, 219, 232) 3px 3px 6px 0px inset, 
+           rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset`
         )
         this.icon = false
       }
@@ -164,14 +186,17 @@ nav {
   padding: 0 10px;
   animation: 1s animationHeader 8s ease-in;
 }
+
 .img {
   width: 40px;
   height: auto;
 }
+
 .img .rigth,
 .img .left {
   fill: var(--bg-3);
 }
+
 ul {
   width: 500px;
   display: flex;
@@ -183,51 +208,63 @@ ul {
   transition: 0.4s;
   padding: 0px;
 }
+
 a {
   text-decoration: none;
   color: var(--bg-3);
 }
-a, li {
+
+a,
+li {
   width: 100%;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-li:hover, a:hover {
+
+li:hover,
+a:hover {
   color: var(--bg-1);
   transition: 0.4s;
 }
+
 li:hover .point {
   animation: point 1s ease;
   background-color: var(--bg-1);
   width: 7px;
 }
+
 .icon {
   width: 20px;
   height: 20px;
   color: var(--bg-3);
   margin: -1px 0 0 1.5px;
 }
+
 .theme {
   height: 35px;
   width: 35px;
   transition: 0.3s;
 }
+
 .theme:hover {
   box-shadow: var(--shadow-inset);
   transition: 0.3s;
 }
+
 .point {
   background-color: var(--bg-3);
   width: 0px;
   height: 2px;
   border-radius: 2px;
 }
+
 @keyframes point {
   0% {
     width: 0;
   }
+
   50% {
     width: 70%;
   }
@@ -237,6 +274,7 @@ li:hover .point {
   0% {
     transform: translateY(-80px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -246,14 +284,17 @@ li:hover .point {
   ul {
     display: none;
   }
+
   .theme {
     width: 45px;
     height: 45px;
   }
+
   .icon {
     width: 22px;
     height: 22px;
   }
+
   .img {
     cursor: pointer;
   }
