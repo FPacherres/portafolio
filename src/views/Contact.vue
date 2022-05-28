@@ -2,7 +2,15 @@
     <section>
         <div class="title"><span>Contact</span></div>
         <fform class="form" />
-        <div class="snippet">Snippet</div>
+        <div class="snippet">
+            <avatar class="avatar-snippet" />
+            <div class="text-snippet">
+                <h1>Datos curiosos</h1>
+                <span>Memorizo rostros</span>
+                <span>Armo cubos de Rubik</span>
+                <span>Soy pintor paisajista</span>
+            </div>
+        </div>
         <ffooter class="footer" />
     </section>
 </template>
@@ -10,9 +18,10 @@
 <script>
 import ffooter from "../components/global/FFooter.vue";
 import fform from "../components/global/FForm.vue";
+import avatar from "../components/global/Avatar.vue";
 export default {
     name: 'Contact',
-    components: { ffooter, fform },
+    components: { ffooter, fform, avatar },
     data() {
         return {}
     },
@@ -43,27 +52,76 @@ section {
 .snippet {
     border: 1px solid #f132f1;
     grid-area: snippet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer {
     grid-area: footer;
 }
+
 .title span {
     color: var(--bg-2);
     font-size: 40px;
 }
 
+.avatar-snippet {
+    height: 260px;
+    width: 260px;
+}
+.text-snippet h1 {
+    color: var(--bg-1);
+    font-size: 22px;
+}
+.text-snippet span {
+    color: var(--bg-3);
+    display: block;
+    font-size: 14px;
+}
+
+:deep(.photo .photo-sub img) {
+  width: 180px;
+  height: auto;
+  margin: 0 18px -65px 0;
+}
+
 @media (max-width: 870px) {
     section {
         padding: 70px 0 0px;
-        grid-template-areas: "title" "form" "snippet" "footer";
+        grid-template-areas: "title""form""snippet""footer";
         grid-template-columns: 1fr;
         grid-template-rows: 40px 1fr 100px 30px;
         column-gap: 20px;
         row-gap: 20px;
     }
+    .snippet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .title span {
         font-size: 25px;
     }
+
+    .avatar-snippet {
+        height: 90px;
+        width: 90px;
+    }
+    .text-snippet h1 {
+    font-size: 16px;
+}
+.text-snippet span {
+    font-size: 10px;
+}
+:deep(.photo .photo-sub img) {
+  width: 80px;
+  margin: 0 15px -55px 0;
+}
+.text-snippet {
+    text-align: right;
+}
 }
 </style>
