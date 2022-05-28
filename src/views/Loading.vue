@@ -82,7 +82,7 @@ export default {
       let that = this
       let containerLoad = document.querySelector('.load')
       let containerLogo = document.querySelector('.logo')
-    let containerLoading = document.querySelector('.conatiner-loading')
+      let containerLoading = document.querySelector('.conatiner-loading')
       let percentage = setInterval(() => {
         that.count++
         if (that.count == 5) {
@@ -112,7 +112,6 @@ export default {
           containerLoad.style.display = 'none'
           containerLogo.style.transform = 'scale(1)'
           containerLogo.style.transition = '.3s'
-          this.hiddenLoading()
         }
         if (that.count == 165) {
           containerLoading.style.transform = 'scale(0)'
@@ -123,7 +122,7 @@ export default {
           clearInterval(percentage)
         }
       }, 50)
-    }
+    },
   },
   mounted() {
     this.counter()
