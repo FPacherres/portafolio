@@ -55,24 +55,34 @@
     </svg>
     <ul>
       <li>
-        <span>Home</span>
-        <div class="point"></div>
+        <a href="#home">
+          <span>Home</span>
+          <div class="point"></div>
+        </a>
       </li>
       <li>
-        <span>About</span>
-        <div class="point"></div>
+        <a href="#about">
+          <span>About</span>
+          <div class="point"></div>
+        </a>
       </li>
       <li>
-        <span>Skills</span>
-        <div class="point"></div>
+        <a href="#skills">
+          <span>Skills</span>
+          <div class="point"></div>
+        </a>
       </li>
       <li>
-        <span>Studies</span>
-        <div class="point"></div>
+        <a href="#studies">
+          <span>Studies</span>
+          <div class="point"></div>
+        </a>
       </li>
       <li>
-        <span>Experience</span>
-        <div class="point"></div>
+        <a href="#experience">
+          <span>Experience</span>
+          <div class="point"></div>
+        </a>
       </li>
     </ul>
     <button class="btn circle shadow theme" @click="changeTheme">
@@ -171,17 +181,20 @@ ul {
   font-size: 14px;
   font-weight: 300;
   transition: 0.4s;
-  color: var(--bg-3);
   padding: 0px;
 }
-li {
+a {
+  text-decoration: none;
+  color: var(--bg-3);
+}
+a, li {
   width: 100%;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-li:hover {
+li:hover, a:hover {
   color: var(--bg-1);
   transition: 0.4s;
 }
@@ -210,6 +223,14 @@ li:hover .point {
   width: 0px;
   height: 2px;
   border-radius: 2px;
+}
+@keyframes point {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 70%;
+  }
 }
 
 @keyframes animationHeader {
