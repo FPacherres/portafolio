@@ -151,6 +151,7 @@ nav {
   align-items: center;
   height: 80px;
   padding: 0 10px;
+  animation: 1s animationHeader 8s ease-in;
 }
 .img {
   width: 40px;
@@ -210,12 +211,12 @@ li:hover .point {
   border-radius: 2px;
 }
 
-@keyframes point {
+@keyframes animationHeader {
   0% {
-    width: 0;
+    transform: translateY(-80px);
   }
-  50% {
-    width: 70%;
+  100% {
+    transform: translateY(0px);
   }
 }
 
