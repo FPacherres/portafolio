@@ -136,7 +136,7 @@ html {
   --bg-3: #35455E;
   --bg-4: #666666;
   --bg-5: #edf1fd;
-  --bg-6: #cacedb;
+  --bg-6: #b4bacb;
   --shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
     rgba(255, 255, 255, 0.8) -3px -3px 6px 1px;
   --shadow-inset: rgb(204, 219, 232) 3px 3px 6px 0px inset,
