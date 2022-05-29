@@ -1,9 +1,9 @@
 <template>
   <form class="shadow">
     <h1>Hablemos!</h1>
-    <input type="text" class="shadow-total" />
-    <input type="text" class="shadow-total" />
-    <textarea class="shadow-total" />
+    <input type="text" class="shadow-total" placeholder="Nombre" />
+    <input type="text" class="shadow-total" placeholder="Correo" />
+    <textarea class="shadow-total" placeholder="Hola! dime algo..." />
     <button class="btn send shadow">Enviar</button>
   </form>
 </template>
@@ -37,13 +37,16 @@ input {
   border: 3px var(--bg-5) solid;
   background-color: var(--bg-5);
   width: 300px;
-  padding: 0px 10px;
+  padding: 0px 20px;
   box-sizing: border-box;
-  color: var(--bg-3);
-  font-weight: 200;
+  color: var(--bg-6);
+  outline:none;
+}
+input::placeholder, textarea::placeholder {
+  color: var(--bg-6);
 }
 .send {
-    padding: 10px 0;
+  padding: 10px 0;
     border-radius: 30px;
     background-color: var(--bg-5);
     color: var(--bg-6);
@@ -52,19 +55,20 @@ input {
     transition: .3s;
 }
 .send:hover {
-    box-shadow: var(--shadow-inset);
+  box-shadow: var(--shadow-inset);
     transition: .3s;
 }
 textarea {
-    border-radius: 25px;
+    outline:none;
+    border-radius: 20px;
     border: 3px var(--bg-5) solid;
     background-color: var(--bg-5);
-    height: 60px;
-    padding: 0px 10px;
+    height: 70px;
+    padding: 10px 20px;
     box-sizing: border-box;
-    color: var(--bg-3);
-    font-weight: 200;
-    
+    color: var(--bg-6);
+    overflow: hidden;
+    resize: none;  
 }
 @media (max-width: 870px) {
   h1 {
