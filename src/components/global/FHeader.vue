@@ -145,7 +145,7 @@ export default {
         newStyle.setProperty('--bg-3', '#35455E')
         newStyle.setProperty('--bg-4', '#666666')
         newStyle.setProperty('--bg-5', '#edf1fd')
-        newStyle.setProperty('--bg-6', '#cacedb')
+        newStyle.setProperty('--bg-6', '#b4bacb')
         newStyle.setProperty(
           '--shadow',
           `rgb(204, 219, 232) 3px 3px 6px 0px, 
