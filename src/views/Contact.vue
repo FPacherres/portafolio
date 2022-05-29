@@ -76,11 +76,13 @@ section {
   color: var(--bg-1);
   font-size: 22px;
   margin-top: 10px;
+  font-weight: 500;
 }
 .text-snippet span {
   color: var(--bg-3);
   display: block;
   font-size: 14px;
+  font-weight: 300;
 }
 
 :deep(.photo .photo-sub img) {
