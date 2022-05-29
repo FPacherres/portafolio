@@ -71,7 +71,7 @@ textarea {
     font-size: 25px;
   }
   input {
-    width: 240px;
+    width: 68vw;
     height: 50px;
     border: 4px var(--bg-5) solid;
   }
