@@ -1,13 +1,15 @@
 <template>
   <section>
-    <div class="cont">Experience</div>
+    <Title :num="'05'" :text="'Experience'" />
+    <div class="container"></div>
   </section>
 </template>
 
 <script>
+import Title from '../components/global/Title.vue'
 export default {
   name: 'Experience',
-  components: {},
+  components: { Title },
   data() {
     return {}
   },
@@ -19,8 +21,21 @@ section {
   padding: 80px 0 60px;
   box-sizing: border-box;
 }
-.cont {
+
+.container {
   border: 1px solid #f132f1;
-  height: 100%;
+  height: calc(100vh - 300px);
+  margin-top: 40px;
+}
+
+@media (max-width: 870px) {
+  section {
+    padding: 80px 0 20px;
+  }
+  .container {
+    border: 1px solid #f132f1;
+    height: calc(100vh - 260px);
+    margin-top: 40px;
+  }
 }
 </style>
