@@ -51,15 +51,16 @@ h1:nth-child(2) {
 }
 @media (max-width: 870px) {
   h1:nth-child(1) {
-    font-size: 70px;
+    font-size: 50px;
   }
   h1:nth-child(2) {
-    font-size: 53px;
-    margin-top: -66px;
+    font-size: 30px;
+    margin-top: -44px;
   }
   .line {
-    width: 110px;
-    margin-top: -10px;
+    width: 52px;
+    margin-top: -6px;
+    height: 2px;
     }
 }
 </style>
