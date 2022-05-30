@@ -154,7 +154,7 @@ section {
 @media (max-width: 870px) {
   section {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 110px 70px;
+    grid-template-rows: 1fr 120px 70px;
     grid-template-areas: "description" "snippet" "cv";
   }
   .containerDescription {
@@ -162,6 +162,7 @@ section {
   }
   .containerSnippet {
     grid-area: snippet;
+    justify-content: flex-start;
   }
   .containerCV {
     grid-area: cv;
