@@ -235,11 +235,13 @@ section {
 }
 @media (max-width: 870px) {
   section {
-    padding: 80px 0 20px;
+    padding: 80px 0 0;
   }
   .container {
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
+    height: calc(100% - 120px);
+    margin-top: 30px;
   }
   .line {
     border-right: 3px solid var(--bg-4);
