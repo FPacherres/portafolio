@@ -1,15 +1,18 @@
 <template>
   <section>
     <Title :num="'05'" :text="'Experience'" />
-    <div class="container"></div>
+    <div class="container">
+      <Card />
+    </div>
   </section>
 </template>
 
 <script>
 import Title from '../components/global/Title.vue'
+import Card from '../components/global/Card.vue'
 export default {
   name: 'Experience',
-  components: { Title },
+  components: { Title, Card },
   data() {
     return {}
   },
