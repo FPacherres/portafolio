@@ -1,0 +1,289 @@
+[
+    {
+      "type": 1,
+      "typeName": "Proyecto laboral",
+      "pos": "Frontend Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "En desarrollo",
+      "date": 2022,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "Buscapatas",
+      "type": 3,
+      "typeName": "Proyecto Social",
+      "pos": "Frontend Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Pausado",
+      "date": 2020,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "FabCov",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Js Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2021,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "FabMusic",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Js Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2022,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "Catch The Beard",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Web Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2021,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "FabMemory",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Vuejs Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2022,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "FabFood",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Nuxtjs Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Pausado",
+      "date": 2021,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "Calculator bill money",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Js Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2022,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "FabPen",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Maquetados/UI",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2021,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "Minions",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Dibujar ccon CSS",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2021,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 2,
+        "link": "www.codepen.io"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "Switch",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Web Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2021,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    },
+    {
+      "title": "Word Images",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Frontend Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2022,
+      "link": "www.youtube.com",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "../assets/vue.svg",
+        "../assets/js.svg"
+      ],
+      "logo": "../assets/projects/fab-cov.svg",
+      "logoText": "../assets/projects/fab-cov-text.svg"
+    }
+  ]
