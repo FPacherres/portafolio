@@ -101,8 +101,6 @@ export default {
   font-style: oblique;
   font-size: 16px;
 }
-.description {
-}
 .description p {
   margin: 0;
   font-size: 11px;
