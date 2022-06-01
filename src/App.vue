@@ -46,6 +46,7 @@ export default {
   height: 100vh;
   scroll-behavior: smooth;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body {
