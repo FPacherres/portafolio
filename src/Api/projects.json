@@ -19,8 +19,8 @@
         "vue",
         "js"
       ],
-      "logo": "alegra",
-      "logoText": "alegra-text",
+      "logo": "alegra.svg",
+      "logoText": "alegra-text.svg",
       "styles": {
         "cardBackground": "#074F5E",
         "cardColor": "#ffffff",
@@ -49,8 +49,8 @@
         "vue",
         "js"
       ],
-      "logo": "buscapatas",
-      "logoText": "buscapatas-text",
+      "logo": "buscapatas.svg",
+      "logoText": "buscapatas-text.svg",
       "styles": {
         "cardBackground": "#E80C0C",
         "cardColor": "#ffffff",
@@ -79,8 +79,8 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov",
-      "logoText": "fab-cov-text",
+      "logo": "fab-cov.svg",
+      "logoText": "fab-cov-text.svg",
       "styles": {
         "cardBackground": "#172126",
         "cardColor": "#e4e4e4",
@@ -109,8 +109,8 @@
         "vue",
         "js"
       ],
-      "logo": "fabmusic",
-      "logoText": "fabmusic-text",
+      "logo": "fabmusic.svg",
+      "logoText": "fabmusic-text.svg",
       "styles": {
         "cardBackground": "#B9B9B9",
         "cardColor": "#111111",
@@ -139,8 +139,8 @@
         "vue",
         "js"
       ],
-      "logo": "catchTheBeard",
-      "logoText": "catchTheBeard-text",
+      "logo": "catchTheBeard.svg",
+      "logoText": "catchTheBeard-text.svg",
       "styles": {
         "cardBackground": "#38D0E5",
         "cardColor": "#172126",
@@ -169,8 +169,8 @@
         "vue",
         "js"
       ],
-      "logo": "fabmemory",
-      "logoText": "fabmemory-text",
+      "logo": "fabmemory.svg",
+      "logoText": "fabmemory-text.svg",
       "styles": {
         "cardBackground": "#E9EDF0",
         "cardColor": "#8FA4BF",
@@ -199,8 +199,8 @@
         "vue",
         "js"
       ],
-      "logo": "fabfood",
-      "logoText": "fabfood-text",
+      "logo": "fabfood.svg",
+      "logoText": "fabfood-text.svg",
       "styles": {
         "cardBackground": "#28010D",
         "cardColor": "#ffffff",
@@ -229,8 +229,8 @@
         "vue",
         "js"
       ],
-      "logo": "calculator",
-      "logoText": "calculator-text",
+      "logo": "calculator.svg",
+      "logoText": "calculator-text.svg",
       "styles": {
         "cardBackground": "#E0EFFF",
         "cardColor": "#535761",
@@ -259,13 +259,13 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov",
-      "logoText": "fab-cov-text",
+      "logo": "fappen.jpg",
+      "logoText": "fappen-text.svg",
       "styles": {
-        "cardBackground": "#172126",
-        "cardColor": "#e4e4e4",
-        "posColor": "#ff005e",
-        "buttonBackground": "#3f4b59"
+        "cardBackground": "#E0DDD6",
+        "cardColor": "#323D4A",
+        "posColor": "#323D4A",
+        "buttonBackground": "#F4BC00"
       }
     },
     {
@@ -289,8 +289,8 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov",
-      "logoText": "fab-cov-text",
+      "logo": "fab-cov.svg",
+      "logoText": "fab-cov-text.svg",
       "styles": {
         "cardBackground": "#172126",
         "cardColor": "#e4e4e4",
@@ -319,8 +319,8 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov",
-      "logoText": "fab-cov-text",
+      "logo": "fab-cov.svg",
+      "logoText": "fab-cov-text.svg",
       "styles": {
         "cardBackground": "#172126",
         "cardColor": "#e4e4e4",
@@ -349,8 +349,8 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov",
-      "logoText": "fab-cov-text",
+      "logo": "fab-cov.svg",
+      "logoText": "fab-cov-text.svg",
       "styles": {
         "cardBackground": "#172126",
         "cardColor": "#e4e4e4",
