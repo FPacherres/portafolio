@@ -36,7 +36,7 @@
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Pausado",
       "date": 2020,
-      "link": "www.youtube.com",
+      "link": "",
       "repo": {
         "type": 1,
         "link": "www.youtube.com"
@@ -192,7 +192,7 @@
         "link": "www.youtube.com"
       },
       "video": {
-        "state": true,
+        "state": false,
         "link": "www.youtube.com"
       },
       "tecnologies": [
@@ -222,7 +222,7 @@
         "link": "www.youtube.com"
       },
       "video": {
-        "state": true,
+        "state": false,
         "link": "www.youtube.com"
       },
       "tecnologies": [
@@ -252,7 +252,7 @@
         "link": "www.youtube.com"
       },
       "video": {
-        "state": true,
+        "state": false,
         "link": "www.youtube.com"
       },
       "tecnologies": [
@@ -276,13 +276,13 @@
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Culminado",
       "date": 2021,
-      "link": "www.youtube.com",
+      "link": "https://fap-pen.netlify.app/",
       "repo": {
         "type": 1,
         "link": "www.youtube.com"
       },
       "video": {
-        "state": true,
+        "state": false,
         "link": "www.youtube.com"
       },
       "tecnologies": [
@@ -342,7 +342,7 @@
         "link": "www.codepen.io"
       },
       "video": {
-        "state": true,
+        "state": false,
         "link": "www.youtube.com"
       },
       "tecnologies": [
