@@ -186,7 +186,7 @@
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Pausado",
       "date": 2021,
-      "link": "www.youtube.com",
+      "link": "https://fabfood.netlify.app/",
       "repo": {
         "type": 1,
         "link": "www.youtube.com"
