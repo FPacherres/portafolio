@@ -82,10 +82,10 @@ const logoText = ref()
 // let item = ref()
 watchEffect(async () => {
   logo.value = (
-    await import(`../../assets/projects/${props.data.logo}.svg`)
+    await import(`../../assets/projects/${props.data.logo}`)
   ).default
   logoText.value = (
-    await import(`../../assets/projects/${props.data.logoText}.svg`)
+    await import(`../../assets/projects/${props.data.logoText}`)
   ).default
   // async function arr() {
   //   for (const tecnology of props.data.tecnologies) {
