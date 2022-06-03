@@ -28,7 +28,7 @@
           <button
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
-          v-show="data.video.state"
+          v-show="data.link != ''"
         >
           Visitar
         </button>
@@ -39,6 +39,7 @@
           <fa class="icon" :icon="['fab', 'github']" />
         </button>
           <button
+          v-show="data.video.state"
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground};`"
         >
