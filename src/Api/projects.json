@@ -216,7 +216,7 @@
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Culminado",
       "date": 2022,
-      "link": "www.youtube.com",
+      "link": "https://calculator-bill.netlify.app/",
       "repo": {
         "type": 1,
         "link": "www.youtube.com"
@@ -229,13 +229,13 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov",
-      "logoText": "fab-cov-text",
+      "logo": "calculator",
+      "logoText": "calculator-text",
       "styles": {
-        "cardBackground": "#172126",
-        "cardColor": "#e4e4e4",
-        "posColor": "#ff005e",
-        "buttonBackground": "#3f4b59"
+        "cardBackground": "#E0EFFF",
+        "cardColor": "#535761",
+        "posColor": "#34D399",
+        "buttonBackground": "#F87171"
       }
     },
     {
