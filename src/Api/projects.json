@@ -209,6 +209,36 @@
       }
     },
     {
+      "title": "Word Images",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Front-end Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2021,
+      "link": "https://fab-images.netlify.app/",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": true,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "vue",
+        "js"
+      ],
+      "logo": "FabImg.svg",
+      "logoText": "FabImg-text.svg",
+      "styles": {
+        "cardBackground": "#21D3B5",
+        "cardColor": "#172126",
+        "posColor": "#FFFFFF",
+        "buttonBackground": "#FF9800"
+      }
+    },
+    {
       "title": "Calculator bill money",
       "type": 2,
       "typeName": "Proyecto personal",
@@ -319,43 +349,13 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov.svg",
-      "logoText": "fab-cov-text.svg",
+      "logo": "switch.svg",
+      "logoText": "codepen-text.svg",
       "styles": {
-        "cardBackground": "#172126",
-        "cardColor": "#e4e4e4",
-        "posColor": "#ff005e",
-        "buttonBackground": "#3f4b59"
-      }
-    },
-    {
-      "title": "Word Images",
-      "type": 2,
-      "typeName": "Proyecto personal",
-      "pos": "Front-end Developer",
-      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
-      "state": "Culminado",
-      "date": 2022,
-      "link": "www.youtube.com",
-      "repo": {
-        "type": 1,
-        "link": "www.youtube.com"
-      },
-      "video": {
-        "state": true,
-        "link": "www.youtube.com"
-      },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
-      "logo": "fab-cov.svg",
-      "logoText": "fab-cov-text.svg",
-      "styles": {
-        "cardBackground": "#172126",
-        "cardColor": "#e4e4e4",
-        "posColor": "#ff005e",
-        "buttonBackground": "#3f4b59"
+        "cardBackground": "#ffffff",
+        "cardColor": "#172126",
+        "posColor": "#F50E0E",
+        "buttonBackground": "#F50E0E"
       }
     }
   ]
