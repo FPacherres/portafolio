@@ -2,9 +2,9 @@
     {
       "type": 1,
       "typeName": "Proyecto laboral",
-      "pos": "Frontend Developer",
+      "pos": "Front-end Developer",
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
-      "state": "En desarrollo",
+      "state": "En Desarrollo",
       "date": 2022,
       "link": "www.youtube.com",
       "repo": {
@@ -16,17 +16,23 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "alegra",
+      "logoText": "alegra-text",
+      "styles": {
+        "cardBackground": "#074F5E",
+        "cardColor": "#ffffff",
+        "posColor": "#BACC16",
+        "buttonBackground": "#00B19D"
+      }
     },
     {
       "title": "Buscapatas",
       "type": 3,
       "typeName": "Proyecto Social",
-      "pos": "Frontend Developer",
+      "pos": "Front-end Developer",
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Pausado",
       "date": 2020,
@@ -40,11 +46,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "buscapatas",
+      "logoText": "buscapatas-text",
+      "styles": {
+        "cardBackground": "#E80C0C",
+        "cardColor": "#ffffff",
+        "posColor": "#ffffff",
+        "buttonBackground": "#1C69E6"
+      }
     },
     {
       "title": "FabCov",
@@ -64,11 +76,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fab-cov",
+      "logoText": "fab-cov-text",
+      "styles": {
+        "cardBackground": "#172126",
+        "cardColor": "#e4e4e4",
+        "posColor": "#ff005e",
+        "buttonBackground": "#3f4b59"
+      }
     },
     {
       "title": "FabMusic",
@@ -78,7 +96,7 @@
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Culminado",
       "date": 2022,
-      "link": "www.youtube.com",
+      "link": "https://fabmusic.netlify.app/",
       "repo": {
         "type": 1,
         "link": "www.youtube.com"
@@ -88,11 +106,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fabmusic",
+      "logoText": "fabmusic-text",
+      "styles": {
+        "cardBackground": "#B9B9B9",
+        "cardColor": "#111111",
+        "posColor": "#111111",
+        "buttonBackground": "#111111"
+      }
     },
     {
       "title": "Catch The Beard",
@@ -112,11 +136,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "catchTheBeard",
+      "logoText": "catchTheBeard-text",
+      "styles": {
+        "cardBackground": "#38D0E5",
+        "cardColor": "#172126",
+        "posColor": "#ffffff",
+        "buttonBackground": "#127789"
+      }
     },
     {
       "title": "FabMemory",
@@ -136,11 +166,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fabmemory",
+      "logoText": "fabmemory-text",
+      "styles": {
+        "cardBackground": "#E9EDF0",
+        "cardColor": "#8FA4BF",
+        "posColor": "#8FA4BF",
+        "buttonBackground": "#8FA4BF"
+      }
     },
     {
       "title": "FabFood",
@@ -160,11 +196,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fabfood",
+      "logoText": "fabfood-text",
+      "styles": {
+        "cardBackground": "#28010D",
+        "cardColor": "#ffffff",
+        "posColor": "#F20746",
+        "buttonBackground": "#F20746"
+      }
     },
     {
       "title": "Calculator bill money",
@@ -180,15 +222,21 @@
         "link": "www.youtube.com"
       },
       "video": {
-        "state": true,
+        "state": false,
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fab-cov",
+      "logoText": "fab-cov-text",
+      "styles": {
+        "cardBackground": "#172126",
+        "cardColor": "#e4e4e4",
+        "posColor": "#ff005e",
+        "buttonBackground": "#3f4b59"
+      }
     },
     {
       "title": "FabPen",
@@ -208,11 +256,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fab-cov",
+      "logoText": "fab-cov-text",
+      "styles": {
+        "cardBackground": "#172126",
+        "cardColor": "#e4e4e4",
+        "posColor": "#ff005e",
+        "buttonBackground": "#3f4b59"
+      }
     },
     {
       "title": "Minions",
@@ -232,11 +286,17 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fab-cov",
+      "logoText": "fab-cov-text",
+      "styles": {
+        "cardBackground": "#172126",
+        "cardColor": "#e4e4e4",
+        "posColor": "#ff005e",
+        "buttonBackground": "#3f4b59"
+      }
     },
     {
       "title": "Switch",
@@ -256,17 +316,23 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fab-cov",
+      "logoText": "fab-cov-text",
+      "styles": {
+        "cardBackground": "#172126",
+        "cardColor": "#e4e4e4",
+        "posColor": "#ff005e",
+        "buttonBackground": "#3f4b59"
+      }
     },
     {
       "title": "Word Images",
       "type": 2,
       "typeName": "Proyecto personal",
-      "pos": "Frontend Developer",
+      "pos": "Front-end Developer",
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Culminado",
       "date": 2022,
@@ -280,10 +346,16 @@
         "link": "www.youtube.com"
       },
       "tecnologies": [
-        "../assets/vue.svg",
-        "../assets/js.svg"
+        "vue",
+        "js"
       ],
-      "logo": "../assets/projects/fab-cov.svg",
-      "logoText": "../assets/projects/fab-cov-text.svg"
+      "logo": "fab-cov",
+      "logoText": "fab-cov-text",
+      "styles": {
+        "cardBackground": "#172126",
+        "cardColor": "#e4e4e4",
+        "posColor": "#ff005e",
+        "buttonBackground": "#3f4b59"
+      }
     }
   ]
