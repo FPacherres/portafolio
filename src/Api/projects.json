@@ -239,33 +239,33 @@
       }
     },
     {
-      "title": "Calculator bill money",
+      "title": "Bdy",
       "type": 2,
       "typeName": "Proyecto personal",
-      "pos": "Js Developer",
+      "pos": "Animaciones con CSS",
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Culminado",
       "date": 2022,
-      "link": "https://calculator-bill.netlify.app/",
+      "link": "https://bear-bdy.netlify.app/",
       "repo": {
         "type": 1,
         "link": "www.youtube.com"
       },
       "video": {
-        "state": false,
+        "state": true,
         "link": "www.youtube.com"
       },
       "tecnologies": [
         "vue",
         "js"
       ],
-      "logo": "calculator.svg",
-      "logoText": "calculator-text.svg",
+      "logo": "bdy.png",
+      "logoText": "bdy-text.svg",
       "styles": {
-        "cardBackground": "#E0EFFF",
+        "cardBackground": "#FFD9F0",
         "cardColor": "#535761",
-        "posColor": "#34D399",
-        "buttonBackground": "#F87171"
+        "posColor": "#FF388E",
+        "buttonBackground": "#FF388E"
       }
     },
     {
@@ -296,6 +296,36 @@
         "cardColor": "#323D4A",
         "posColor": "#323D4A",
         "buttonBackground": "#F4BC00"
+      }
+    },
+    {
+      "title": "Calculator bill money",
+      "type": 2,
+      "typeName": "Proyecto personal",
+      "pos": "Js Developer",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "state": "Culminado",
+      "date": 2022,
+      "link": "https://calculator-bill.netlify.app/",
+      "repo": {
+        "type": 1,
+        "link": "www.youtube.com"
+      },
+      "video": {
+        "state": false,
+        "link": "www.youtube.com"
+      },
+      "tecnologies": [
+        "vue",
+        "js"
+      ],
+      "logo": "calculator.svg",
+      "logoText": "calculator-text.svg",
+      "styles": {
+        "cardBackground": "#E0EFFF",
+        "cardColor": "#535761",
+        "posColor": "#34D399",
+        "buttonBackground": "#F87171"
       }
     },
     {
