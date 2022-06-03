@@ -289,13 +289,13 @@
         "vue",
         "js"
       ],
-      "logo": "fab-cov.svg",
-      "logoText": "fab-cov-text.svg",
+      "logo": "minion.jpg",
+      "logoText": "codepen-text.svg",
       "styles": {
-        "cardBackground": "#172126",
-        "cardColor": "#e4e4e4",
-        "posColor": "#ff005e",
-        "buttonBackground": "#3f4b59"
+        "cardBackground": "#51D1F5",
+        "cardColor": "#07437A",
+        "posColor": "#07437A",
+        "buttonBackground": "#F50E0E"
       }
     },
     {
