@@ -25,26 +25,26 @@
         >
       </div>
       <div class="actions">
-          <button
+        <a
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
           v-show="data.link != ''"
         >
           Visitar
-        </button>
-          <button
+        </a>
+        <a
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
         >
           <fa class="icon" :icon="['fab', 'github']" />
-        </button>
-          <button
+        </a>
+        <a
           v-show="data.video.state"
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground};`"
         >
           <fa class="icon" :icon="['fa', 'play']" />
-        </button>
+        </a>
       </div>
       <div class="tecnology-title">
         <span>Tecnologías</span>
@@ -185,10 +185,10 @@ watchEffect(async () => {
   list-style: none;
   width: 140px;
 }
-button{
+a{
   height: 25px;
 }
-.actions button{
+.actionCard{
   width: 100%;
   height: 100%;
   color: #fff;
@@ -196,17 +196,19 @@ button{
   border-radius: 5px;
   z-index: 1;
   position: relative;
+  display: grid;
+  place-content: center;
 }
-.actions button:nth-child(1){
+.actions a:nth-child(1){
   width: 80px;
 }
-.actions button:nth-child(1) {
+.actions a:nth-child(1) {
   font-size: 12px;
 }
-.actions button:nth-child(2){
+.actions a:nth-child(2){
   width: 25px;
 }
-.actions button:nth-child(3){
+.actions a:nth-child(3){
   width: 25px;
 }
 .actionCard:after {
