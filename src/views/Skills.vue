@@ -190,11 +190,6 @@ section {
   height: 100%;
 }
 
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  /* estilos en el APP.vue */
-}
-
 .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
