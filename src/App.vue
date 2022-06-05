@@ -128,6 +128,17 @@ h1 {
   z-index: 900;
 }
 
+.swiper-button-prev, .swiper-rtl .swiper-button-next  {
+  color: var(--bg-1);
+  background-color: var(--bg-5);
+  left: 0px;
+  height: 100%;
+  top: 22px;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0px;
+}
+
 html {
   --white: #ffffff;
   --red: #ff2400;
