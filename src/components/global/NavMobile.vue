@@ -4,11 +4,31 @@
       <ChevronLeftIcon class="icon closed" />
     </button>
     <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Skills</li>
-      <li>Studies</li>
-      <li>Experience</li>
+      <li>
+        <a href="#home">
+          <span @click="closed">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <span  @click="closed">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#skills">
+          <span  @click="closed">Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="#studies">
+          <span  @click="closed">Studies</span>
+        </a>
+      </li>
+      <li>
+        <a href="#experience">
+          <span  @click="closed">Experience</span>
+        </a>
+      </li>
     </ul>
   </nav>
 </template>
@@ -23,8 +43,8 @@ export default {
   },
   methods: {
     closed() {
-        this.$emit("close")
-    }
+      this.$emit('close')
+    },
   },
 }
 </script>
@@ -39,10 +59,12 @@ nav {
   padding: 20px 50px;
   box-sizing: border-box;
 }
+
 img {
   width: 40px;
   height: auto;
 }
+
 ul {
   width: 100%;
   display: flex;
@@ -54,26 +76,34 @@ ul {
   font-size: 36px;
   font-weight: 300;
   transition: 0.4s;
-  color: var(--bg-3);
   padding: 0px;
 }
+
 li {
   width: 100%;
-  cursor: pointer;
   text-align: end;
 }
+a {
+  cursor: pointer;
+  width: auto;
+  color: var(--bg-3);
+  text-decoration: none;
+}
+
 li:hover {
   color: var(--bg-1);
   transition: 0.4s;
 }
+
 .icon {
   width: 40px;
   height: 40px;
   color: var(--bg-3);
   margin: -1px 0 0 1.5px;
 }
+
 .closed {
-    margin-right: -20px;
+  margin-right: -20px;
 }
 
 @media (min-width: 870px) {
