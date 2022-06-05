@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="containerCV">
-      <button class="btn shadow">Descargar CV</button>
+      <button class="btn shadow" @click="downloadCv">Descargar CV</button>
     </div>
   </section>
 </template>
@@ -51,6 +51,25 @@ export default {
   data() {
     return {}
   },
+  methods: {
+    downloadCv() {
+      fetch({
+        url: '../assets/documents/cv_fabian.pdf',
+        method: 'GET',
+        responseType: 'blob'
+          })
+          .then((response) => {
+                const url = window.URL
+                      .createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', 'cv_fabian.pdf');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+          })
+    }
+  }
 }
 </script>
 
