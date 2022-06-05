@@ -29,6 +29,11 @@
           <span  @click="closed">Experience</span>
         </a>
       </li>
+      <li>
+        <a href="#contact">
+          <span  @click="closed">Contact</span>
+        </a>
+      </li>
     </ul>
   </nav>
 </template>
