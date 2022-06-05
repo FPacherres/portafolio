@@ -3,26 +3,44 @@
     <Title :num="'05'" :text="'Experience'" />
     <div class="container-list">
       <swiper
-      :effect="'cards'"
-      :grabCursor="true"
-      :modules="modules"
-      class="mySwiper"
-    >
-      <swiper-slide class="box" v-for="project in projects" :key="project"
-      :style="`backgroundColor:${project.styles.cardBackground}; color:${project.styles.cardColor}`">
-        <card :data="project" />
-      </swiper-slide>
-    </swiper>
+        :effect="'cards'"
+        :grabCursor="true"
+        :modules="modules"
+        class="mySwiper"
+      >
+        <swiper-slide
+          v-for="project in projects"
+          :key="project"
+          :style="`backgroundColor:${project.styles.cardBackground}; color:${project.styles.cardColor}`"
+        >
+          <card :data="project" />
+        </swiper-slide>
+      </swiper>
+      <div class="description__experience">
+        <h1>Algo más...</h1>
+        <p>
+          Llevo varios años usando a <strong class="vuejs">Vue.js</strong> como
+          framework favorito y todo su ecosistema.<br /><br />
+          También me he adentrado al mundo de las
+          <strong class="css">animaciones con css</strong> como una hermoso
+          pasatiempo<br /><br />
+          Actualmente vengo estudiando el framework
+          <strong class="svelte">Svelte</strong> y estoy aprendiendo algunas
+          cosas básicas de Backend.<br /><br />
+          También estoy leyendo el libro
+          <strong class="cleanCode">Clean Code</strong> de Robert C. Martin<br /><br />
+        </p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
 
-import "swiper/css/effect-cards";
-import { EffectCards } from "swiper";
+import 'swiper/css/effect-cards'
+import { EffectCards } from 'swiper'
 
 import Title from '../components/global/Title.vue'
 import Card from '../components/global/Card.vue'
@@ -32,15 +50,16 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    Title, Card
+    Title,
+    Card,
   },
   setup() {
     return {
       modules: [EffectCards],
-      projects
-    };
+      projects,
+    }
   },
-};
+}
 </script>
 
 <style scoped>
@@ -51,10 +70,6 @@ export default {
   grid-template-rows: 131.8px 470px;
   gap: 30px;
 }
-.box {
-  font-size: 20px;
-  color: red;
-} 
 .swiper {
   width: 280px;
   height: 420px;
@@ -66,6 +81,60 @@ export default {
   width: 100%;
   border-radius: 10px;
 }
+.container-list {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+}
+.description__experience {
+  height: 100%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 28px;
+}
+.description__experience h1 {
+  color: var(--bg-2);
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.description__experience p {
+  color: var(--bg-4);
+  font-size: 14px;
+  margin: 0px;
+  font-weight: 200;
+  width: 300px;
+  line-height: 25px;
+}
+.description__experience strong {
+  font-weight: 500;
+  font-size: 16px;
+}
+.description__experience .vuejs {
+  color: #3fb27f;
+}
+.description__experience .css {
+  color: #6030ee;
+}
+.description__experience .svelte {
+  color: #f73c00;
+}
+.description__experience .cleanCode {
+  color: #0cb1ea;
+}
 @media (max-width: 870px) {
+  .section {
+    padding: 80px 0 0;
+    grid-template-rows: 100px 470px;
+    gap: 10px;
+  }
+  .container-list {
+    grid-template-columns: 1fr;
+  }
+  .description__experience {
+    display: none;
+  }
 }
 </style>
