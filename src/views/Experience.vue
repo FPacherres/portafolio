@@ -21,14 +21,15 @@
         <p>
           Llevo varios años usando a <strong class="vuejs">Vue.js</strong> como
           framework favorito y todo su ecosistema.<br /><br />
-          También me he adentrado al mundo de las
+          Me he adentrado en las 
           <strong class="css">animaciones con css</strong> como una hermoso
-          pasatiempo<br /><br />
+          pasatiempo.<br /><br />
           Actualmente vengo estudiando el framework
           <strong class="svelte">Svelte</strong> y estoy aprendiendo algunas
           cosas básicas de Backend.<br /><br />
           También estoy leyendo el libro
           <strong class="cleanCode">Clean Code</strong> de Robert C. Martin<br /><br />
+          Me gusta aportar <strong class="ideas">nuevas ideas</strong>.
         </p>
       </div>
     </div>
@@ -123,6 +124,9 @@ export default {
 }
 .description__experience .cleanCode {
   color: #0cb1ea;
+}
+.description__experience .ideas {
+  color: #f70000;
 }
 @media (max-width: 870px) {
   .section {
