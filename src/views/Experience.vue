@@ -22,7 +22,7 @@
           Llevo varios años usando a <strong class="vuejs">Vue.js</strong> como
           framework favorito y todo su ecosistema.<br /><br />
           Me he adentrado en las 
-          <strong class="css">animaciones con css</strong> como una hermoso
+          <strong class="css">animaciones con css</strong> como un hermoso
           pasatiempo.<br /><br />
           Actualmente vengo estudiando el framework
           <strong class="svelte">Svelte</strong> y estoy aprendiendo algunas
