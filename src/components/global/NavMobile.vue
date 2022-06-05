@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navMobile">
     <button class="btn" @click="closed">
       <ChevronLeftIcon class="icon closed" />
     </button>
@@ -43,13 +43,21 @@ export default {
   },
   methods: {
     closed() {
-      this.$emit('close')
+      let nav = document.querySelector('.navMobile')
+      nav.style.borderRadius = '50%'
+      nav.style.transform = 'scale(0)'
+      nav.style.transition = '.3s'
+      setTimeout(() => this.$emit('close'), 350)
     },
   },
 }
 </script>
 
 <style scoped>
+.navMobile {
+  transform: scale(1);
+  transition: .3s;
+}
 nav {
   background-color: var(--bg-5);
   display: flex;
