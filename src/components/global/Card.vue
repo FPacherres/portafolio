@@ -25,6 +25,7 @@
         >
       </div>
       <div class="actions">
+        <!-- @click="goToWebsite(data.link)" -->
         <a
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
@@ -33,12 +34,14 @@
           Visitar
         </a>
         <a
+        target="_blank" 
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
         >
           <fa class="icon" :icon="['fab', 'github']" />
         </a>
         <a
+        target="_blank" 
           v-show="data.video.state"
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground};`"
@@ -76,11 +79,17 @@ const props = defineProps({
 
 const logo = ref()
 const logoText = ref()
+
 // let list = []
 // function tecnologies() {
 //   return list
 // }
 // let item = ref()
+
+// function goToWebsite(link){
+//   window.open(link);
+// }
+
 watchEffect(async () => {
   logo.value = (
     await import(`../../assets/projects/${props.data.logo}`)
@@ -198,6 +207,7 @@ a{
   position: relative;
   display: grid;
   place-content: center;
+  text-decoration: none;
 }
 .actions a:nth-child(1){
   width: 80px;
