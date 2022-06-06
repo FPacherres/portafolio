@@ -11,39 +11,39 @@
           </div>
           <div v-else-if="currentTecnology === 'nuxt'" class="data circle shadow-inset absolute">
             <img src="../assets/nuxt.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Nuxt.js</span>
           </div>
           <div v-else-if="currentTecnology === 'js'" class="data circle shadow-inset absolute">
             <img src="../assets/js.svg" alt="" />
-            <span>Vue.js</span>
+            <span>JavaScript</span>
           </div>
           <div v-else-if="currentTecnology === 'html'" class="data circle shadow-inset absolute">
             <img src="../assets/html.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Html</span>
           </div>
           <div v-else-if="currentTecnology === 'css'" class="data circle shadow-inset absolute">
             <img src="../assets/css.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Css</span>
           </div>
           <div v-else-if="currentTecnology === 'sass'" class="data circle shadow-inset absolute">
             <img src="../assets/sass.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Sass</span>
           </div>
           <div v-else-if="currentTecnology === 'tailwind'" class="data circle shadow-inset absolute">
             <img src="../assets/tailwind.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Tailwind</span>
           </div>
           <div v-else-if="currentTecnology === 'git'" class="data circle shadow-inset absolute">
             <img src="../assets/git.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Git</span>
           </div>
           <div v-else-if="currentTecnology === 'figma'" class="data circle shadow-inset absolute">
             <img src="../assets/figma.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Figma</span>
           </div>
           <div v-else-if="currentTecnology === 'vuetify'" class="data circle shadow-inset absolute">
             <img src="../assets/vuetify.svg" alt="" />
-            <span>Vue.js</span>
+            <span>Vuetify</span>
           </div>
         </div>
         <div class="title">
@@ -121,7 +121,7 @@
   </section>
 </template>
 
-<script setup>
+<script>
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 
@@ -132,42 +132,49 @@ import { Navigation } from 'swiper'
 import Title from '../components/global/Title.vue'
 import Spinner from '../components/global/SpringSpinner.vue'
 
-import { ref, watchEffect } from 'vue'
+// import { ref, watchEffect } from 'vue'
 
-let modules = [Navigation]
-let tecnologies = [
-  { id: 1, name: 'vue', path: '../assets/vue.svg' },
-  { id: 2, name: 'js', path: '../assets/js.svg' },
-  { id: 3, name: 'nuxt', path: '../assets/nuxt.svg' },
-  { id: 4, name: 'html', path: '../assets/html.svg' },
-  { id: 5, name: 'css', path: '../assets/css.svg' },
-  { id: 6, name: 'sass', path: '../assets/sass.svg' },
-  { id: 7, name: 'tailwind', path: '../assets/tailwind.svg' },
-  { id: 8, name: 'git', path: '../assets/git.svg' },
-  { id: 9, name: 'figma', path: '../assets/figma.svg' },
-  { id: 10, name: 'vuetify', path: '../assets/vuetify.svg' },
-]
-
-let path = ref()
-let list = []
-
-watchEffect(async () => {
-  for (let i = 0; i < tecnologies.length; i++) {
-    list.push(
-      path.value = (
-        await import(`../assets/${tecnologies[i].name}.svg`)
-      ).default
-    )
+export default {
+  components: { Swiper, SwiperSlide, Title, Spinner },
+  data() {
+    return {
+      modules: [Navigation],
+      currentTecnology: 'vue'
+    }
+  },
+  methods: {
+    showSkill(e) {
+      this.currentTecnology = e
+      return e
+    }
   }
-})
-
-let currentTecnology = 'sass'
-
-function showSkill(e) {
-  currentTecnology = e
-  console.log(currentTecnology)
-  return e
 }
+
+// let tecnologies = [
+//   { id: 1, name: 'vue', path: '../assets/vue.svg' },
+//   { id: 2, name: 'js', path: '../assets/js.svg' },
+//   { id: 3, name: 'nuxt', path: '../assets/nuxt.svg' },
+//   { id: 4, name: 'html', path: '../assets/html.svg' },
+//   { id: 5, name: 'css', path: '../assets/css.svg' },
+//   { id: 6, name: 'sass', path: '../assets/sass.svg' },
+//   { id: 7, name: 'tailwind', path: '../assets/tailwind.svg' },
+//   { id: 8, name: 'git', path: '../assets/git.svg' },
+//   { id: 9, name: 'figma', path: '../assets/figma.svg' },
+//   { id: 10, name: 'vuetify', path: '../assets/vuetify.svg' },
+// ]
+
+// let path = ref()
+// let list = []
+
+// watchEffect(async () => {
+//   for (let i = 0; i < tecnologies.length; i++) {
+//     list.push(
+//       path.value = (
+//         await import(`../assets/${tecnologies[i].name}.svg`)
+//       ).default
+//     )
+//   }
+// })
 
 </script>
 
