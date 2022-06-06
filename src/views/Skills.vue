@@ -5,8 +5,44 @@
       <div class="card">
         <div class="canva relative">
           <spinner class="score" />
-          <div class="data circle shadow-inset absolute">
+          <div v-if="currentTecnology === 'vue'" class="data circle shadow-inset absolute">
             <img src="../assets/vue.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'nuxt'" class="data circle shadow-inset absolute">
+            <img src="../assets/nuxt.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'js'" class="data circle shadow-inset absolute">
+            <img src="../assets/js.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'html'" class="data circle shadow-inset absolute">
+            <img src="../assets/html.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'css'" class="data circle shadow-inset absolute">
+            <img src="../assets/css.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'sass'" class="data circle shadow-inset absolute">
+            <img src="../assets/sass.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'tailwind'" class="data circle shadow-inset absolute">
+            <img src="../assets/tailwind.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'git'" class="data circle shadow-inset absolute">
+            <img src="../assets/git.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'figma'" class="data circle shadow-inset absolute">
+            <img src="../assets/figma.svg" alt="" />
+            <span>Vue.js</span>
+          </div>
+          <div v-else-if="currentTecnology === 'vuetify'" class="data circle shadow-inset absolute">
+            <img src="../assets/vuetify.svg" alt="" />
             <span>Vue.js</span>
           </div>
         </div>
@@ -16,52 +52,52 @@
         <div class="list">
           <swiper dir="rtl" :navigation="true" :modules="modules" class="mySwiper">
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('vue')">
                 <img src="../assets/vue.svg" alt="vue" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('nuxt')">
                 <img src="../assets/nuxt.svg" alt="nuxt" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('js')">
                 <img src="../assets/js.svg" alt="js" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('html')">
                 <img src="../assets/html.svg" alt="html" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('css')">
                 <img src="../assets/css.svg" alt="css" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('sass')">
                 <img src="../assets/sass.svg" alt="sass" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('tailwind')">
                 <img src="../assets/tailwind.svg" alt="tailwind" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('git')">
                 <img src="../assets/git.svg" alt="git" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('figma')">
                 <img src="../assets/figma.svg" alt="figma" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle">
+              <button class="btn btnSkills shadow circle" @click="showSkill('vuetify')">
                 <img src="../assets/vuetify.svg" alt="vuetify" />
               </button>
             </swiper-slide>
@@ -97,6 +133,7 @@ import Title from '../components/global/Title.vue'
 import Spinner from '../components/global/SpringSpinner.vue'
 
 import { ref, watchEffect } from 'vue'
+
 let modules = [Navigation]
 let tecnologies = [
   { id: 1, name: 'vue', path: '../assets/vue.svg' },
@@ -123,6 +160,15 @@ watchEffect(async () => {
     )
   }
 })
+
+let currentTecnology = 'sass'
+
+function showSkill(e) {
+  currentTecnology = e
+  console.log(currentTecnology)
+  return e
+}
+
 </script>
 
 <style scoped>
