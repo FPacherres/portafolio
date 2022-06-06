@@ -3,47 +3,76 @@
     <Title :num="'02'" :text="'Skills'" />
     <div class="container">
       <div class="card">
-        <div class="canva relative">
-          <spinner class="score" />
-          <div v-if="currentTecnology === 'vue'" class="data circle shadow-inset absolute">
-            <img src="../assets/vue.svg" alt="" />
-            <span>Vue.js</span>
+        <div class="canva">
+          <div v-if="currentTecnology === 'vue'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/vue.svg" alt="" />
+              <span>Vue.js</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'nuxt'" class="data circle shadow-inset absolute">
-            <img src="../assets/nuxt.svg" alt="" />
-            <span>Nuxt.js</span>
+          <div v-else-if="currentTecnology === 'nuxt'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/nuxt.svg" alt="" />
+              <span>Nuxt.js</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'js'" class="data circle shadow-inset absolute">
-            <img src="../assets/js.svg" alt="" />
-            <span>JavaScript</span>
+          <div v-else-if="currentTecnology === 'js'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/js.svg" alt="" />
+              <span>JavaScript</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'html'" class="data circle shadow-inset absolute">
-            <img src="../assets/html.svg" alt="" />
-            <span>Html</span>
+          <div v-else-if="currentTecnology === 'html'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/html.svg" alt="" />
+              <span>Html</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'css'" class="data circle shadow-inset absolute">
-            <img src="../assets/css.svg" alt="" />
-            <span>Css</span>
+          <div v-else-if="currentTecnology === 'css'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/css.svg" alt="" />
+              <span>Css</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'sass'" class="data circle shadow-inset absolute">
-            <img src="../assets/sass.svg" alt="" />
-            <span>Sass</span>
+          <div v-else-if="currentTecnology === 'sass'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/sass.svg" alt="" />
+              <span>Sass</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'tailwind'" class="data circle shadow-inset absolute">
-            <img src="../assets/tailwind.svg" alt="" />
-            <span>Tailwind</span>
+          <div v-else-if="currentTecnology === 'tailwind'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/tailwind.svg" alt="" />
+              <span>Tailwind</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'git'" class="data circle shadow-inset absolute">
-            <img src="../assets/git.svg" alt="" />
-            <span>Git</span>
+          <div v-else-if="currentTecnology === 'git'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/git.svg" alt="" />
+              <span>Git</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'figma'" class="data circle shadow-inset absolute">
-            <img src="../assets/figma.svg" alt="" />
-            <span>Figma</span>
+          <div v-else-if="currentTecnology === 'figma'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/figma.svg" alt="" />
+              <span>Figma</span>
+            </div>
           </div>
-          <div v-else-if="currentTecnology === 'vuetify'" class="data circle shadow-inset absolute">
-            <img src="../assets/vuetify.svg" alt="" />
-            <span>Vuetify</span>
+          <div v-else-if="currentTecnology === 'vuetify'" class="canva relative">
+            <spinner class="score" />
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/vuetify.svg" alt="" />
+              <span>Vuetify</span>
+            </div>
           </div>
         </div>
         <div class="title">
@@ -204,8 +233,8 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 20px 0px;
 }
-
 .score {
   transform: rotate(65deg);
 }
