@@ -3,76 +3,126 @@
     <Title :num="'02'" :text="'Skills'" />
     <div class="container">
       <div class="card">
-        <div class="canva">
-          <div v-if="currentTecnology === 'vue'" class="canva relative">
-            <spinner class="score" />
+        <div class="detail__tecnology relative">
+          <div v-show="currentTecnology === 'vue'" class="percent relative" style="--clr:#40b783; --percentage: 85;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/vue.svg" alt="" />
               <span>Vue.js</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'nuxt'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'nuxt'" class="percent relative" style="--clr:#00dc82; --percentage: 75;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/nuxt.svg" alt="" />
               <span>Nuxt.js</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'js'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'js'" class="percent relative" style="--clr:#f7df1e; --percentage: 70;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/js.svg" alt="" />
               <span>JavaScript</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'html'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'html'" class="percent relative" style="--clr:#ed6029; --percentage: 100;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/html.svg" alt="" />
-              <span>Html</span>
+              <span>Html5</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'css'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'css'" class="percent relative" style="--clr:#3caede; --percentage: 100;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/css.svg" alt="" />
-              <span>Css</span>
+              <span>Css3</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'sass'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'sass'" class="percent relative" style="--clr:#d06a9d; --percentage: 80;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/sass.svg" alt="" />
               <span>Sass</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'tailwind'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'tailwind'" class="percent relative" style="--clr:#06b6d5; --percentage: 90;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/tailwind.svg" alt="" />
               <span>Tailwind</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'git'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'git'" class="percent relative" style="--clr:#ef5032; --percentage: 65;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/git.svg" alt="" />
               <span>Git</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'figma'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'figma'" class="percent relative" style="--clr:#a259ff; --percentage: 75;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/figma.svg" alt="" />
               <span>Figma</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
-          <div v-else-if="currentTecnology === 'vuetify'" class="canva relative">
-            <spinner class="score" />
+          <div v-show="currentTecnology === 'vuetify'" class="percent relative" style="--clr:#1867c0; --percentage: 95;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
             <div class="data circle shadow-inset absolute">
               <img src="../assets/vuetify.svg" alt="" />
               <span>Vuetify</span>
             </div>
+            <div class="dot absolute"></div>
           </div>
         </div>
         <div class="title">
@@ -228,6 +278,82 @@ section {
   gap: 1px;
 }
 
+
+
+.detail__tecnology {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail__tecnology .percent {
+  width: 265px;
+  height: 265px;
+}
+.detail__tecnology .percent svg {
+  width: 265px;
+  height: 265px;
+  transform: rotate(270deg);
+}
+.detail__tecnology .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: var(--bg-5);
+  stroke-width: 12;
+  transform: translate(7px, 7px);
+}
+.detail__tecnology .percent svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 786;
+  stroke-dashoffset: calc(786 - (786 * var(--percentage))/100);
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.circle-pass {
+  height: 261px;
+  width: 261px;
+  transform: rotate(-270deg);
+  background-color: var(--bg-5);
+  top: 2px;
+  left: 2px;
+}
+.dot {
+  inset: 1.5px;
+  transform: rotate(calc(3.6deg * var(--percentage)));
+  animation: animationDot1 2.5s linear forwards;
+}
+.dot::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--bg-5);
+  border: 4px solid var(--clr);
+  transform: translateX(-50%);
+  box-shadow: var(--shadow);
+}
+
+@keyframes animationDot1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--percentage)));
+  }
+}
+
+
 .canva {
   display: flex;
   justify-content: center;
@@ -240,13 +366,15 @@ section {
 }
 
 .data {
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   background-color: var(--bg-5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 14px;
+  left: 12px;
 }
 
 .data img {
