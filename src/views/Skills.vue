@@ -112,7 +112,7 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'vuetify'" class="percent relative" style="--clr:#1867c0; --percentage: 95;">
+          <div v-show="currentTecnology === 'vuetify'" class="percent relative" style="--clr:#1697F6; --percentage: 95;">
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
