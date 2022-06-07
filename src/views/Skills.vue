@@ -333,7 +333,7 @@ section {
 .dot::before {
   content: '';
   position: absolute;
-  top: -6px;
+  top: -4px;
   left: 50%;
   width: 12px;
   height: 12px;
