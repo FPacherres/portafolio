@@ -2,9 +2,13 @@
   <section>
     <Title :num="'02'" :text="'Skills'" />
     <div class="container">
-      <div class="card">
+      <div class="card cardDesk">
         <div class="detail__tecnology relative">
-          <div v-show="currentTecnology === 'vue'" class="percent relative" style="--clr:#40b783; --percentage: 85;">
+          <div
+            v-show="currentTecnology === 'vue'"
+            class="percent relative"
+            style="--clr: #40b783; --percentage: 85"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -16,7 +20,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'nuxt'" class="percent relative" style="--clr:#00dc82; --percentage: 75;">
+          <div
+            v-show="currentTecnology === 'nuxt'"
+            class="percent relative"
+            style="--clr: #00dc82; --percentage: 75"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -28,7 +36,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'js'" class="percent relative" style="--clr:#f7df1e; --percentage: 70;">
+          <div
+            v-show="currentTecnology === 'js'"
+            class="percent relative"
+            style="--clr: #f7df1e; --percentage: 70"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -40,7 +52,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'html'" class="percent relative" style="--clr:#ed6029; --percentage: 100;">
+          <div
+            v-show="currentTecnology === 'html'"
+            class="percent relative"
+            style="--clr: #ed6029; --percentage: 100"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -52,7 +68,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'css'" class="percent relative" style="--clr:#3caede; --percentage: 100;">
+          <div
+            v-show="currentTecnology === 'css'"
+            class="percent relative"
+            style="--clr: #3caede; --percentage: 100"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -64,7 +84,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'sass'" class="percent relative" style="--clr:#d06a9d; --percentage: 80;">
+          <div
+            v-show="currentTecnology === 'sass'"
+            class="percent relative"
+            style="--clr: #d06a9d; --percentage: 80"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -76,7 +100,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'tailwind'" class="percent relative" style="--clr:#06b6d5; --percentage: 90;">
+          <div
+            v-show="currentTecnology === 'tailwind'"
+            class="percent relative"
+            style="--clr: #06b6d5; --percentage: 90"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -88,7 +116,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'git'" class="percent relative" style="--clr:#ef5032; --percentage: 65;">
+          <div
+            v-show="currentTecnology === 'git'"
+            class="percent relative"
+            style="--clr: #ef5032; --percentage: 65"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -100,7 +132,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'figma'" class="percent relative" style="--clr:#a259ff; --percentage: 75;">
+          <div
+            v-show="currentTecnology === 'figma'"
+            class="percent relative"
+            style="--clr: #a259ff; --percentage: 75"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -112,7 +148,11 @@
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentTecnology === 'vuetify'" class="percent relative" style="--clr:#1697F6; --percentage: 95;">
+          <div
+            v-show="currentTecnology === 'vuetify'"
+            class="percent relative"
+            style="--clr: #1697f6; --percentage: 95"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
@@ -129,118 +169,173 @@
           <span>Tecnologías</span>
         </div>
         <div class="list">
-          <swiper dir="rtl" :navigation="true" :modules="modules" class="mySwiper">
+          <swiper
+            dir="rtl"
+            :navigation="true"
+            :modules="modules"
+            class="mySwiper"
+          >
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('vue')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('vue')"
+              >
                 <img src="../assets/vue.svg" alt="vue" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('nuxt')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('nuxt')"
+              >
                 <img src="../assets/nuxt.svg" alt="nuxt" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('js')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('js')"
+              >
                 <img src="../assets/js.svg" alt="js" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('html')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('html')"
+              >
                 <img src="../assets/html.svg" alt="html" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('css')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('css')"
+              >
                 <img src="../assets/css.svg" alt="css" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('sass')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('sass')"
+              >
                 <img src="../assets/sass.svg" alt="sass" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('tailwind')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('tailwind')"
+              >
                 <img src="../assets/tailwind.svg" alt="tailwind" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('git')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('git')"
+              >
                 <img src="../assets/git.svg" alt="git" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('figma')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('figma')"
+              >
                 <img src="../assets/figma.svg" alt="figma" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showSkill('vuetify')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('vuetify')"
+              >
                 <img src="../assets/vuetify.svg" alt="vuetify" />
               </button>
             </swiper-slide>
           </swiper>
         </div>
       </div>
-      <div class="card">
+      <div class="card cardDesk">
         <div class="detail__tecnology relative">
-          <div v-show="currentAbility === 'scrum'" class="percent relative" style="--clr:#F8759D; --percentage: 85;">
+          <div
+            v-show="currentAbility === 'scrum'"
+            class="percent relative"
+            style="--clr: #f8759d; --percentage: 85"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
               <circle cx="125" cy="125" r="125"></circle>
             </svg>
             <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility"  src="../assets/scrum.svg" alt="" />
+              <img class="imgAbility" src="../assets/scrum.svg" alt="" />
               <span>SCRUM</span>
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentAbility === 'ui'" class="percent relative" style="--clr:#FFAE17; --percentage: 98;">
+          <div
+            v-show="currentAbility === 'ui'"
+            class="percent relative"
+            style="--clr: #ffae17; --percentage: 98"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
               <circle cx="125" cy="125" r="125"></circle>
             </svg>
             <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility"  src="../assets/ui.svg" alt="" />
+              <img class="imgAbility" src="../assets/ui.svg" alt="" />
               <span>UI</span>
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentAbility === 'ux'" class="percent relative" style="--clr:#20C4C4; --percentage: 85;">
+          <div
+            v-show="currentAbility === 'ux'"
+            class="percent relative"
+            style="--clr: #20c4c4; --percentage: 85"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
               <circle cx="125" cy="125" r="125"></circle>
             </svg>
             <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility"  src="../assets/ux.svg" alt="" />
+              <img class="imgAbility" src="../assets/ux.svg" alt="" />
               <span>UX</span>
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentAbility === 'design'" class="percent relative" style="--clr:#C7C7C7; --percentage: 95;">
+          <div
+            v-show="currentAbility === 'design'"
+            class="percent relative"
+            style="--clr: #c7c7c7; --percentage: 95"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
               <circle cx="125" cy="125" r="125"></circle>
             </svg>
             <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility"  src="../assets/design.svg" alt="" />
+              <img class="imgAbility" src="../assets/design.svg" alt="" />
               <span>Graphic Design</span>
             </div>
             <div class="dot absolute"></div>
           </div>
-          <div v-show="currentAbility === 'responsive'" class="percent relative" style="--clr:#F04633; --percentage: 95;">
+          <div
+            v-show="currentAbility === 'responsive'"
+            class="percent relative"
+            style="--clr: #f04633; --percentage: 95"
+          >
             <div class="circle-pass circle shadow absolute"></div>
             <svg class="relative">
               <circle cx="125" cy="125" r="125"></circle>
               <circle cx="125" cy="125" r="125"></circle>
             </svg>
             <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility"  src="../assets/responsive.svg" alt="" />
+              <img class="imgAbility" src="../assets/responsive.svg" alt="" />
               <span>Responsive</span>
             </div>
             <div class="dot absolute"></div>
@@ -250,34 +345,451 @@
           <span>Habilidades</span>
         </div>
         <div class="list">
-          <swiper dir="rtl" :navigation="true" :modules="modules" class="mySwiper">
+          <swiper
+            dir="rtl"
+            :navigation="true"
+            :modules="modules"
+            class="mySwiper"
+          >
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showAbility('scrum')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('scrum')"
+              >
                 <img src="../assets/scrum.svg" alt="SCRUM" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showAbility('ui')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('ui')"
+              >
                 <img src="../assets/ui.svg" alt="UI" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showAbility('ux')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('ux')"
+              >
                 <img src="../assets/ux.svg" alt="UX" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showAbility('design')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('design')"
+              >
                 <img src="../assets/design.svg" alt="Design" />
               </button>
             </swiper-slide>
             <swiper-slide>
-              <button class="btn btnSkills shadow circle" @click="showAbility('responsive')">
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('responsive')"
+              >
                 <img src="../assets/responsive.svg" alt="Responsive" />
               </button>
             </swiper-slide>
           </swiper>
         </div>
+      </div>
+      <div v-show="!ability" class="card cardMobile">
+        <div class="detail__tecnology relative">
+          <div
+            v-show="currentTecnology === 'vue'"
+            class="percent relative"
+            style="--clr: #40b783; --percentage: 85"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/vue.svg" alt="" />
+              <span>Vue.js</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'nuxt'"
+            class="percent relative"
+            style="--clr: #00dc82; --percentage: 75"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/nuxt.svg" alt="" />
+              <span>Nuxt.js</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'js'"
+            class="percent relative"
+            style="--clr: #f7df1e; --percentage: 70"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/js.svg" alt="" />
+              <span>JavaScript</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'html'"
+            class="percent relative"
+            style="--clr: #ed6029; --percentage: 100"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/html.svg" alt="" />
+              <span>Html5</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'css'"
+            class="percent relative"
+            style="--clr: #3caede; --percentage: 100"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/css.svg" alt="" />
+              <span>Css3</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'sass'"
+            class="percent relative"
+            style="--clr: #d06a9d; --percentage: 80"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/sass.svg" alt="" />
+              <span>Sass</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'tailwind'"
+            class="percent relative"
+            style="--clr: #06b6d5; --percentage: 90"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/tailwind.svg" alt="" />
+              <span>Tailwind</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'git'"
+            class="percent relative"
+            style="--clr: #ef5032; --percentage: 65"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/git.svg" alt="" />
+              <span>Git</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'figma'"
+            class="percent relative"
+            style="--clr: #a259ff; --percentage: 75"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/figma.svg" alt="" />
+              <span>Figma</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentTecnology === 'vuetify'"
+            class="percent relative"
+            style="--clr: #1697f6; --percentage: 95"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data circle shadow-inset absolute">
+              <img src="../assets/vuetify.svg" alt="" />
+              <span>Vuetify</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+        </div>
+        <div class="title">
+          <span>Tecnologías</span>
+        </div>
+        <div class="list">
+          <swiper
+            dir="rtl"
+            :navigation="true"
+            :modules="modules"
+            class="mySwiper"
+          >
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('vue')"
+              >
+                <img src="../assets/vue.svg" alt="vue" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('nuxt')"
+              >
+                <img src="../assets/nuxt.svg" alt="nuxt" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('js')"
+              >
+                <img src="../assets/js.svg" alt="js" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('html')"
+              >
+                <img src="../assets/html.svg" alt="html" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('css')"
+              >
+                <img src="../assets/css.svg" alt="css" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('sass')"
+              >
+                <img src="../assets/sass.svg" alt="sass" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('tailwind')"
+              >
+                <img src="../assets/tailwind.svg" alt="tailwind" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('git')"
+              >
+                <img src="../assets/git.svg" alt="git" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('figma')"
+              >
+                <img src="../assets/figma.svg" alt="figma" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showSkill('vuetify')"
+              >
+                <img src="../assets/vuetify.svg" alt="vuetify" />
+              </button>
+            </swiper-slide>
+          </swiper>
+        </div>
+      </div>
+      <div v-show="ability" class="card cardMobile">
+        <div class="detail__tecnology relative">
+          <div
+            v-show="currentAbility === 'scrum'"
+            class="percent relative"
+            style="--clr: #f8759d; --percentage: 85"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility" src="../assets/scrum.svg" alt="" />
+              <span>SCRUM</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentAbility === 'ui'"
+            class="percent relative"
+            style="--clr: #ffae17; --percentage: 98"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility" src="../assets/ui.svg" alt="" />
+              <span>UI</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentAbility === 'ux'"
+            class="percent relative"
+            style="--clr: #20c4c4; --percentage: 85"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility" src="../assets/ux.svg" alt="" />
+              <span>UX</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentAbility === 'design'"
+            class="percent relative"
+            style="--clr: #c7c7c7; --percentage: 95"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility" src="../assets/design.svg" alt="" />
+              <span>Graphic Design</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div
+            v-show="currentAbility === 'responsive'"
+            class="percent relative"
+            style="--clr: #f04633; --percentage: 95"
+          >
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility" src="../assets/responsive.svg" alt="" />
+              <span>Responsive</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+        </div>
+        <div class="title">
+          <span>Habilidades</span>
+        </div>
+        <div class="list">
+          <swiper
+            dir="rtl"
+            :navigation="true"
+            :modules="modules"
+            class="mySwiper"
+          >
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('scrum')"
+              >
+                <img src="../assets/scrum.svg" alt="SCRUM" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('ui')"
+              >
+                <img src="../assets/ui.svg" alt="UI" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('ux')"
+              >
+                <img src="../assets/ux.svg" alt="UX" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('design')"
+              >
+                <img src="../assets/design.svg" alt="Design" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button
+                class="btn btnSkills shadow circle"
+                @click="showAbility('responsive')"
+              >
+                <img src="../assets/responsive.svg" alt="Responsive" />
+              </button>
+            </swiper-slide>
+          </swiper>
+        </div>
+      </div>
+      <div class="changeTypeSkill">
+        <button class="btn btnChangeSkill" @click="ability = !ability">
+          {{ ability ? 'Ver Tecnologías' : 'Ver Habilidades' }}
+        </button>
       </div>
     </div>
   </section>
@@ -302,7 +814,8 @@ export default {
     return {
       modules: [Navigation],
       currentTecnology: 'vue',
-      currentAbility: 'scrum'
+      currentAbility: 'scrum',
+      ability: false,
     }
   },
   methods: {
@@ -310,11 +823,11 @@ export default {
       this.currentTecnology = e
       return e
     },
-     showAbility(e) {
+    showAbility(e) {
       this.currentAbility = e
       return e
-    }
-  }
+    },
+  },
 }
 
 // let tecnologies = [
@@ -342,7 +855,6 @@ export default {
 //     )
 //   }
 // })
-
 </script>
 
 <style scoped>
@@ -365,8 +877,9 @@ section {
   grid-template-rows: 280px 50px 1fr;
   gap: 1px;
 }
-
-
+.cardMobile {
+  display: none;
+}
 
 .detail__tecnology {
   width: 100%;
@@ -396,14 +909,18 @@ section {
 .detail__tecnology .percent svg circle:nth-child(2) {
   stroke: var(--clr);
   stroke-dasharray: 786;
-  stroke-dashoffset: calc(786 - (786 * var(--percentage))/100);
+  stroke-dashoffset: calc(786 - (786 * var(--percentage)) / 100);
   opacity: 0;
   animation: fadeIn 1s linear forwards;
   animation-delay: 2.5s;
 }
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .circle-pass {
   height: 261px;
@@ -440,7 +957,6 @@ section {
     transform: rotate(calc(3.6deg * var(--percentage)));
   }
 }
-
 
 .canva {
   display: flex;
@@ -527,13 +1043,88 @@ section {
   width: 30px;
 }
 
+.changeTypeSkill {
+  display: none;
+}
+
 @media (max-width: 870px) {
   section {
-    padding: 80px 0 20px;
+    padding: 80px 0 0;
+  }
+  .cardMobile {
+    display: grid;
+  }
+  .container {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  .changeTypeSkill {
+    height: 30px;
+    bottom: -20px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+  }
+  .changeTypeSkill .btnChangeSkill {
+    color: var(--bg-3);
+    font-weight: 300;
+    opacity: 0.3;
+    font-style: oblique;
+    font-size: 14px;
+    border: 0.8px solid var(--bg-3);
+    border-radius: 25px;
+    padding: 0px 20px;
+    position: relative;
   }
 
-  .container {
-    grid-template-columns: 1fr;
+  .btnChangeSkill {
+    border: none;
+    overflow: hidden;
+  }
+  .btnChangeSkill:hover {
+    opacity: 1;
+  }
+  .btnChangeSkill:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: var(--bg-4);
+    animation: changeKillType 3s ease-in-out infinite;
+  }
+  .btnChangeSkill:hover {
+    opacity: 0.7;
+  }
+  .btnChangeSkill:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+      -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  @-webkit-keyframes changeKillType {
+    0% {
+      -webkit-transform: scale(0) rotate(45deg);
+      opacity: 0;
+    }
+    80% {
+      -webkit-transform: scale(0) rotate(45deg);
+      opacity: 0.5;
+    }
+    81% {
+      -webkit-transform: scale(4) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(50) rotate(45deg);
+      opacity: 0;
+    }
   }
 
   .card {
@@ -541,8 +1132,11 @@ section {
     gap: 10px;
   }
 
-  .card:nth-child(2) {
+  .cardDesk {
     display: none;
+  }
+  .swiper-slide {
+    height: 70%;
   }
 
   .data img {
