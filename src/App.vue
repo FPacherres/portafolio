@@ -199,5 +199,8 @@ html {
   #app::-webkit-scrollbar {
     width: 0;
   }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next  {
+  height: 70%;
+}
 }
 </style>
