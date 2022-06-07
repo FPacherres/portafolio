@@ -184,17 +184,100 @@
         </div>
       </div>
       <div class="card">
-        <div class="canva relative">
-          <spinner class="score" />
-          <div class="data circle shadow-inset absolute">
-            <img src="../assets/vue.svg" alt="" />
-            <span>Vue.js</span>
+        <div class="detail__tecnology relative">
+          <div v-show="currentAbility === 'scrum'" class="percent relative" style="--clr:#F8759D; --percentage: 85;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility"  src="../assets/scrum.svg" alt="" />
+              <span>SCRUM</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div v-show="currentAbility === 'ui'" class="percent relative" style="--clr:#FFAE17; --percentage: 98;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility"  src="../assets/ui.svg" alt="" />
+              <span>UI</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div v-show="currentAbility === 'ux'" class="percent relative" style="--clr:#20C4C4; --percentage: 85;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility"  src="../assets/ux.svg" alt="" />
+              <span>UX</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div v-show="currentAbility === 'design'" class="percent relative" style="--clr:#C7C7C7; --percentage: 95;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility"  src="../assets/design.svg" alt="" />
+              <span>Graphic Design</span>
+            </div>
+            <div class="dot absolute"></div>
+          </div>
+          <div v-show="currentAbility === 'responsive'" class="percent relative" style="--clr:#F04633; --percentage: 95;">
+            <div class="circle-pass circle shadow absolute"></div>
+            <svg class="relative">
+              <circle cx="125" cy="125" r="125"></circle>
+              <circle cx="125" cy="125" r="125"></circle>
+            </svg>
+            <div class="data dataAbility circle shadow-inset absolute">
+              <img class="imgAbility"  src="../assets/responsive.svg" alt="" />
+              <span>Responsive</span>
+            </div>
+            <div class="dot absolute"></div>
           </div>
         </div>
         <div class="title">
           <span>Habilidades</span>
         </div>
-        <div class="list">a</div>
+        <div class="list">
+          <swiper dir="rtl" :navigation="true" :modules="modules" class="mySwiper">
+            <swiper-slide>
+              <button class="btn btnSkills shadow circle" @click="showAbility('scrum')">
+                <img src="../assets/scrum.svg" alt="SCRUM" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button class="btn btnSkills shadow circle" @click="showAbility('ui')">
+                <img src="../assets/ui.svg" alt="UI" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button class="btn btnSkills shadow circle" @click="showAbility('ux')">
+                <img src="../assets/ux.svg" alt="UX" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button class="btn btnSkills shadow circle" @click="showAbility('design')">
+                <img src="../assets/design.svg" alt="Design" />
+              </button>
+            </swiper-slide>
+            <swiper-slide>
+              <button class="btn btnSkills shadow circle" @click="showAbility('responsive')">
+                <img src="../assets/responsive.svg" alt="Responsive" />
+              </button>
+            </swiper-slide>
+          </swiper>
+        </div>
       </div>
     </div>
   </section>
@@ -218,12 +301,17 @@ export default {
   data() {
     return {
       modules: [Navigation],
-      currentTecnology: 'vue'
+      currentTecnology: 'vue',
+      currentAbility: 'scrum'
     }
   },
   methods: {
     showSkill(e) {
       this.currentTecnology = e
+      return e
+    },
+     showAbility(e) {
+      this.currentAbility = e
       return e
     }
   }
@@ -377,8 +465,16 @@ section {
   left: 12px;
 }
 
+.dataAbility {
+  gap: 25px;
+}
+
 .data img {
   width: 140px;
+}
+
+.data .imgAbility {
+  width: 120px;
 }
 
 .data span {
