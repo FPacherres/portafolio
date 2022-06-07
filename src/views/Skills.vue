@@ -1108,7 +1108,7 @@ section {
       inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
   }
 
-  @-webkit-keyframes changeKillType {
+  @keyframes changeKillType {
     0% {
       -webkit-transform: scale(0) rotate(45deg);
       opacity: 0;
