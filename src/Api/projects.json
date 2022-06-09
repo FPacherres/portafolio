@@ -218,11 +218,10 @@
       "link": "https://fab-images.netlify.app/",
       "repo": {
         "type": 1,
-        "link": "www.youtube.com"
+        "link": "https://github.com/FabianXRL16/worldImages"
       },
       "video": {
         "state": false,
-        "link": "www.youtube.com"
       },
       "tecnologies": [
         "vue",
