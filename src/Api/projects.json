@@ -192,7 +192,7 @@
         "link": "https://github.com/FabianXRL16/FabFood"
       },
       "video": {
-        "state": false,
+        "state": false
       },
       "tecnologies": [
         "vue",
@@ -221,7 +221,7 @@
         "link": "https://github.com/FabianXRL16/worldImages"
       },
       "video": {
-        "state": false,
+        "state": false
       },
       "tecnologies": [
         "vue",
@@ -247,11 +247,10 @@
       "link": "https://bear-bdy.netlify.app/",
       "repo": {
         "type": 1,
-        "link": "www.youtube.com"
+        "link": "https://github.com/FabianXRL16/bear-animation"
       },
       "video": {
-        "state": false,
-        "link": "www.youtube.com"
+        "state": false
       },
       "tecnologies": [
         "vue",
