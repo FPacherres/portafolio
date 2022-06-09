@@ -36,7 +36,9 @@
           Visitar
         </a>
         <a
-        target="_blank" 
+          v-if="data.repo"
+          :href="data.repo.link"
+          target="_blank" 
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
         >
