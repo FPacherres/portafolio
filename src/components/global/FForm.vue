@@ -6,14 +6,14 @@
       v-model="name"
       id="name"
       class="shadow-total"
-      placeholder="Nombre"
+      placeholder="Nombre *"
     />
     <input
       type="text"
       v-model="email"
       id="email"
       class="shadow-total"
-      placeholder="Correo"
+      placeholder="Correo *"
     />
     <textarea
       class="shadow-total"
