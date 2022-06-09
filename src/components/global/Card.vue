@@ -45,7 +45,8 @@
           <fa class="icon" :icon="['fab', data.repo.type == 1 ? 'github' : 'codepen']" />
         </a>
         <a
-        target="_blank" 
+          :href="data.video.link"
+          target="_blank" 
           v-show="data.video.state"
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground};`"
