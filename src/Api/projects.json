@@ -331,14 +331,13 @@
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Culminado",
       "date": 2021,
-      "link": "www.youtube.com",
+      "link": "",
       "repo": {
         "type": 2,
-        "link": "www.codepen.io"
+        "link": "https://codepen.io/fabianxrl16/pen/eYWVQdm"
       },
       "video": {
-        "state": false,
-        "link": "www.youtube.com"
+        "state": false
       },
       "tecnologies": [
         "vue",
