@@ -42,7 +42,7 @@
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
         >
-          <fa class="icon" :icon="['fab', 'github']" />
+          <fa class="icon" :icon="['fab', data.repo.type == 1 ? 'github' : 'codepen']" />
         </a>
         <a
         target="_blank" 
