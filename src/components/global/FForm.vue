@@ -1,14 +1,42 @@
 <template>
   <form class="shadow">
     <h1>Hablemos!</h1>
-    <input type="text" class="shadow-total" placeholder="Nombre" />
-    <input type="text" class="shadow-total" placeholder="Correo" />
-    <textarea class="shadow-total" placeholder="Hola! dime algo..." />
-    <button class="btn send shadow">Enviar</button>
+    <input
+      type="text"
+      v-model="name"
+      id="name"
+      class="shadow-total"
+      placeholder="Nombre"
+    />
+    <input
+      type="text"
+      v-model="email"
+      id="email"
+      class="shadow-total"
+      placeholder="Correo"
+    />
+    <textarea
+      class="shadow-total"
+      v-model="msg"
+      id="msg"
+      placeholder="Hola! dime algo..."
+    />
+    <button
+      type="submit"
+      class="btn send shadow"
+      :class="name != '' && email != '' ? 'sendPerfect' : 'sendDisabled'"
+      @click="send"
+    >
+      Enviar
+    </button>
+    <a href="mailto:fabianpacherres@gmail.com" id="tagA"></a>
     <div class="socialNetworkAdd">
       <span>También estoy por aquí</span>
       <div>
-        <a href="https://wa.me/51953172725?text=Hola%20Fabi%C3%A1n!%20un%20gusto..." target="blank">
+        <a
+          href="https://wa.me/51953172725?text=Hola%20Fabi%C3%A1n!%20un%20gusto..."
+          target="blank"
+        >
           <fa class="icon whatsapp" :icon="['fab', 'whatsapp']" />
         </a>
         <a href="https://www.instagram.com/fabian.xrl16/" target="blank">
@@ -27,7 +55,24 @@ export default {
   name: 'Form',
   components: {},
   data() {
-    return {}
+    return {
+      name: '',
+      email: '',
+      msg: '',
+    }
+  },
+  methods: {
+    send(event) {
+      event.preventDefault()
+      if (this.name != '' && this.email != '') {
+        const $tagA = document.querySelector('#tagA')
+        $tagA.setAttribute(
+          'href',
+          `mailto:fabianpacherres@gmail.com?subject=Nombre: ${this.name} Correo: ${this.email}&body=${this.msg}`
+        )
+        $tagA.click()
+      }
+    },
   },
 }
 </script>
@@ -72,10 +117,10 @@ h1 {
   font-size: 25px;
 }
 .socialNetworkAdd div a .whatsapp {
-  color: #25D366;
+  color: #25d366;
 }
 .socialNetworkAdd div a .instagram {
-  color: #DD2A7B;
+  color: #dd2a7b;
 }
 .socialNetworkAdd div a .facebook {
   color: #1e8ff3;
@@ -105,12 +150,14 @@ textarea::placeholder {
   color: var(--bg-6);
   font-size: 20px;
   font-weight: 500;
-  transition: .3s;
+  transition: 0.3s;
 }
-
-.send:hover {
+.sendDisabled:hover {
+  cursor: not-allowed;
+}
+.sendPerfect:hover {
   box-shadow: var(--shadow-inset);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 textarea {
@@ -144,14 +191,14 @@ textarea {
     height: 20px;
   }
   .socialNetworkAdd span {
-  font-size: 10px;
-}
-.socialNetworkAdd div a {
-  width: 20px;
-  height: 20px;
-}
-.socialNetworkAdd div a .icon {
-  font-size: 20px;
-}
+    font-size: 10px;
+  }
+  .socialNetworkAdd div a {
+    width: 20px;
+    height: 20px;
+  }
+  .socialNetworkAdd div a .icon {
+    font-size: 20px;
+  }
 }
 </style>
