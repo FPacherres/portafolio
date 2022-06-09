@@ -27,6 +27,8 @@
       <div class="actions">
         <!-- @click="goToWebsite(data.link)" -->
         <a
+          :href="data.link"
+          target="_blank" 
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
           v-show="data.link != ''"
