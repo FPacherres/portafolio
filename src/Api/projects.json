@@ -66,7 +66,7 @@
       "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
       "state": "Culminado",
       "date": 2021,
-      "link": "www.youtube.com",
+      "link": "https://fabcov.netlify.app/",
       "repo": {
         "type": 1,
         "link": "https://github.com/FabianXRL16/Covid-19"
