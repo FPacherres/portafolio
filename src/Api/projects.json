@@ -276,11 +276,10 @@
       "link": "https://fap-pen.netlify.app/",
       "repo": {
         "type": 1,
-        "link": "www.youtube.com"
+        "link": "https://github.com/FabianXRL16/FapPen"
       },
       "video": {
-        "state": false,
-        "link": "www.youtube.com"
+        "state": false
       },
       "tecnologies": [
         "vue",
