@@ -305,11 +305,10 @@
       "link": "https://calculator-bill.netlify.app/",
       "repo": {
         "type": 1,
-        "link": "www.youtube.com"
+        "link": "https://github.com/FabianXRL16/calculator-bill-money"
       },
       "video": {
-        "state": false,
-        "link": "www.youtube.com"
+        "state": false
       },
       "tecnologies": [
         "vue",
