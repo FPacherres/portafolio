@@ -9,7 +9,7 @@
           <div class="line"></div>
         </div>
       </div>
-      <avatar class="avatar" :flag="true" />
+      <avatar class="avatar" :photo="1" :flag="true" />
     </div>
     <div class="socialNetwork relative">
       <a href="https://twitter.com/FabianXRL16" target="blank" class="sn-a btn circle shadow btnSocial">
