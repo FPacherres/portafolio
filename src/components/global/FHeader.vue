@@ -249,6 +249,7 @@ li:hover .point {
 li.selected .point {
   background-color: var(--bg-1);
   width: 7px;
+  animation: point 1s ease;
 }
 li.selected a {
   color: var(--bg-1);
