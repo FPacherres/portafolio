@@ -8,7 +8,7 @@
         y esto se consigue <strong>con una buena UI.</strong></p>
     </div>
     <div class="containerSnippet">
-      <Avatar class="avatar" />
+      <Avatar class="avatar" :photo="2" />
       <div class="github">
         <div class="text relative circle shadow">
           <h1>Repositories</h1>
@@ -106,9 +106,9 @@ section {
   height: 250px;
 }
 :deep(.photo .photo-sub img) {
-  width: 200px;
+  width: 220px;
   height: auto;
-  margin: 0 30px -120px 0;
+  margin: 0 0 -110px -5px;
 }
 .github {
   display: flex;
