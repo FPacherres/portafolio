@@ -64,13 +64,13 @@ export default {
   transition: .3s;
 }
 nav {
-  background-color: var(--bg-5);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
   padding: 20px 50px;
   box-sizing: border-box;
+  backdrop-filter: blur(100px);
 }
 
 img {
