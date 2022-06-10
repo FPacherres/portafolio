@@ -114,17 +114,17 @@ export default {
         newStyle.setProperty('--bg-2', '#ef0070')
         newStyle.setProperty('--bg-3', '#edf1fd')
         newStyle.setProperty('--bg-4', '#b3b3b3')
-        newStyle.setProperty('--bg-5', '#0e0f34')
-        newStyle.setProperty('--bg-6', '#2b2d68')
+        newStyle.setProperty('--bg-5', '#1f2937')
+        newStyle.setProperty('--bg-6', '#304157')
         newStyle.setProperty(
           '--shadow',
-          `#060721 3px 3px 6px 0px, 
-           #161843 -3px -3px 6px 1px`
+          `#2e3b4c 3px 3px 6px 0px, 
+           #101823 -3px -3px 6px 1px`
         )
         newStyle.setProperty(
           '--shadow-inset',
-          `#060721 3px 3px 6px 0px inset, 
-           #161843 -3px -3px 6px 1px inset`
+          `#2e3b4c 3px 3px 6px 0px inset, 
+           #101823 -3px -3px 6px 1px inset`
         )
         newStyle.setProperty(
           '--shadow-btn',
@@ -133,10 +133,10 @@ export default {
         )
         newStyle.setProperty(
           '--shadow-total',
-          `#060721 3px 3px 6px 0px,
-           #161843 -3px -3px 6px 1px,
-           #060721 3px 3px 6px 0px inset,
-           #161843 -3px -3px 6px 1px inset`
+          `#101823 3px 3px 6px 0px,
+           #2e3b4c -3px -3px 6px 1px,
+           #101823 3px 3px 6px 0px inset,
+           #2e3b4c -3px -3px 6px 1px inset`
         )
         this.icon = true
       } else {
