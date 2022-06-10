@@ -1,7 +1,9 @@
 <template>
   <div class="photo circle shadow relative">
     <div class="photo-sub circle shadow-inset">
-      <img src="../../assets/photo.png" alt="" />
+      <img v-if="photo === 2" src="../../assets/photo2.png" alt="" />
+      <img v-else-if="photo === 3" src="../../assets/photo3.png" alt="" /> 
+      <img v-else src="../../assets/photo.png" alt="" /> 
     </div>
     <div v-if="flag" class="flag absolute"></div>
   </div>
@@ -15,6 +17,10 @@ export default {
     flag: {
       type: Boolean,
       default: false,
+    },
+    photo: {
+      type: Number,
+      default: 1,
     },
   },
   data() {
