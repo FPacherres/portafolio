@@ -60,7 +60,7 @@ export default {
 .photo .photo-sub img {
   width: 350px;
   height: auto;
-  margin: 0 45px -180px 0;
+  margin: 0 15px -130px 0;
 }
 @media (max-width: 870px) {
   .photo {
