@@ -178,13 +178,17 @@ export default {
 
 <style scoped>
 nav {
-  background-color: var(--bg-5);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  padding: 0 10px;
+  margin-top: 10px;
+  height: 70px;
+  padding: 0 20px;
+  box-sizing: none;
   animation: 1s animationHeader 8s ease-in;
+  border-radius: 8px;
+  backdrop-filter: blur(20px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 .img {
@@ -281,6 +285,14 @@ li:hover .point {
 }
 
 @media (max-width: 870px) {
+  nav {
+    background-color: var(--bg-5);
+    box-sizing: content-box;
+    border-radius: 0px;
+    box-shadow: none;
+    height: 80px;
+    margin-top: 0px;
+  }
   ul {
     display: none;
   }
