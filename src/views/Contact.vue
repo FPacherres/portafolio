@@ -3,7 +3,7 @@
     <div class="title"><span>Contact</span></div>
     <fform class="form" />
     <div class="snippet">
-      <avatar class="avatar-snippet" />
+      <avatar :photo="3" class="avatar-snippet" />
       <div class="text-snippet">
         <h1>Datos curiosos</h1>
         <span>Memorizo rostros</span>
@@ -86,9 +86,9 @@ section {
 }
 
 :deep(.photo .photo-sub img) {
-  width: 180px;
+  width: 240px;
   height: auto;
-  margin: 0 18px -65px 0;
+  margin: 0 0 -115px 25px;
 }
 
 @media (max-width: 870px) {
@@ -127,7 +127,7 @@ section {
   }
   :deep(.photo .photo-sub img) {
     width: 80px;
-    margin: 0 15px -55px 0;
+    margin: 0 -7px -40px 0;
   }
   .text-snippet {
     text-align: right;
