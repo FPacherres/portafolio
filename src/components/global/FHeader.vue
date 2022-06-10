@@ -54,31 +54,31 @@
       </defs>
     </svg>
     <ul>
-      <li>
+      <li class="liNav selected" @click="selectNav(0)">
         <a href="#home">
           <span>Home</span>
           <div class="point"></div>
         </a>
       </li>
-      <li>
+      <li class="liNav" @click="selectNav(1)">
         <a href="#about">
           <span>About</span>
           <div class="point"></div>
         </a>
       </li>
-      <li>
+      <li class="liNav" @click="selectNav(2)">
         <a href="#skills">
           <span>Skills</span>
           <div class="point"></div>
         </a>
       </li>
-      <li>
+      <li class="liNav" @click="selectNav(3)">
         <a href="#studies">
           <span>Studies</span>
           <div class="point"></div>
         </a>
       </li>
-      <li>
+      <li class="liNav" @click="selectNav(4)">
         <a href="#experience">
           <span>Experience</span>
           <div class="point"></div>
@@ -172,6 +172,14 @@ export default {
       }
       this.colorScheme = !this.colorScheme
     },
+    selectNav(n) {
+      let li = document.querySelectorAll(".liNav")
+      for(let i=0; i <= li.length; i++) {
+        i == n 
+          ? li[i].classList.add('selected')
+          : li[i].classList.remove('selected')
+      }
+    }
   },
 }
 </script>
@@ -238,6 +246,13 @@ li:hover .point {
   background-color: var(--bg-1);
   width: 7px;
 }
+li.selected .point {
+  background-color: var(--bg-1);
+  width: 7px;
+}
+li.selected a {
+  color: var(--bg-1);
+}
 
 .icon {
   width: 20px;
@@ -258,8 +273,8 @@ li:hover .point {
 }
 
 .point {
-  background-color: var(--bg-3);
-  width: 0px;
+  background-color: transparent;
+  width: 7px;
   height: 2px;
   border-radius: 2px;
 }
