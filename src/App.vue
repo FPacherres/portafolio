@@ -80,6 +80,7 @@ body {
 
 .is-full-height {
   height: 100vh;
+  min-height: 750px;
 }
 
 .relative {
