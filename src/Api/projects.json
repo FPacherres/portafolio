@@ -42,7 +42,7 @@
       "logo": "buscapatas.svg",
       "logoText": "buscapatas-text.svg",
       "styles": {
-        "cardBackground": "#E80C0C",
+        "cardBackground": "#B80909",
         "cardColor": "#ffffff",
         "posColor": "#ffffff",
         "buttonBackground": "#1C69E6"
