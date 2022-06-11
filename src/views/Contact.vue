@@ -42,7 +42,7 @@ section {
 
 .title {
   grid-area: title;
-  padding-top: 10px;
+  padding-top: 25px;
 }
 
 .form {
@@ -110,7 +110,7 @@ section {
     display: flex;
     align-items: flex-end ;
     justify-content: center;
-    padding-bottom: 5px;
+    padding: 0 0 5px 0;
   }
 
   .title span {
