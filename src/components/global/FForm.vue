@@ -188,7 +188,7 @@ textarea {
     font-size: 18px;
   }
   .socialNetworkAdd {
-    height: 20px;
+    height: 5px;
   }
   .socialNetworkAdd span {
     font-size: 10px;
