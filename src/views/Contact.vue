@@ -96,7 +96,7 @@ section {
     padding: 70px 0 0px;
     grid-template-areas: 'title' 'form' 'snippet' 'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 1fr 100px 30px;
+    grid-template-rows: 60px 1fr 100px 30px;
     column-gap: 20px;
     row-gap: 20px;
   }
@@ -107,7 +107,10 @@ section {
     margin: 0 auto;
   }
   .title {
-    padding-top: 0px;
+    display: flex;
+    align-items: flex-end ;
+    justify-content: center;
+    padding-bottom: 5px;
   }
 
   .title span {
