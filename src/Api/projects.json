@@ -11,14 +11,11 @@
         "state": true,
         "link": "https://youtu.be/7cAIG4Nkx_U"
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "alegra-categories.svg",
       "logo": "alegra.svg",
       "logoText": "alegra-text.svg",
       "styles": {
-        "cardBackground": "#074F5E",
+        "cardBackground": "#167487",
         "cardColor": "#ffffff",
         "posColor": "#BACC16",
         "buttonBackground": "#00B19D"
@@ -41,10 +38,7 @@
         "state": true,
         "link": "https://youtu.be/1n8h63egfsU"
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "buscapatas-categories.svg",
       "logo": "buscapatas.svg",
       "logoText": "buscapatas-text.svg",
       "styles": {
@@ -71,10 +65,7 @@
         "state": true,
         "link": "https://youtu.be/HcubE_lId0w"
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "fabcov-categories.svg",
       "logo": "fab-cov.svg",
       "logoText": "fab-cov-text.svg",
       "styles": {
@@ -101,10 +92,7 @@
         "state": true,
         "link": "https://youtu.be/zgWhGWrEz0E"
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "fabmusic-categories.svg",
       "logo": "fabmusic.svg",
       "logoText": "fabmusic-text.svg",
       "styles": {
@@ -131,10 +119,7 @@
         "state": true,
         "link": "https://youtu.be/B6hcFuDTbbE"
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "catchTheBear-categories.svg",
       "logo": "catchTheBeard.svg",
       "logoText": "catchTheBeard-text.svg",
       "styles": {
@@ -161,10 +146,7 @@
         "state": true,
         "link": "https://youtu.be/CLZj1TENxoM"
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "fabmemory-categories.svg",
       "logo": "fabmemory.svg",
       "logoText": "fabmemory-text.svg",
       "styles": {
@@ -190,10 +172,7 @@
       "video": {
         "state": false
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "fabfood-categories.svg",
       "logo": "fabfood.svg",
       "logoText": "fabfood-text.svg",
       "styles": {
@@ -219,10 +198,7 @@
       "video": {
         "state": false
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "worldImage-categories.svg",
       "logo": "FabImg.svg",
       "logoText": "FabImg-text.svg",
       "styles": {
@@ -248,10 +224,7 @@
       "video": {
         "state": false
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "bdy-categories.svg",
       "logo": "bdy.png",
       "logoText": "bdy-text.svg",
       "styles": {
@@ -277,10 +250,7 @@
       "video": {
         "state": false
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "fappen-categories.svg",
       "logo": "fappen.jpg",
       "logoText": "fappen-text.svg",
       "styles": {
@@ -306,10 +276,7 @@
       "video": {
         "state": false
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "calculator-categories.svg",
       "logo": "calculator.svg",
       "logoText": "calculator-text.svg",
       "styles": {
@@ -335,45 +302,13 @@
       "video": {
         "state": false
       },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
+      "tecnologies": "minion-categories.svg",
       "logo": "minion.jpg",
       "logoText": "codepen-text.svg",
       "styles": {
         "cardBackground": "#51D1F5",
         "cardColor": "#07437A",
         "posColor": "#07437A",
-        "buttonBackground": "#F50E0E"
-      }
-    },
-    {
-      "title": "Switch",
-      "type": 2,
-      "typeName": "Proyecto personal",
-      "pos": "Web Developer",
-      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
-      "state": "Culminado",
-      "date": 2021,
-      "link": "",
-      "repo": {
-        "type": 2,
-        "link": "https://codepen.io/fabianxrl16/pen/wvqqYMy"
-      },
-      "video": {
-        "state": false
-      },
-      "tecnologies": [
-        "vue",
-        "js"
-      ],
-      "logo": "switch.svg",
-      "logoText": "codepen-text.svg",
-      "styles": {
-        "cardBackground": "#ffffff",
-        "cardColor": "#172126",
-        "posColor": "#F50E0E",
         "buttonBackground": "#F50E0E"
       }
     }
