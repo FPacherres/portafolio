@@ -235,7 +235,7 @@ section {
 }
 @media (max-width: 870px) {
   section {
-    padding: 80px 0 0;
+    padding: 80px 0 40px;
   }
   .container {
     grid-template-columns: auto 1fr;
