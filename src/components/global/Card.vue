@@ -58,12 +58,7 @@
         <span>Tecnologías</span>
       </div>
       <div class="tecnology-items">
-        <!-- <img
-          v-for="tec in tecnologies"
-          :key="tec"
-          :src="tec"
-          alt=""
-        /> -->
+        <img :src="tecnologies" alt="" />
       </div>
       <div class="title">
         <img :src="logoText" alt="" />
@@ -84,6 +79,7 @@ const props = defineProps({
 
 const logo = ref()
 const logoText = ref()
+const tecnologies = ref()
 
 // let list = []
 // function tecnologies() {
@@ -101,6 +97,9 @@ watchEffect(async () => {
   ).default
   logoText.value = (
     await import(`../../assets/projects/${props.data.logoText}`)
+  ).default
+  tecnologies.value = (
+    await import(`../../assets/projects/${props.data.tecnologies}`)
   ).default
   // async function arr() {
   //   for (const tecnology of props.data.tecnologies) {
@@ -261,16 +260,12 @@ li button .icon {
 }
 
 .tecnology-items {
-  border: 1px solid rgb(4, 133, 246);
   display: flex;
   justify-content: flex-end;
-  align-items: end;
-  /* gap: 5px; */
-  box-sizing: border-box;
 }
 
 .tecnology-items img {
-  height: 100%;
+  height: 90%;
   width: auto;
 }
 
