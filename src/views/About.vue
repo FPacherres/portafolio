@@ -53,21 +53,12 @@ export default {
   },
   methods: {
     downloadCv() {
-      fetch({
-        url: '../assets/documents/cv_fabian.pdf',
-        method: 'GET',
-        responseType: 'blob'
-          })
-          .then((response) => {
-                const url = window.URL
-                      .createObjectURL(new Blob([response.data]));
-                const link = document.createElement('a');
-                link.href = url;
-                link.setAttribute('download', 'cv_fabian.pdf');
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-          })
+      const link = document.createElement('a');
+      link.href = '/cv_fabian.pdf';
+      link.setAttribute('download', 'cv_fabian.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   }
 }
