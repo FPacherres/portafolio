@@ -96,8 +96,7 @@ section {
     padding: 70px 0 0px;
     grid-template-areas: 'title' 'form' 'snippet' 'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 1fr 100px 30px;
-    column-gap: 20px;
+    grid-template-rows: 55px 1fr 90px 35px;
     row-gap: 20px;
   }
   .snippet {
@@ -110,7 +109,7 @@ section {
     display: flex;
     align-items: flex-end ;
     justify-content: center;
-    padding: 0 0 5px 0;
+    /* padding: 0 0 5px 0; */
   }
 
   .title span {
@@ -118,8 +117,8 @@ section {
   }
 
   .avatar-snippet {
-    height: 90px;
-    width: 90px;
+    height: 85px;
+    width: 85px;
   }
   .text-snippet h1 {
     font-size: 16px;
@@ -130,7 +129,7 @@ section {
   }
   :deep(.photo .photo-sub img) {
     width: 80px;
-    margin: 0 -7px -40px 0;
+    margin: 0 -7px -45px 0;
   }
   .text-snippet {
     text-align: right;
