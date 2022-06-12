@@ -1,42 +1,18 @@
 <template>
   <form class="shadow">
     <h1>Hablemos!</h1>
-    <input
-      type="text"
-      v-model="name"
-      id="name"
-      class="shadow-total"
-      placeholder="Nombre *"
-    />
-    <input
-      type="text"
-      v-model="email"
-      id="email"
-      class="shadow-total"
-      placeholder="Correo *"
-    />
-    <textarea
-      class="shadow-total"
-      v-model="msg"
-      id="msg"
-      placeholder="Hola! dime algo..."
-    />
-    <button
-      type="submit"
-      class="btn send shadow"
-      :class="name != '' && email != '' ? 'sendPerfect' : 'sendDisabled'"
-      @click="send"
-    >
+    <input  autocomplete="off" type="text" v-model="name" class="shadow-total" placeholder="Nombre *" />
+    <input  autocomplete="off" type="text" v-model="email" class="shadow-total" placeholder="Correo *" />
+    <textarea class="shadow-total" v-model="msg" id="msg" placeholder="Hola! dime algo..." />
+    <button type="submit" class="btn send shadow" :class="name != '' && email != '' ? 'sendPerfect' : 'sendDisabled'"
+      @click="send">
       Enviar
     </button>
     <a href="mailto:fabianpacherres@gmail.com" id="tagA"></a>
     <div class="socialNetworkAdd">
       <span>También estoy por aquí</span>
       <div>
-        <a
-          href="https://wa.me/51953172725?text=Hola%20Fabi%C3%A1n!%20un%20gusto..."
-          target="blank"
-        >
+        <a href="https://wa.me/51953172725?text=Hola%20Fabi%C3%A1n!%20un%20gusto..." target="blank">
           <fa class="icon whatsapp" :icon="['fab', 'whatsapp']" />
         </a>
         <a href="https://www.instagram.com/fabian.xrl16/" target="blank">
@@ -104,24 +80,30 @@ h1 {
   font-size: 12px;
   color: var(--bg-6);
 }
+
 .socialNetworkAdd div {
   display: flex;
   gap: 8px;
 }
+
 .socialNetworkAdd div a {
   text-decoration: none;
   width: 25px;
   height: 25px;
 }
+
 .socialNetworkAdd div a .icon {
   font-size: 25px;
 }
+
 .socialNetworkAdd div a .whatsapp {
   color: #25d366;
 }
+
 .socialNetworkAdd div a .instagram {
   color: #dd2a7b;
 }
+
 .socialNetworkAdd div a .facebook {
   color: #1e8ff3;
 }
@@ -152,9 +134,11 @@ textarea::placeholder {
   font-weight: 500;
   transition: 0.3s;
 }
+
 .sendDisabled:hover {
   cursor: not-allowed;
 }
+
 .sendPerfect:hover {
   box-shadow: var(--shadow-inset);
   transition: 0.3s;
@@ -187,16 +171,20 @@ textarea {
   .send {
     font-size: 18px;
   }
+
   .socialNetworkAdd {
     height: 5px;
   }
+
   .socialNetworkAdd span {
     font-size: 10px;
   }
+
   .socialNetworkAdd div a {
     width: 20px;
     height: 20px;
   }
+
   .socialNetworkAdd div a .icon {
     font-size: 20px;
   }
