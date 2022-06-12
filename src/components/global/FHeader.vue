@@ -189,7 +189,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  left: 0;
+  right: 0;
+  margin: 10px auto 0;
   height: 70px;
   padding: 0 20px;
   box-sizing: none;
