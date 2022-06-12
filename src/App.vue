@@ -20,16 +20,28 @@ export default {
 
 <template>
   <loading />
-  <div class="container relative is-full-width-screen">
+  <div class="container relative">
     <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute z-max" />
     <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false"
       class="is-full-width-screen is-full-height fixed absolute z-max" />
-    <home id="home" class="is-full-width is-full-height relative" />
-    <about id="about" class="is-full-width is-full-height" />
-    <skills id="skills" class="is-full-width is-full-height" />
-    <studies id="studies" class="is-full-width is-full-height" />
-    <experience id="experience" class="is-full-width is-full-height" />
-    <contact id="contact" class="is-full-width is-full-height" />
+    <div id="home" class="item-area is-full-height is-full-width">
+      <home class="item-area is-full-width is-full-height relative" />
+    </div>
+    <div id="about" class="item-area is-full-height is-full-width">
+      <about class="item-area is-full-width is-full-height" />
+    </div>
+    <div id="skills" class="item-area is-full-height is-full-width">
+      <skills class="item-area is-full-width is-full-height" />
+    </div>
+    <div id="studies" class="item-area is-full-height is-full-width">
+      <studies class="item-area is-full-width is-full-height" />
+    </div>
+    <div id="experience" class="item-area is-full-height is-full-width">
+      <experience class="item-area is-full-width is-full-height" />
+    </div>
+    <div id="contact" class="item-area is-full-height is-full-width">
+      <contact class="item-area is-full-width is-full-height" />
+    </div>
   </div>
 </template>
 
@@ -44,7 +56,6 @@ export default {
   color: var(--bg-3);
   width: 100%;
   height: 100vh;
-  scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -55,9 +66,18 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  width: 100%;
+}
+
+.item-area {
+  scroll-snap-align: start;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 #app::-webkit-scrollbar {
@@ -129,15 +149,18 @@ h1 {
   z-index: 900;
 }
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next  {
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
   color: var(--bg-1);
   background-color: var(--bg-5);
   left: 0px;
   height: 100%;
   top: 22px;
 }
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
-    right: 0px;
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 0px;
 }
 
 html {
@@ -200,8 +223,10 @@ html {
   #app::-webkit-scrollbar {
     width: 0;
   }
-  .swiper-button-prev, .swiper-rtl .swiper-button-next  {
-  height: 70%;
-}
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    height: 70%;
+  }
 }
 </style>
