@@ -161,17 +161,21 @@ section {
   gap: 10px;
   animation: 1s move-arrow-down 8s linear infinite;
 }
+
 a {
   text-decoration: none;
 }
+
 .down:hover #arrow {
   fill: var(--bg-1);
   transition: .3s;
 }
+
 .down:hover span {
   color: var(--bg-1);
   transition: .3s;
 }
+
 .down span {
   transform: rotate(180deg);
   writing-mode: vertical-lr;
@@ -242,13 +246,14 @@ a {
 
 @media (max-width: 870px) {
   section {
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr 150px;
   }
 
   .content {
-    margin-top: -100px;
+    margin-top: -80px;
     justify-content: center;
     flex-direction: column-reverse;
+    gap: 20px;
   }
 
   .text {
@@ -289,6 +294,7 @@ a {
   .socialNetwork {
     align-items: flex-start;
     justify-content: center;
+    padding-top: 20px;
   }
 
   .avatar {
