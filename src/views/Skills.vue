@@ -1,7 +1,7 @@
 <template>
   <section>
     <Title :num="'02'" :text="'Skills'" />
-    <div class="container">
+    <div class="containerS">
       <div class="card cardDesk">
         <div class="detail__tecnology relative">
           <div
@@ -829,32 +829,6 @@ export default {
     },
   },
 }
-
-// let tecnologies = [
-//   { id: 1, name: 'vue', path: '../assets/vue.svg' },
-//   { id: 2, name: 'js', path: '../assets/js.svg' },
-//   { id: 3, name: 'nuxt', path: '../assets/nuxt.svg' },
-//   { id: 4, name: 'html', path: '../assets/html.svg' },
-//   { id: 5, name: 'css', path: '../assets/css.svg' },
-//   { id: 6, name: 'sass', path: '../assets/sass.svg' },
-//   { id: 7, name: 'tailwind', path: '../assets/tailwind.svg' },
-//   { id: 8, name: 'git', path: '../assets/git.svg' },
-//   { id: 9, name: 'figma', path: '../assets/figma.svg' },
-//   { id: 10, name: 'vuetify', path: '../assets/vuetify.svg' },
-// ]
-
-// let path = ref()
-// let list = []
-
-// watchEffect(async () => {
-//   for (let i = 0; i < tecnologies.length; i++) {
-//     list.push(
-//       path.value = (
-//         await import(`../assets/${tecnologies[i].name}.svg`)
-//       ).default
-//     )
-//   }
-// })
 </script>
 
 <style scoped>
@@ -863,7 +837,7 @@ section {
   box-sizing: border-box;
 }
 
-.container {
+.containerS {
   height: calc(100% - 160px);
   margin-top: 40px;
   display: grid;
@@ -1054,7 +1028,7 @@ section {
   .cardMobile {
     display: grid;
   }
-  .container {
+  .containerS {
     margin-top: 20px;
     grid-template-columns: 1fr;
     position: relative;

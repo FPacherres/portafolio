@@ -1,7 +1,7 @@
 <template>
   <section>
     <Title :num="'03'" :text="'Studies'" />
-    <div class="container">
+    <div class="containerST">
       <div class="line">
         <span>2021 - presente</span>
         <span>2022</span>
@@ -96,7 +96,7 @@ section {
   padding: 80px 0 60px;
   box-sizing: border-box;
 }
-.container {
+.containerST {
   /* border: 1px solid #f132f1; */
   height: calc(100% - 140px);
   margin-top: 20px;
@@ -237,7 +237,7 @@ section {
   section {
     padding: 80px 0 40px;
   }
-  .container {
+  .containerST {
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
     height: calc(100% - 120px);
