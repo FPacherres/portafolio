@@ -835,11 +835,13 @@ export default {
 section {
   padding: 80px 0 60px;
   box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  gap: 40px;
 }
 
 .containerS {
-  height: calc(100% - 160px);
-  margin-top: 40px;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
@@ -848,8 +850,8 @@ section {
 .card {
   height: 100%;
   display: grid;
-  grid-template-rows: 280px 50px 1fr;
-  gap: 1px;
+  grid-template-rows: 270px 50px 70px;
+  gap: 10px;
 }
 .cardMobile {
   display: none;
@@ -1023,13 +1025,12 @@ section {
 
 @media (max-width: 870px) {
   section {
-    padding: 80px 0 0;
+    padding: 80px 0 80px;
   }
   .cardMobile {
     display: grid;
   }
   .containerS {
-    margin-top: 20px;
     grid-template-columns: 1fr;
     position: relative;
   }
