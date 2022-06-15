@@ -14,6 +14,46 @@ export default {
     return {
       MenuMobile: false
     }
+  },
+  methods: {
+    selectNav(n) {
+      let li = document.querySelectorAll(".liNav")
+      for(let i=0; i <= li.length; i++) {
+        i == n 
+          ? li[i].classList.add('selected')
+          : li[i].classList.remove('selected')
+      }
+    }
+  },
+  mounted() {
+    let searchLi = (id) => {
+      if(id == 'home') return 0
+      if(id == 'about') return 1
+      if(id == 'skills') return 2
+      if(id == 'studies') return 3
+      if(id == 'experience') return 4
+      if(id == 'contact') return 5
+    }
+
+    const $sections = document.querySelectorAll('.view')
+
+    const options = {
+      rootMargin: '0px 0px 0px 0px',
+      threshold: .5,
+    }
+
+    const callback = (entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          let currentLi = searchLi(entry.target.id)
+          this.selectNav(currentLi)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, options)
+    
+    $sections.forEach( section => observer.observe(section))
   }
 }
 </script>
@@ -24,22 +64,22 @@ export default {
     <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute z-max" />
     <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false"
       class="is-full-width-screen is-full-height fixed absolute z-max" />
-    <div id="home" class="item-area is-full-height is-full-width">
+    <div id="home" class="item-area view is-full-height is-full-width">
       <home class="item-area is-full-width is-full-height relative" />
     </div>
-    <div id="about" class="item-area is-full-height is-full-width">
+    <div id="about" class="item-area view is-full-height is-full-width">
       <about class="item-area is-full-width is-full-height" />
     </div>
-    <div id="skills" class="item-area is-full-height is-full-width">
+    <div id="skills" class="item-area view is-full-height is-full-width">
       <skills class="item-area is-full-width is-full-height" />
     </div>
-    <div id="studies" class="item-area is-full-height is-full-width">
+    <div id="studies" class="item-area view is-full-height is-full-width">
       <studies class="item-area is-full-width is-full-height" />
     </div>
-    <div id="experience" class="item-area is-full-height is-full-width">
+    <div id="experience" class="item-area view is-full-height is-full-width">
       <experience class="item-area is-full-width is-full-height" />
     </div>
-    <div id="contact" class="item-area is-full-height is-full-width">
+    <div id="contact" class="item-area view is-full-height is-full-width">
       <contact class="item-area is-full-width is-full-height" />
     </div>
   </div>
