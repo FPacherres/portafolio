@@ -1,6 +1,5 @@
 <template>
-  <section>
-    <div class="title"><span>Contact</span></div>
+  <section class="relative">
     <fform class="form" />
     <div class="snippet">
       <avatar :photo="3" class="avatar-snippet" />
@@ -11,7 +10,7 @@
         <span>Soy pintor paisajista</span>
       </div>
     </div>
-    <ffooter class="footer" />
+    <ffooter class="footer absolute" />
   </section>
 </template>
 
@@ -30,28 +29,16 @@ export default {
 
 <style scoped>
 section {
-  padding: 80px 0 0px;
+  padding: 100px 0 60px;
   box-sizing: border-box;
   display: grid;
-  grid-template-areas: 'title title' 'form snippet' 'footer footer';
-  grid-template-columns: 1.2fr 1fr;
-  grid-template-rows: 60px 1fr 40px;
+  place-content: center;
+  grid-template-columns: 1.1fr 1fr;
   column-gap: 20px;
   row-gap: 40px;
 }
 
-.title {
-  grid-area: title;
-  padding-top: 25px;
-}
-
-.form {
-  grid-area: form;
-}
-
 .snippet {
-  /* border: 1px solid #f132f1; */
-  grid-area: snippet;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,12 +47,16 @@ section {
 }
 
 .footer {
-  grid-area: footer;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto 0;
 }
 
 .title span {
   color: var(--bg-2);
   font-size: 35px;
+  line-height: 35px;
 }
 
 .avatar-snippet {
@@ -85,7 +76,7 @@ section {
   font-weight: 300;
 }
 
-:deep(.photo .photo-sub img) {
+::v-deep .photo .photo-sub img {
   width: 240px;
   height: auto;
   margin: 0 0 -115px 25px;
@@ -93,11 +84,10 @@ section {
 
 @media (max-width: 870px) {
   section {
-    padding: 70px 0 0px;
-    grid-template-areas: 'title' 'form' 'snippet' 'footer';
-    grid-template-columns: 1fr;
-    grid-template-rows: 55px 1fr 90px 35px;
-    row-gap: 20px;
+    padding: 100px 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .snippet {
     flex-direction: row;
@@ -109,7 +99,6 @@ section {
     display: flex;
     align-items: flex-end ;
     justify-content: center;
-    /* padding: 0 0 5px 0; */
   }
 
   .title span {
