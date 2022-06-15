@@ -119,12 +119,12 @@ export default {
         newStyle.setProperty(
           '--shadow',
           `#2e3b4c 3px 3px 6px 0px, 
-           #101823 -3px -3px 6px 1px`
+           #161e29 -3px -3px 6px 1px`
         )
         newStyle.setProperty(
           '--shadow-inset',
           `#2e3b4c 3px 3px 6px 0px inset, 
-           #101823 -3px -3px 6px 1px inset`
+           #161e29 -3px -3px 6px 1px inset`
         )
         newStyle.setProperty(
           '--shadow-btn',
@@ -133,9 +133,9 @@ export default {
         )
         newStyle.setProperty(
           '--shadow-total',
-          `#101823 3px 3px 6px 0px,
+          `#161e29 3px 3px 6px 0px,
            #2e3b4c -3px -3px 6px 1px,
-           #101823 3px 3px 6px 0px inset,
+           #161e29 3px 3px 6px 0px inset,
            #2e3b4c -3px -3px 6px 1px inset`
         )
         this.icon = true
