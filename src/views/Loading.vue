@@ -1,5 +1,5 @@
 <template>
-  <section class="conatiner-loading center">
+  <div class="conatiner-loading center">
     <div class="load center">
       <p class=".text-loading">cargando</p>
       <span class=".text-percentage">{{ percentage }}%</span>
@@ -64,7 +64,7 @@
       </div>
       <span class="text-welcome">Bienvenidos!</span>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -131,7 +131,7 @@ export default {
 </script>
 
 <style scoped>
-section {
+.conatiner-loading {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
