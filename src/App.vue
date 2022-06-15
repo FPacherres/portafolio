@@ -80,11 +80,11 @@ body {
   box-sizing: border-box;
 }
 
-#app::-webkit-scrollbar {
+.container::-webkit-scrollbar {
   width: 5px;
 }
 
-#app::-webkit-scrollbar-thumb {
+.container::-webkit-scrollbar-thumb {
   width: 5px;
   border-radius: 4px;
   background-color: var(--bg-1);
