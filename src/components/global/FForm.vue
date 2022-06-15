@@ -59,7 +59,9 @@ form {
   background-color: var(--bg-5);
   display: grid;
   place-content: center;
-  gap: 20px;
+  gap: 25px;
+  padding: 50px 0;
+  max-height: 500px;
 }
 
 h1 {
@@ -158,6 +160,10 @@ textarea {
 }
 
 @media (max-width: 870px) {
+  form {
+    padding: 25px 0;
+    gap: 25px;
+  }
   h1 {
     font-size: 25px;
   }
