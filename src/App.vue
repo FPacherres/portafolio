@@ -198,11 +198,11 @@ html {
     --bg-5: #1f2937;
     --bg-6: #304157;
     --shadow: #2e3b4c 3px 3px 6px 0px,
-      #101823 -3px -3px 6px 1px;
+      #161e29 -3px -3px 6px 1px;
     --shadow-inset: #2e3b4c 3px 3px 6px 0px inset,
-      #101823 -3px -3px 6px 1px inset;
-    --shadow-total: #101823 3px 3px 6px 0px,
-      #2e3b4c -3px -3px 6px 1px, #101823 3px 3px 6px 0px inset,
+      #161e29 -3px -3px 6px 1px inset;
+    --shadow-total: #161e29 3px 3px 6px 0px,
+      #2e3b4c -3px -3px 6px 1px, #161e29 3px 3px 6px 0px inset,
       #2e3b4c -3px -3px 6px 1px inset;
     --shadow-btn: #710d3c 3px 3px 6px 0px inset,
       #ff55a4 -3px -3px 6px 1px inset;
