@@ -65,10 +65,11 @@ export default {
 
 <style scoped>
 .section {
-  padding: 80px 0 0;
+  padding: 80px 0 60px;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 131.8px 470px;
+  grid-template-rows: 131.8px 450px;
+  align-content: center;
   gap: 30px;
 }
 .swiper {
@@ -130,8 +131,8 @@ export default {
 }
 @media (max-width: 870px) {
   .section {
-    padding: 80px 0 0;
-    grid-template-rows: 100px 470px;
+    padding: 80px 0 60px;
+    grid-template-rows: 100px 420px;
     gap: 10px;
   }
   .container-list {
