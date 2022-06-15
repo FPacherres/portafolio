@@ -6,6 +6,7 @@
         Me enfoco a la <strong>parte visual de una AppWeb,</strong> amo darle vida a los distintos componentes.<br /><br />
         Pienso que <strong>para enamorar a un usuario,</strong> primero <strong>debo atraer su atención,</strong> 
         y esto se consigue <strong>con una buena UI.</strong></p>
+      <button class="btnCv btnCv-text btn shadow" @click="downloadCv">Descargar CV</button>
     </div>
     <div class="containerSnippet">
       <Avatar class="avatar" :photo="2" />
@@ -34,7 +35,7 @@
       </div>
     </div>
     <div class="containerCV">
-      <button class="btn shadow" @click="downloadCv">Descargar CV</button>
+      <button class="btnCv btn shadow" @click="downloadCv">Descargar CV</button>
     </div>
   </section>
 </template>
@@ -70,11 +71,14 @@ section {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 300px;
-  grid-template-rows: 1fr 120px;
-  grid-template-areas: "description snippet" "cv cv"; 
+  column-gap: 20px;
+  grid-template-areas: "description snippet";
+  place-content: center;
 }
 .containerDescription {
   grid-area: description;
+  display: flex;
+  flex-direction: column;
 }
 .containerSnippet {
   grid-area: snippet;
@@ -82,21 +86,22 @@ section {
   justify-self: center; */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 50px;
 }
 .containerCV {
   grid-area: cv;
   display: flex;
-  justify-content: start;
+  justify-content: flex-end;
   align-items: flex-end;
+  display: none;
 }
 .avatar {
   width: 250px;
   height: 250px;
 }
-:deep(.photo .photo-sub img) {
+::v-deep .photo .photo-sub img {
   width: 220px;
   height: auto;
   margin: 0 0 -110px -5px;
@@ -140,15 +145,15 @@ section {
 }
 .aboutMe {
   font-size: 18px;
-  padding: 30px 30px 0 0;
+  padding: 30px 30px 30px 0;
   color: var(--bg-4);
   font-weight: 200;
-  text-align: start;
+  text-align: left;
 }
 .aboutMe strong {
   font-weight: 400;
 }
-.containerCV button {
+.btnCv {
   height: 45px;
   width: 160px;
   font-size: 16px;
@@ -157,7 +162,7 @@ section {
   color: var(--white);
   transition: .3s;
 }
-.containerCV button:hover {
+.btnCv:hover {
   transition: .3s;
   box-shadow: var(--shadow-btn)
 }
@@ -176,6 +181,8 @@ section {
   }
   .containerCV {
     grid-area: cv;
+    display: flex;
+    
   }
   .avatar {
     display: none;
@@ -188,6 +195,9 @@ section {
     height: 35px;
     width: 130px;
     font-size: 13px;
+  }
+  .btnCv-text {
+    display: none;
   }
 }
 </style>
