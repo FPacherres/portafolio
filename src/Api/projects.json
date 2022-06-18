@@ -53,7 +53,7 @@
       "type": 2,
       "typeName": "Proyecto personal",
       "pos": "Js Developer",
-      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen para posteriormente ser compartida.",
       "state": "Culminado",
       "date": 2021,
       "link": "https://fabcov.netlify.app/",
