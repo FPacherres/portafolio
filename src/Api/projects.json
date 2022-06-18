@@ -80,7 +80,7 @@
       "type": 2,
       "typeName": "Proyecto personal",
       "pos": "Js Developer",
-      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "description": "Es un mini-reproductor de música donde pongo a prueba mis habilidades de UI; adaptable a las distintas plataformas como Desktop, Mobile y Tablet.",
       "state": "Culminado",
       "date": 2022,
       "link": "https://fabmusic.netlify.app/",
