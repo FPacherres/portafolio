@@ -107,7 +107,7 @@
       "type": 2,
       "typeName": "Proyecto personal",
       "pos": "Web Developer",
-      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "description": "Mini juego donde pongo a prueba mis habiliades en animaciones con CSS, enfocado especialmente a los más pequeños de casa.",
       "state": "Culminado",
       "date": 2021,
       "link": "https://catchbear.netlify.app/",
