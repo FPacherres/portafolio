@@ -134,7 +134,7 @@
       "type": 2,
       "typeName": "Proyecto personal",
       "pos": "Vuejs Developer",
-      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "description": "Juego cuyo propósito es entrenar la memoria visual y potenciar las habilidades cognitivas, apto para todas las edades.",
       "state": "Culminado",
       "date": 2022,
       "link": "https://fab-memory.netlify.app/",
