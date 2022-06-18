@@ -265,7 +265,7 @@
       "type": 2,
       "typeName": "Proyecto personal",
       "pos": "Js Developer",
-      "description": "App que muestra datos actuales del covid-19 a nivel global, y que permite descargar estos resultados en una imagen.",
+      "description": "Mini aplicación que facilita el conteo manual de billetes y monedas en tiendas, tiene una plus el guardar este resultado en una imagen con su fecha respectiva.",
       "state": "Culminado",
       "date": 2022,
       "link": "https://calculator-bill.netlify.app/",
