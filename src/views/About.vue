@@ -13,7 +13,7 @@
       <div class="github">
         <div class="text relative circle shadow">
           <h1>Repositories</h1>
-          <h1>43</h1>
+          <h1>46</h1>
           <div class="tag circle absolute shadow">
             <fa class="icon" :icon="['fa', 'book-bookmark']" />
           </div>
@@ -27,7 +27,7 @@
         </div>
         <div class="text relative circle shadow">
           <h1>Stars</h1>
-          <h1>17</h1>
+          <h1>16</h1>
           <div class="tag circle absolute shadow">
            <StarIcon class="icon star" />
           </div>
