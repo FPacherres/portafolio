@@ -76,7 +76,7 @@ section {
   font-weight: 300;
 }
 
-::v-deep .photo .photo-sub img {
+:deep(.photo .photo-sub img) {
   width: 240px;
   height: auto;
   margin: 0 0 -115px 25px;
