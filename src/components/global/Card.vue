@@ -93,13 +93,13 @@ const tecnologies = ref()
 
 watchEffect(async () => {
   logo.value = (
-    await import(`../../assets/projects/${props.data.logo}`)
+    await import(`../../assets/${props.data.logo}`)
   ).default
   logoText.value = (
-    await import(`../../assets/projects/${props.data.logoText}`)
+    await import(`../../assets/${props.data.logoText}`)
   ).default
   tecnologies.value = (
-    await import(`../../assets/projects/${props.data.tecnologies}`)
+    await import(`../../assets/${props.data.tecnologies}`)
   ).default
   // async function arr() {
   //   for (const tecnology of props.data.tecnologies) {
