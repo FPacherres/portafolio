@@ -10,11 +10,11 @@
       <div class="studies">
         <div class="container-study-1">
           <div class="study-1 relative shadow-inset">
-            <h1 class="title">Platzi</h1>
-            <h1 class="career">Frontend Developer</h1>
-            <h1 class="career">UI/UX</h1>
-            <h1 class="career">Bussiness Managment</h1>
-            <h1 class="career">Carrera de Ciencias</h1>
+            <span class="title">Platzi</span>
+            <span class="career">Frontend Developer</span>
+            <span class="career">UI/UX</span>
+            <span class="career">Bussiness Managment</span>
+            <span class="career">Carrera de Ciencias</span>
             <button class="btn shadow chip">Estudiante</button>
             <div class="identity-1 absolute shadow circle">
               <img class="identity-logo" src="../assets/platzi.svg" alt="" />
@@ -23,8 +23,8 @@
         </div>
         <div class="container-study-2">
           <div class="study-2 relative shadow-inset">
-            <h1 class="title">Udemy</h1>
-            <h1 class="career">Vue.js 2</h1>
+            <span class="title">Udemy</span>
+            <span class="career">Vue.js 2</span>
             <button class="btn shadow chip">Estudiante</button>
             <div class="identity-2 absolute shadow circle">
               <svg
@@ -54,9 +54,9 @@
         </div>
         <div class="container-study-3">
           <div class="study-3 relative shadow-inset">
-            <h1 class="title">UNPRG</h1>
-            <h1 class="subtitle">Universidad Nacional Pedro Ruiz Gallo</h1>
-            <h1 class="career">Ing. en Computación e Informática</h1>
+            <span class="title">UNPRG</span>
+            <span class="subtitle">Universidad Nacional Pedro Ruiz Gallo</span>
+            <span class="career">Ing. en Computación e Informática</span>
             <button class="btn shadow chip">Egresado</button>
             <div class="identity-3 absolute shadow circle">
               <img class="identity-logo" src="../assets/unprg.png" alt="" />
@@ -208,15 +208,16 @@ section {
 .study-3 .subtitle {
   font-size: 12px;
   width: 180px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .study-1 .career,
 .study-2 .career,
 .study-3 .career {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 200;
   font-style: oblique;
+  width: 200px;
 }
 .identity-1,
 .identity-2,
@@ -366,7 +367,6 @@ section {
     font-size: 10px;
     font-weight: 400;
     width: 160px;
-    font-style: oblique;
   }
   .identity-logo {
     width: 45px;
