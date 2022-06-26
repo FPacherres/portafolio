@@ -206,9 +206,6 @@ span {
     margin-bottom: -15px;
     font-size: 29px;
   }
-  h1 {
-    font-size: 60px;
-  }
   .load {
     width: 250px;
   }
