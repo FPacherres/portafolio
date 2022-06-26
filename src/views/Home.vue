@@ -3,9 +3,9 @@
     <div class="content relative">
       <div class="text">
         <div class="mainText absolute">
-          <h1>Hola soy</h1>
+          <h2>Hola soy</h2>
           <h1>Fabian Pacherres</h1>
-          <h1>Front-End Developer</h1>
+          <h2 class="carrer">Front-End Developer</h2>
           <div class="line"></div>
         </div>
       </div>
@@ -115,14 +115,14 @@ section {
   z-index: 10;
 }
 
-.text h1:nth-child(1) {
+.text h2 {
   font-weight: 300;
   font-size: 25px;
   margin-bottom: -8px;
   margin-left: -2.5px;
 }
 
-.text h1:nth-child(2) {
+.text h1 {
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 500;
@@ -130,7 +130,7 @@ section {
   margin-left: -4px;
 }
 
-.text h1:nth-child(3) {
+.text .carrer {
   font-weight: 400;
   font-size: 30px;
   margin-top: -8px;
@@ -265,19 +265,19 @@ a {
     z-index: 99;
   }
 
-  .text h1:nth-child(1) {
+  .text h2 {
     font-weight: 300;
     font-size: 16px;
     margin-bottom: -8px;
     margin-left: 0;
   }
 
-  .text h1:nth-child(2) {
+  .text h1 {
     font-size: 30px;
     margin-left: 0;
   }
 
-  .text h1:nth-child(3) {
+  .text .carrer {
     font-size: 20px;
     margin-top: -8px;
     margin-left: 0;
