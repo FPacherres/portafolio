@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{ num }}</h1>
-    <h1>{{ text }}</h1>
+    <h2>{{ num }}</h2>
+    <h3>{{ text }}</h3>
     <div class="line"></div>
   </div>
 </template>
@@ -32,11 +32,14 @@ div {
   text-transform: uppercase;
   width: fit-content;
 }
-h1:nth-child(1) {
+h2, h3 {
+  margin: 0px;
+}
+h2 {
   color: var(--bg-2);
   font-size: 83px;
 }
-h1:nth-child(2) {
+h3 {
   color: var(--bg-3);
   font-size: 65px;
   margin-top: -77px;
@@ -50,10 +53,10 @@ h1:nth-child(2) {
   margin-top: -15px;
 }
 @media (max-width: 870px) {
-  h1:nth-child(1) {
+  h2 {
     font-size: 50px;
   }
-  h1:nth-child(2) {
+  h3 {
     font-size: 30px;
     margin-top: -44px;
   }
