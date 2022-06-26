@@ -4,7 +4,7 @@
     <div class="snippet">
       <avatar :photo="3" class="avatar-snippet" />
       <div class="text-snippet">
-        <h1>Datos curiosos</h1>
+        <h2>Datos curiosos</h2>
         <span>Memorizo rostros</span>
         <span>Armo cubos de Rubik</span>
         <span>Soy pintor paisajista</span>
@@ -63,11 +63,12 @@ section {
   height: 260px;
   width: 260px;
 }
-.text-snippet h1 {
+.text-snippet h2 {
   color: var(--bg-1);
   font-size: 22px;
   margin-top: 10px;
   font-weight: 500;
+  margin: 0px;
 }
 .text-snippet span {
   color: var(--bg-3);
@@ -109,7 +110,7 @@ section {
     height: 85px;
     width: 85px;
   }
-  .text-snippet h1 {
+  .text-snippet h2 {
     font-size: 16px;
     margin-top: 0px;
   }
