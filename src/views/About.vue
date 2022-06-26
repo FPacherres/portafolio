@@ -12,22 +12,22 @@
       <Avatar class="avatar" :photo="2" />
       <div class="github">
         <div class="text relative circle shadow">
-          <h1>Repositories</h1>
-          <h1>46</h1>
+          <span>Repositories</span>
+          <span>46</span>
           <div class="tag circle absolute shadow">
             <fa class="icon" :icon="['fa', 'book-bookmark']" />
           </div>
         </div>
         <div class="text relative circle shadow">
-          <h1>Projects</h1>
-          <h1>1</h1>
+          <span>Projects</span>
+          <span>1</span>
           <div class="tag circle absolute shadow">
             <fa class="icon" :icon="['fa', 'table']" />
           </div>
         </div>
         <div class="text relative circle shadow">
-          <h1>Stars</h1>
-          <h1>16</h1>
+          <span>Stars</span>
+          <span>16</span>
           <div class="tag circle absolute shadow">
            <StarIcon class="icon star" />
           </div>
@@ -118,7 +118,7 @@ section {
   justify-content: center;
   align-items: center;
 }
-.github div h1:nth-child(1) {
+.github div span:nth-child(1) {
   margin-top: 4px;
   font-weight: 400;
   font-size: 10px;
@@ -138,7 +138,7 @@ section {
   width: 11px;
   height: 11px;
 }
-.github .text h1:nth-child(2){
+.github .text span:nth-child(2){
   font-size: 22px;
   font-weight: 600;
   color: var(--bg-1);
