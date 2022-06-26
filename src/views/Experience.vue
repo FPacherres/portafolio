@@ -17,7 +17,7 @@
         </swiper-slide>
       </swiper>
       <div class="description__experience">
-        <h1>Algo más...</h1>
+        <h2>Algo más...</h2>
         <p>
           Llevo varios años usando a <strong class="vuejs">Vue.js</strong> como
           framework favorito y todo su ecosistema.<br /><br />
@@ -96,11 +96,11 @@ export default {
   align-items: flex-end;
   padding-top: 28px;
 }
-.description__experience h1 {
+.description__experience h2 {
+  margin: 0 0 15px;
   color: var(--bg-2);
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 15px;
 }
 .description__experience p {
   color: var(--bg-4);
