@@ -260,8 +260,12 @@ html {
     width: 90vw;
   }
 
-  #app::-webkit-scrollbar {
-    width: 0;
+  .container::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    width: 1px;
   }
 
   .swiper-button-prev,
