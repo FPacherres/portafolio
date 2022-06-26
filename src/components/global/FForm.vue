@@ -1,6 +1,6 @@
 <template>
   <form class="shadow">
-    <h1>Hablemos!</h1>
+    <h2>Hablemos!</h2>
     <input  autocomplete="off" type="text" v-model="name" class="shadow-total" placeholder="Nombre *" />
     <input  autocomplete="off" type="text" v-model="email" class="shadow-total" placeholder="Correo *" />
     <textarea class="shadow-total" v-model="msg" id="msg" placeholder="Hola! dime algo..." />
@@ -64,7 +64,7 @@ form {
   max-height: 500px;
 }
 
-h1 {
+h2 {
   color: var(--bg-6);
   font-weight: 600;
   font-size: 30px;
@@ -164,7 +164,7 @@ textarea {
     padding: 25px 0;
     gap: 25px;
   }
-  h1 {
+  h2 {
     font-size: 25px;
   }
 
