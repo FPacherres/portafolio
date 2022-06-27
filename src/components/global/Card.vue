@@ -25,10 +25,9 @@
         >
       </div>
       <div class="actions">
-        <!-- @click="goToWebsite(data.link)" -->
         <a
           :href="data.link"
-          target="_blank" 
+          target="_blank"
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
           v-show="data.link != ''"
@@ -38,15 +37,18 @@
         <a
           v-if="data.repo"
           :href="data.repo.link"
-          target="_blank" 
+          target="_blank"
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground}`"
         >
-          <fa class="icon" :icon="['fab', data.repo.type == 1 ? 'github' : 'codepen']" />
+          <fa
+            class="icon"
+            :icon="['fab', data.repo.type == 1 ? 'github' : 'codepen']"
+          />
         </a>
         <a
           :href="data.video.link"
-          target="_blank" 
+          target="_blank"
           v-show="data.video.state"
           class="btn actionCard"
           :style="`background:${props.data.styles.buttonBackground};`"
@@ -81,34 +83,17 @@ const logo = ref()
 const logoText = ref()
 const tecnologies = ref()
 
-// let list = []
-// function tecnologies() {
-//   return list
-// }
-// let item = ref()
-
-// function goToWebsite(link){
-//   window.open(link);
-// }
-
 watchEffect(async () => {
-  logo.value = (
-    await import(`../../assets/${props.data.logo}`)
-  ).default
   logoText.value = (
-    await import(`../../assets/${props.data.logoText}`)
+    await import(`../../assets/${props.data.logoText}.svg`)
   ).default
   tecnologies.value = (
-    await import(`../../assets/${props.data.tecnologies}`)
+    await import(`../../assets/${props.data.tecnologies}.svg`)
   ).default
-  // async function arr() {
-  //   for (const tecnology of props.data.tecnologies) {
-  //     let tec = item.value = (await import(`../../assets/${tecnology}.svg`)).default
-  //     await list.push(tec)
-  //     tecnologies()
-  //   }
-  // }
-  // await arr()
+
+  props.data.typeImg === 'jpg'
+    ? logo.value = (await import(`../../assets/${props.data.logo}.jpg`)).default
+    : logo.value = (await import(`../../assets/${props.data.logo}.svg`)).default
 })
 </script>
 
@@ -198,10 +183,10 @@ watchEffect(async () => {
   list-style: none;
   width: 140px;
 }
-a{
+a {
   height: 25px;
 }
-.actionCard{
+.actionCard {
   width: 100%;
   height: 100%;
   color: #fff;
@@ -213,32 +198,30 @@ a{
   place-content: center;
   text-decoration: none;
 }
-.actions a:nth-child(1){
+.actions a:nth-child(1) {
   width: 80px;
 }
 .actions a:nth-child(1) {
   font-size: 12px;
 }
-.actions a:nth-child(2){
+.actions a:nth-child(2) {
   width: 25px;
 }
-.actions a:nth-child(3){
+.actions a:nth-child(3) {
   width: 25px;
 }
 .actionCard:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 0;
   bottom: 0;
   left: 0;
   z-index: -1;
   border-radius: 5px;
-  box-shadow:
-   0px 0px 20px 0px rgb(255, 255, 255),
-   0px 0px 5px 0px rgb(255, 255, 255),
-   7px 7px 20px 0px rgba(0, 0, 0, 0),
-   4px 4px 5px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 20px 0px rgb(255, 255, 255),
+    0px 0px 5px 0px rgb(255, 255, 255), 7px 7px 20px 0px rgba(0, 0, 0, 0),
+    4px 4px 5px 0px rgba(0, 0, 0, 0);
   transition: all 0.3s ease;
 }
 .actionCard:hover:after {
