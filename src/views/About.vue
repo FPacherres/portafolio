@@ -2,7 +2,7 @@
   <section>
     <div class="containerDescription">
       <Title />
-      <p class="aboutMe">También soy un, apasionado por el <strong>diseño grafico</strong> y un <strong>gran aficionado del UI/UX.</strong><br /><br />
+      <p class="aboutMe">Soy apasionado del <strong>diseño gráfico</strong> y un <strong>gran aficionado del UI/UX.</strong><br /><br />
         Me enfoco a la <strong>parte visual de una AppWeb,</strong> amo darle vida a los distintos componentes.<br /><br />
         Pienso que <strong>para enamorar a un usuario,</strong> primero <strong>debo atraer su atención,</strong> 
         y esto se consigue <strong>con una buena UI.</strong></p>
