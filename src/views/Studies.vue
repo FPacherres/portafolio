@@ -95,11 +95,13 @@ export default {
 section {
   padding: 80px 0 60px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
 }
 .containerST {
-  /* border: 1px solid #f132f1; */
-  height: calc(100% - 140px);
-  margin-top: 20px;
+  height: 450px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
@@ -236,13 +238,14 @@ section {
 }
 @media (max-width: 870px) {
   section {
-    padding: 80px 0 40px;
+    gap: 40px;
   }
   .containerST {
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
-    height: calc(100% - 120px);
-    margin-top: 30px;
+    height: 650px;
+    width: 450px;
+    margin: 0 auto;
   }
   .line {
     border-right: 3px solid var(--bg-4);
@@ -371,6 +374,12 @@ section {
   .identity-logo {
     width: 45px;
     height: 45px;
+  }
+}
+@media (max-width: 500px){
+  .containerST {
+    height: 420px;
+    width: 95%;
   }
 }
 </style>
