@@ -170,12 +170,15 @@
         </div>
         <div class="list">
           <swiper
-            dir="rtl"
+            :spaceBetween="30"
+            :hashNavigation="{
+              watchState: true,
+            }"
             :navigation="true"
             :modules="modules"
             class="mySwiper"
           >
-            <swiper-slide>
+            <swiper-slide data-hash="slide1">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('vue')"
@@ -183,7 +186,7 @@
                 <img src="../assets/vue.svg" alt="vue" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide2">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('nuxt')"
@@ -191,7 +194,7 @@
                 <img src="../assets/nuxt.svg" alt="nuxt" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide3">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('js')"
@@ -199,7 +202,7 @@
                 <img src="../assets/js.svg" alt="js" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide4">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('html')"
@@ -207,7 +210,7 @@
                 <img src="../assets/html.svg" alt="html" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide5">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('css')"
@@ -215,7 +218,7 @@
                 <img src="../assets/css.svg" alt="css" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide6">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('sass')"
@@ -223,7 +226,7 @@
                 <img src="../assets/sass.svg" alt="sass" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide7">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('tailwind')"
@@ -231,7 +234,7 @@
                 <img src="../assets/tailwind.svg" alt="tailwind" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide8">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('git')"
@@ -239,7 +242,7 @@
                 <img src="../assets/git.svg" alt="git" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide9">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('figma')"
@@ -247,7 +250,7 @@
                 <img src="../assets/figma.svg" alt="figma" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide10">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('vuetify')"
@@ -346,12 +349,15 @@
         </div>
         <div class="list">
           <swiper
-            dir="rtl"
+            :spaceBetween="30"
+            :hashNavigation="{
+              watchState: true,
+            }"
             :navigation="true"
             :modules="modules"
             class="mySwiper"
           >
-            <swiper-slide>
+            <swiper-slide data-hash="slide1">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('scrum')"
@@ -359,7 +365,7 @@
                 <img src="../assets/scrum.svg" alt="SCRUM" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide2">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('ui')"
@@ -367,7 +373,7 @@
                 <img src="../assets/ui.svg" alt="UI" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide3">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('ux')"
@@ -375,7 +381,7 @@
                 <img src="../assets/ux.svg" alt="UX" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide4">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('design')"
@@ -383,7 +389,7 @@
                 <img src="../assets/design.svg" alt="Design" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide5">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('responsive')"
@@ -562,12 +568,15 @@
         </div>
         <div class="list">
           <swiper
-            dir="rtl"
+            :spaceBetween="30"
+            :hashNavigation="{
+              watchState: true,
+            }"
             :navigation="true"
             :modules="modules"
             class="mySwiper"
           >
-            <swiper-slide>
+            <swiper-slide data-hash="slide1">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('vue')"
@@ -575,7 +584,7 @@
                 <img src="../assets/vue.svg" alt="vue" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide2">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('nuxt')"
@@ -583,7 +592,7 @@
                 <img src="../assets/nuxt.svg" alt="nuxt" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide3">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('js')"
@@ -591,7 +600,7 @@
                 <img src="../assets/js.svg" alt="js" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide4">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('html')"
@@ -599,7 +608,7 @@
                 <img src="../assets/html.svg" alt="html" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide5">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('css')"
@@ -607,7 +616,7 @@
                 <img src="../assets/css.svg" alt="css" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide6">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('sass')"
@@ -615,7 +624,7 @@
                 <img src="../assets/sass.svg" alt="sass" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide7">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('tailwind')"
@@ -623,7 +632,7 @@
                 <img src="../assets/tailwind.svg" alt="tailwind" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide8">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('git')"
@@ -631,7 +640,7 @@
                 <img src="../assets/git.svg" alt="git" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide9">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('figma')"
@@ -639,7 +648,7 @@
                 <img src="../assets/figma.svg" alt="figma" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide10">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showSkill('vuetify')"
@@ -738,12 +747,15 @@
         </div>
         <div class="list">
           <swiper
-            dir="rtl"
+            :spaceBetween="30"
+            :hashNavigation="{
+              watchState: true,
+            }"
             :navigation="true"
             :modules="modules"
             class="mySwiper"
           >
-            <swiper-slide>
+            <swiper-slide data-hash="slide1">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('scrum')"
@@ -751,7 +763,7 @@
                 <img src="../assets/scrum.svg" alt="SCRUM" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide2">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('ui')"
@@ -759,7 +771,7 @@
                 <img src="../assets/ui.svg" alt="UI" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide3">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('ux')"
@@ -767,7 +779,7 @@
                 <img src="../assets/ux.svg" alt="UX" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide4">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('design')"
@@ -775,7 +787,7 @@
                 <img src="../assets/design.svg" alt="Design" />
               </button>
             </swiper-slide>
-            <swiper-slide>
+            <swiper-slide data-hash="slide5">
               <button
                 class="btn btnSkills shadow circle"
                 @click="showAbility('responsive')"
