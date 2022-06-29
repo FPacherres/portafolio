@@ -190,16 +190,18 @@ h1 {
 }
 
 .swiper-button-prev,
-.swiper-rtl .swiper-button-next {
+.swiper-button-next {
   color: var(--bg-1);
   background-color: var(--bg-5);
-  left: 0px;
   height: 100%;
   top: 22px;
 }
 
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
+.swiper-button-prev {
+  left: 0px;
+}
+
+.swiper-button-next {
   right: 0px;
 }
 
@@ -269,7 +271,7 @@ html {
   }
 
   .swiper-button-prev,
-  .swiper-rtl .swiper-button-next {
+  .swiper-button-next {
     height: 70%;
   }
 }
