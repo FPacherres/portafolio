@@ -887,8 +887,8 @@ section {
   stroke-dasharray: 786;
   stroke-dashoffset: calc(786 - (786 * var(--percentage)) / 100);
   opacity: 0;
-  animation: fadeIn 1s linear forwards;
-  animation-delay: 2.5s;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 1.5s;
 }
 @keyframes fadeIn {
   0% {
@@ -909,7 +909,7 @@ section {
 .dot {
   inset: 1.5px;
   transform: rotate(calc(3.6deg * var(--percentage)));
-  animation: animationDot1 2.5s linear forwards;
+  animation: animationDot1 1.5s ease-in forwards;
 }
 .dot::before {
   content: '';
