@@ -94,7 +94,7 @@ export default {
         'Front-End Developer',
         'Aficionado en UI/UX',
         'Diseñador Gráfico',
-        'Egresado en Computación',
+        'Egresado en Informática',
       ],
     }
   },
