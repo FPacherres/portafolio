@@ -13,7 +13,7 @@
       <div class="github">
         <div class="text relative circle shadow">
           <span>Repositories</span>
-          <span>46</span>
+          <span>47</span>
           <div class="tag circle absolute shadow">
             <fa class="icon" :icon="['fa', 'book-bookmark']" />
           </div>
