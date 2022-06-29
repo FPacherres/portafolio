@@ -15,7 +15,8 @@
     "@heroicons/vue": "^1.0.6",
     "rollup-plugin-dynamic-import-variables": "^1.1.0",
     "swiper": "^8.2.2",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-writer": "^1.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
