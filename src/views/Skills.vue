@@ -1,1133 +1,409 @@
 <template>
-  <section>
-    <Title :num="'02'" :text="'Skills'" />
-    <div class="containerS">
-      <div class="card cardDesk">
-        <div class="detail__tecnology relative">
-          <div
-            v-show="currentTecnology === 'vue'"
-            class="percent relative"
-            style="--clr: #40b783; --percentage: 85"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/vue.svg" alt="" />
-              <span>Vue.js</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'nuxt'"
-            class="percent relative"
-            style="--clr: #00dc82; --percentage: 75"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/nuxt.svg" alt="" />
-              <span>Nuxt.js</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'js'"
-            class="percent relative"
-            style="--clr: #f7df1e; --percentage: 70"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/js.svg" alt="" />
-              <span>JavaScript</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'html'"
-            class="percent relative"
-            style="--clr: #ed6029; --percentage: 100"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/html.svg" alt="" />
-              <span>Html5</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'css'"
-            class="percent relative"
-            style="--clr: #3caede; --percentage: 100"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/css.svg" alt="" />
-              <span>Css3</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'sass'"
-            class="percent relative"
-            style="--clr: #d06a9d; --percentage: 80"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/sass.svg" alt="" />
-              <span>Sass</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'tailwind'"
-            class="percent relative"
-            style="--clr: #06b6d5; --percentage: 90"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/tailwind.svg" alt="" />
-              <span>Tailwind</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'git'"
-            class="percent relative"
-            style="--clr: #ef5032; --percentage: 65"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/git.svg" alt="" />
-              <span>Git</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'figma'"
-            class="percent relative"
-            style="--clr: #a259ff; --percentage: 75"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/figma.svg" alt="" />
-              <span>Figma</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'vuetify'"
-            class="percent relative"
-            style="--clr: #1697f6; --percentage: 95"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/vuetify.svg" alt="" />
-              <span>Vuetify</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
+  <section id="skills" class="is-full-width">
+    <div class="container__skills">
+      <titleCustom class="title__about" :pos="2" :title="'Skills'" />
+      <div class="tecnologies__skills">
+        <div class="tecnologies__subtitle">
+          <h2>Tecnologías</h2>
         </div>
-        <div class="title">
-          <span>Tecnologías</span>
-        </div>
-        <div class="list">
-          <swiper
-            :spaceBetween="30"
-            :hashNavigation="{
-              watchState: true,
-            }"
-            :navigation="true"
-            :modules="modules"
-            class="mySwiper"
-          >
-            <swiper-slide data-hash="slide1">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('vue')"
-              >
-                <img src="../assets/vue.svg" alt="vue" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide2">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('nuxt')"
-              >
-                <img src="../assets/nuxt.svg" alt="nuxt" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide3">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('js')"
-              >
-                <img src="../assets/js.svg" alt="js" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide4">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('html')"
-              >
-                <img src="../assets/html.svg" alt="html" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide5">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('css')"
-              >
-                <img src="../assets/css.svg" alt="css" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide6">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('sass')"
-              >
-                <img src="../assets/sass.svg" alt="sass" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide7">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('tailwind')"
-              >
-                <img src="../assets/tailwind.svg" alt="tailwind" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide8">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('git')"
-              >
-                <img src="../assets/git.svg" alt="git" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide9">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('figma')"
-              >
-                <img src="../assets/figma.svg" alt="figma" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide10">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('vuetify')"
-              >
-                <img src="../assets/vuetify.svg" alt="vuetify" />
-              </button>
-            </swiper-slide>
-          </swiper>
+        <div class="tecnologies__content">
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M48.279 10.615 32.986 37.088 17.724 10.615H7.165l.703 1.243c.148.257.269.48.417.737l2.463 4.257c.133.244.269.464.402.712l2.076 3.585c.566.956 1.073 1.89 1.643 2.846l3.285 5.693c.285.492.539.931.808 1.423.148.232.281.467.418.7.148.247.269.479.417.723.149.257.254.464.418.712.807 1.346 1.643 2.911 2.45 4.257l1.24 2.147c.746 1.358 1.702 2.911 2.479 4.282.133.26.254.452.402.712.149.244.254.451.402.699l2.478 4.297c.567.947 1.077 1.903 1.643 2.846.09.13 1.6 2.704 1.643 2.9.18-.115.733-1.177.85-1.384.715-1.32 1.733-2.923 2.464-4.285.507-.919 1.163-1.94 1.658-2.846l1.643-2.846c1.358-2.265 2.747-4.854 4.108-7.116.808-1.358 1.655-2.951 2.478-4.31.285-.48.551-.946.82-1.41L58.83 10.615H48.273h.006z"
+                  fill="#40B783"
+                />
+                <path
+                  d="m38.54 10.615-5.124 8.929c-.074.13-.328.581-.418.646-.12-.077-.315-.48-.402-.622-.12-.235-.238-.414-.374-.646l-.746-1.306c-.866-1.448-1.76-3.094-2.626-4.566l-1.39-2.432h-9.736l15.262 26.474L48.28 10.618h-9.737l-.003-.003z"
+                  fill="#34495E"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M26.372 47.954c.386 2.395 2.447 2.698 5.117 2.688l23.206.007c7.868.046 3.716-5.755 2.12-8.382L45.284 22.783c-1.494-1.659-4-1.191-5.105.402l-8.616 14.584c-1.052 1.85-5.473 8.446-5.191 10.188v-.003z"
+                  fill="#00DC82"
+                />
+                <path
+                  d="M23 50.624c-2.535-3.564-.632-4.622 2.92-10.912l7.413-12.67c1.695-2.777 1.178-1.862-2.197-7.74-.975-1.698-1.776-3.79-4.105-3.975-2.856-.236-3.611 1.633-4.58 3.3-4.04 6.953-7.848 13.44-11.833 20.287-.975 1.677-1.928 3.322-2.952 5.083-1.178 2.032-1.63 4.04.375 5.745 1.519 1.29 4.696.9 7.156.9 2.57 0 5.247.072 7.802-.018z"
+                  fill="#80EDC1"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M55.388 10.612H10.615v44.773h44.773V10.612z"
+                fill="#F7DF1E"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="m40.615 45.652-3.31 1.915c.52 1.358 1.968 2.614 3.196 3.301 4.467 2.447 12.31.712 11.32-5.965-.749-5.089-7.156-5.38-8.706-7.245-1.714-2.058 1.69-4.697 3.908-1.829l.457.508c.941-.495 2.309-1.65 3.16-1.953-1.42-4.238-10.127-5.114-11.84.381-.573 1.816-.177 3.886.71 5.154 1.993 2.844 6.612 3.31 7.831 5.012 1.358 1.918-.773 3.289-2.704 3.212-1.268-.038-2.564-.635-3.273-1.56l-.749-.928v-.003zM22.467 48.078c1.804 4.48 9.495 5.343 11.778.94 1.092-2.12.749-5.965.749-8.554l.012-9.303-4.213.052c.04 3.973 0 7.958 0 11.942 0 1.816.343 4.239-1.191 4.796-2.259.826-3.122-.913-3.772-2.005l-3.363 2.132z"
+                fill="#000"
+              />
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.99 49.77c-2.548 0-.915-3.793.378-4.882.338-.282.557-.477.897-.761.36-.297.557-.464.957-.73.358-.254.597-.433.974-.687l2.051-1.284c.04.554.257 1.21.257 1.85 0 1.748-.795 3.375-1.634 4.331-.897.987-2.468 2.166-3.882 2.166l.003-.003zm23.433-5.003 2.45-2.896c0 1.448-1.692 2.837-2.45 2.896zm7.466-1.76c0-.628.08-.733.238-1.151.337-.835 1.055-1.97 1.773-2.45.018.659.396 1.584-.539 2.704-.297.343-.934.85-1.472.897zM25.453 44.68c-.718-.477-.557-1.943-.539-2.717.08-2.298 1.795-6.227 3.685-6.614.579-.133.538.284.418.881-.059.434-.22.925-.36 1.39-.256.897-.556 1.689-.893 2.536L26.57 43.16c-.257.538-.499 1.373-1.114 1.525l-.003-.003zM6.658 28.884c0 1.97.458 2.942 1.612 4.433 2.33 2.97 8.201 6.361 8.66 7.063-1.316.36-5.495 3.255-6.47 4.242-.399.39-.696.702-1.036 1.15-1.832 2.39-1.535 6.99 2.227 6.99 1.93 0 3.385-.297 4.88-1.284a9.54 9.54 0 0 0 2.607-2.568c1.374-1.986 2.033-5.659.777-8.257l2.806-1.584c-.08.94-.619 1.837-.619 3.941 0 1.105.378 2.435.736 3.227.458 1 1.015 1.791 2.21 1.732 1.732-.105 2.589-2.88 3.186-4.27l.201-.327c0 .956-.22 1.97.158 2.896.3.687.677.971 1.414.971.875 0 1.831-1.568 2.19-2.209.916-1.584 3.923-7.437 4.3-9.123.022.015.04.028.04.058 0 .028.022.044.022.06.18.445-.099-.329.06.132l.556 2.06c1.015 2.943 1.652 1.343-1.015 4.629-.677.85-1.85 1.838-1.85 2.973 0 .387.678.715 1.136.715 2.428 0 5.714-1.522 5.714-4.226l-.198-1.628c-.18-.655-.517-.956-.18-1.463a29.815 29.815 0 0 0 2.37-3.957c.18-.343.279-.73.557-.94.04 1.584 1.176 3.39 1.312 4.046-.257.374-.616.66-.934.987-2.268 2.24-2.748 5.42-.997 5.42 1.971 0 5.176-1.998 5.176-4.21 0-1-.26-1.448-.439-2.194.498-.12.934-.328 1.433-.417 2.827-.523 6.428-.164 8.201 2.107 1.117 1.416.897 3.285-.597 4.254-.337.222-.498.222-.517.733.498 0 .935-.133 1.294-.372 2.01-1.33 2.131-3.746.897-5.674-.418-.628-.935-1.21-1.553-1.611-2.47-1.643-5.872-1.912-8.681-.82-.378.133-.777.39-1.176.402-.1-.464-.517-1.077-.718-1.569-.436-1.089-.418-2.747-.099-3.898.238-.85.975-1.822-.857-1.822-1.732 0-1.992.238-2.268 1.148-.139.433-.2.91-.337 1.315-.18.448-.359.822-.557 1.225l-1.81 3.344c-.18.282-.556.835-.637 1.12h-.18c-.358-1.522-.696-.671-.696-3.419 0-1.806 1.813-3.165-.974-3.165-2.29 0-1.634.972-2.33 2.584-1.014 2.314-2.07 4.507-3.066 6.868-.26.628-1.256 2.986-1.714 3.286-.399-1.733 1.315-5.436 1.315-7.02 0-.328-.637-.703-.956-.703-.377 0-.498.18-.795.254.279-.566.1-1.88-.12-2.345-.656-1.479-2.528-.866-3.543-.254-.776.465-1.572 1.09-2.15 1.792-.795 1.014-1.117 1.06-2.29 1.658l-3.403 1.866-2.29-2c-.398-.315-.754-.612-1.175-.924-1.813-1.358-4.777-3.508-4.777-6.017v-.882c0-3.778 4.737-7.032 7.645-8.78a35.369 35.369 0 0 1 5.473-2.674c3.026-1.15 8.026-2.255 11.311-.702 4.458 2.12.319 9.019-6.253 11.38-2.41.866-5.871 1.524-8.34.253-.62-.316-1.755-1.764-1.755-.792 0 .566.378 1.12.678 1.42 2.846 2.942 8.202 1.97 11.586.85 1.495-.491 3.007-1.283 4.121-2.208 1.154-.94 2.25-2.002 3.048-3.286 1.076-1.748 1.633-3.18 1.633-5.553 0-4.347-5.197-6.061-8.96-6.061-4.699 0-8.3 1.374-12.146 3.227-1.073.507-2.169 1.089-3.165 1.748-1.216.807-2.428 1.568-3.545 2.524-.14.121-.161.149-.319.285-.18.133-.18.12-.337.27-1.256 1.224-2.469 2.462-3.385 4.003-.458.745-1.333 2.462-1.333 3.582v-.015z"
+                fill="#CF6499"
+              />
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill-rule="evenodd" clip-rule="evenodd" fill="#06B6D5">
+                <path
+                  d="M19.782 27.665c.05-.108.322-.464.396-.56.355-.464.996-1.16 1.46-1.54.693-.57 1.46-1.124 2.472-1.536 3.156-1.283 5.804-.272 8.186 1.637.328.26 1.368 1.148 1.587 1.41.136.162.35.344.51.499l1.504 1.494c.34.322.66.644 1.077.944 2.537 1.838 5.572 2.992 8.953 3.05 2.287.04 4.892-.464 6.674-1.349a11.291 11.291 0 0 0 2.87-2.088l.487-.523c.35-.439.52-.622.894-1.126.965-1.302 2.252-3.855 2.49-5.51-.148.177-.278.356-.424.539l-1.46 1.512c-.47.375-.613.505-1.142.848-2.456 1.6-5.253 1.569-7.815.35-1.048-.498-1.633-1.043-2.283-1.699-.154-.154-.328-.362-.486-.495-.207-.176-.321-.334-.491-.52-.08-.086-.161-.145-.242-.235l-.612-.65c-.071-.058-.08-.055-.136-.117-.183-.213-.297-.316-.486-.492l-.266-.238-.647-.588c-2.642-2.326-5.962-3.502-9.683-3.505-3.326-.003-6.69.807-9.093 2.858-1.528 1.306-2.53 2.652-3.382 4.58-.272.618-.903 2.422-.91 3.047l-.002.003zM6.658 43.425c.176-.294.65-.892.872-1.127.174-.182.297-.343.486-.526.16-.154.337-.312.52-.46.68-.573 1.47-1.127 2.475-1.535 2.277-.916 4.446-.684 6.395.436.906.52 1.64 1.086 2.332 1.677l.792.72c.093.081.18.156.263.24l.502.51c.173.167.321.318.491.492.545.55 1.464 1.488 2.08 1.93 1.274.91 2.413 1.538 3.904 2.095 1.569.584 3.36.921 5.061.946 2.172.031 4.978-.47 6.646-1.352.984-.52 1.674-.98 2.379-1.633.43-.396.603-.535 1.012-1.009.297-.346.597-.708.878-1.11.557-.799 1-1.554 1.473-2.538.288-.597.94-2.249 1-2.957l-1.64 1.838c-.7.646-1.665 1.333-2.708 1.754-2.283.922-4.452.61-6.518-.353a5.599 5.599 0 0 1-1.232-.755c-.606-.476-1.5-1.389-2.017-1.964l-.977-1.015a23.931 23.931 0 0 0-2.107-1.872c-2.51-1.961-5.597-2.927-8.997-2.927-1.234 0-2.478.096-3.644.344-1.606.343-2.964.857-4.28 1.689-.336.213-1.41.993-1.695 1.306a7.4 7.4 0 0 1-.485.495c-.118.102-.146.163-.242.262-.767.796-1.667 2.3-2.113 3.357-.309.74-.838 2.24-.903 3.032l-.003.01z"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M33.486 54.67c.544-1.616 1.15-3.172 1.68-4.84a196.363 196.363 0 0 0 1.532-4.986c2.343-8.105 4.78-19.788 3.888-28.318-.16-1.527-.339-2.768-.694-4.242-.05-.21-.222-1.109-.38-1.18-.8 1.263-2.353 4.055-3.159 5.474-3.102 5.467-6.433 11.025-9.495 16.459l-2.748 4.774c-.465.83-.425.409.522 2.095.275.49.532.911.794 1.378.532.949 1.06 1.827 1.592 2.749.093.162 6.178 10.808 6.34 10.967.092-.154.107-.15.128-.33z"
+                  fill="#1767BF"
+                />
+                <path
+                  d="M33.486 54.67c.193-.125 6.075-10.42 6.338-10.882 2.58-4.55 5.312-9.095 7.867-13.639.513-.91 1.033-1.815 1.573-2.717 1.084-1.813 2.082-3.68 3.156-5.477 2.101-3.512 4.181-7.38 6.283-10.905-.67-.072-13.126-.015-14.44-.015-.62 0-4.528-.114-4.751.069.158.07.33.97.38 1.18.355 1.474.534 2.715.694 4.242.891 8.53-1.546 20.213-3.889 28.318a195.15 195.15 0 0 1-1.532 4.985c-.53 1.669-1.135 3.225-1.68 4.841z"
+                  fill="#1697F6"
+                />
+                <path
+                  d="M21.284 34.053c-.094-.59-.299-1.271-.415-1.883-.42-2.21-.653-4.03-.646-6.351.012-3.881.762-7.346 3.037-10.267.105-.135.17-.183.268-.312.524-.696 1.829-1.72 2.527-2.135 1.603-.954 3.256-1.504 5.174-1.817.428-.07 1.855-.154 2.097-.25L8 11.037c.155.381 9.253 16.029 9.932 17.24.546.976 1.1 1.938 1.666 2.89.377.634 1.358 2.427 1.686 2.886z"
+                  fill="#ADDCFF"
+                />
+                <path
+                  d="M21.284 34.053c.046.1.003.056.097.083l12.876-22.36c.13-.23.307-.5.415-.735l-1.346-.003c-.242.096-1.67.18-2.097.25-1.918.313-3.571.863-5.174 1.817-.698.415-2.003 1.44-2.527 2.134-.097.13-.163.178-.268.313-2.275 2.92-3.025 6.386-3.037 10.267-.007 2.322.227 4.14.646 6.35.116.613.32 1.294.415 1.884z"
+                  fill="#7BC6FF"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M26.857 15.525c.368.544 3.314 3.363 4.19 4.238 1.345 1.346.56.786 2.13.786 1.854 0 3.274 1.432 3.274 3.502 0 1.448-.622.495 2.07 3.187.674.671 2.286 2.119 2.716 2.778.647-.05.331-.114 1.411-.114 2.512 0 4.288 3.195 2.308 5.584-1.878 2.246-5.94.85-5.94-2.194 0-.634.189-.965.241-1.525-.838-.557-3.985-4.25-4.684-4.44v12.16c.61.404.814.457 1.256 1.079 1.535 2.156.14 5.355-2.766 5.355-2.778 0-4.189-3.109-2.79-5.24 2.042-3.11 1.612 3.35 1.612-13.35 0-.433-.344-.32-.95-.802-1.17-.912-1.535-2.691-.916-3.985l-5.114-5.064c-.572.393-11.487 11.435-12.858 12.805-1.194 1.194-1.41 1.296-1.435 2.704v.303c0 1.22 1.256 2.132 2.31 3.187l16.599 16.598c1.296 1.309 1.739 2.246 3.592 2.311h.176c1.396 0 2.475-1.485 3.249-2.246l16.536-16.549c1.296-1.296 2.246-1.75 2.311-3.592v-.176c0-1.42-1.472-2.463-2.246-3.236L35.13 11.58c-.798-.798-1.092-.94-1.89-.965h-.646c-1.257 0-2.361 1.485-3.073 2.196-.659.66-2.221 2.07-2.664 2.717v-.003z"
+                fill="#EF5032"
+              />
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M53.507 10.612H12.496L16.79 50.72l16.212 4.665L49.21 50.72l4.297-40.108z"
+                  fill="#E55126"
+                />
+                <path
+                  d="m49.492 14.464-16.49.003v38.02l12.814-3.685 3.675-34.338z"
+                  fill="#F1672C"
+                />
+                <path
+                  d="m26.124 23.767.402 5.098h18.42l-1.429 15.618-10.516 3.186-10.518-2.868-.638-7.97h5.099l.322 4.143 5.736 1.594 5.735-1.594.638-7.01H21.527l-1.083-15.618h25.304l-.637 5.42H26.124z"
+                  fill="#fff"
+                />
+                <path
+                  d="m26.124 23.767.402 5.098h6.476v5.099H21.53l-1.086-15.618h12.558v5.42h-6.878zm6.875 23.902-10.52-2.868-.637-7.97h5.099l.319 4.143 5.738 1.594v5.101z"
+                  fill="#CED1DB"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M53.507 10.612H12.496L16.79 50.72l16.212 4.665L49.21 50.72l4.297-40.108z"
+                  fill="#0C73B8"
+                />
+                <path
+                  d="m49.492 14.464-16.49.003v38.02l12.814-3.685 3.675-34.338z"
+                  fill="#30A9DC"
+                />
+                <path
+                  d="m21.347 24.546-.931-5.13h25.168l-2.33 25.169-9.788 2.948-10.72-2.948-.932-7.92h5.127l.467 4.192 6.058 1.646 5.593-1.646.467-6.522H27.872l-.464-4.662h12.118l.464-5.127H21.347z"
+                  fill="#fff"
+                />
+                <path
+                  d="m21.347 24.546-.931-5.13h12.586v5.13H21.347zm11.655 22.857-10.256-2.818-.932-7.924h5.127l.467 4.196 5.594 1.519v5.027zm0-13.071h-5.13l-.464-4.663h5.594v4.663z"
+                  fill="#CED1DB"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="tecnologies__item">
+            <svg
+              width="66"
+              height="66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M40.464 40.464a7.462 7.462 0 1 0 0-14.925 7.462 7.462 0 0 0 0 14.925z"
+                fill="#1ABCFE"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25.536 40.46H33v7.463a7.463 7.463 0 1 1-14.925-.003 7.463 7.463 0 0 1 7.462-7.462v.003z"
+                fill="#0ACF83"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25.641 25.536H33v14.925h-7.463a7.463 7.463 0 0 1-7.462-7.466 7.463 7.463 0 0 1 7.462-7.462h.105v.003z"
+                fill="#A259FF"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25.641 25.536H33V10.612h-7.463a7.463 7.463 0 0 0-.096 14.924h.201z"
+                fill="#F24E1E"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M33.002 25.536h7.561a7.463 7.463 0 0 0-.096-14.924h-7.465v14.924z"
+                fill="#FF7262"
+              />
+            </svg>
+          </div>
         </div>
       </div>
-      <div class="card cardDesk">
-        <div class="detail__tecnology relative">
-          <div
-            v-show="currentAbility === 'scrum'"
-            class="percent relative"
-            style="--clr: #f8759d; --percentage: 85"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/scrum.svg" alt="" />
-              <span>SCRUM</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'ui'"
-            class="percent relative"
-            style="--clr: #ffae17; --percentage: 98"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/ui.svg" alt="" />
-              <span>UI</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'ux'"
-            class="percent relative"
-            style="--clr: #20c4c4; --percentage: 85"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/ux.svg" alt="" />
-              <span>UX</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'design'"
-            class="percent relative"
-            style="--clr: #c7c7c7; --percentage: 95"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/design.svg" alt="" />
-              <span>Graphic Design</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'responsive'"
-            class="percent relative"
-            style="--clr: #f04633; --percentage: 95"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/responsive.svg" alt="" />
-              <span>Responsive</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
+      <div class="habilities__skills">
+        <div class="habilities__subtitle">
+          <h2>Habilidades</h2>
         </div>
-        <div class="title">
-          <span>Habilidades</span>
+        <div class="habilities__content">
+          <span>Gestión de Proyectos - <strong>SCRUM</strong></span>
+          <span>UI/UX</span>
+          <span>Diseño Gráfico</span>
+          <span>Mobile First</span>
+          <span>Accesibilidad</span>
         </div>
-        <div class="list">
-          <swiper
-            :spaceBetween="30"
-            :hashNavigation="{
-              watchState: true,
-            }"
-            :navigation="true"
-            :modules="modules"
-            class="mySwiper"
-          >
-            <swiper-slide data-hash="slide1">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('scrum')"
-              >
-                <img src="../assets/scrum.svg" alt="SCRUM" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide2">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('ui')"
-              >
-                <img src="../assets/ui.svg" alt="UI" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide3">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('ux')"
-              >
-                <img src="../assets/ux.svg" alt="UX" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide4">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('design')"
-              >
-                <img src="../assets/design.svg" alt="Design" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide5">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('responsive')"
-              >
-                <img src="../assets/responsive.svg" alt="Responsive" />
-              </button>
-            </swiper-slide>
-          </swiper>
-        </div>
-      </div>
-      <div v-show="!ability" class="card cardMobile">
-        <div class="detail__tecnology relative">
-          <div
-            v-show="currentTecnology === 'vue'"
-            class="percent relative"
-            style="--clr: #40b783; --percentage: 85"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/vue.svg" alt="" />
-              <span>Vue.js</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'nuxt'"
-            class="percent relative"
-            style="--clr: #00dc82; --percentage: 75"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/nuxt.svg" alt="" />
-              <span>Nuxt.js</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'js'"
-            class="percent relative"
-            style="--clr: #f7df1e; --percentage: 70"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/js.svg" alt="" />
-              <span>JavaScript</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'html'"
-            class="percent relative"
-            style="--clr: #ed6029; --percentage: 100"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/html.svg" alt="" />
-              <span>Html5</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'css'"
-            class="percent relative"
-            style="--clr: #3caede; --percentage: 100"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/css.svg" alt="" />
-              <span>Css3</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'sass'"
-            class="percent relative"
-            style="--clr: #d06a9d; --percentage: 80"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/sass.svg" alt="" />
-              <span>Sass</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'tailwind'"
-            class="percent relative"
-            style="--clr: #06b6d5; --percentage: 90"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/tailwind.svg" alt="" />
-              <span>Tailwind</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'git'"
-            class="percent relative"
-            style="--clr: #ef5032; --percentage: 65"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/git.svg" alt="" />
-              <span>Git</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'figma'"
-            class="percent relative"
-            style="--clr: #a259ff; --percentage: 75"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/figma.svg" alt="" />
-              <span>Figma</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentTecnology === 'vuetify'"
-            class="percent relative"
-            style="--clr: #1697f6; --percentage: 95"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data circle shadow-inset absolute">
-              <img src="../assets/vuetify.svg" alt="" />
-              <span>Vuetify</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-        </div>
-        <div class="title">
-          <span>Tecnologías</span>
-        </div>
-        <div class="list">
-          <swiper
-            :spaceBetween="30"
-            :hashNavigation="{
-              watchState: true,
-            }"
-            :navigation="true"
-            :modules="modules"
-            class="mySwiper"
-          >
-            <swiper-slide data-hash="slide1">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('vue')"
-              >
-                <img src="../assets/vue.svg" alt="vue" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide2">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('nuxt')"
-              >
-                <img src="../assets/nuxt.svg" alt="nuxt" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide3">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('js')"
-              >
-                <img src="../assets/js.svg" alt="js" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide4">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('html')"
-              >
-                <img src="../assets/html.svg" alt="html" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide5">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('css')"
-              >
-                <img src="../assets/css.svg" alt="css" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide6">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('sass')"
-              >
-                <img src="../assets/sass.svg" alt="sass" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide7">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('tailwind')"
-              >
-                <img src="../assets/tailwind.svg" alt="tailwind" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide8">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('git')"
-              >
-                <img src="../assets/git.svg" alt="git" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide9">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('figma')"
-              >
-                <img src="../assets/figma.svg" alt="figma" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide10">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showSkill('vuetify')"
-              >
-                <img src="../assets/vuetify.svg" alt="vuetify" />
-              </button>
-            </swiper-slide>
-          </swiper>
-        </div>
-      </div>
-      <div v-show="ability" class="card cardMobile">
-        <div class="detail__tecnology relative">
-          <div
-            v-show="currentAbility === 'scrum'"
-            class="percent relative"
-            style="--clr: #f8759d; --percentage: 85"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/scrum.svg" alt="" />
-              <span>SCRUM</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'ui'"
-            class="percent relative"
-            style="--clr: #ffae17; --percentage: 98"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/ui.svg" alt="" />
-              <span>UI</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'ux'"
-            class="percent relative"
-            style="--clr: #20c4c4; --percentage: 85"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/ux.svg" alt="" />
-              <span>UX</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'design'"
-            class="percent relative"
-            style="--clr: #c7c7c7; --percentage: 95"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/design.svg" alt="" />
-              <span>Graphic Design</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-          <div
-            v-show="currentAbility === 'responsive'"
-            class="percent relative"
-            style="--clr: #f04633; --percentage: 95"
-          >
-            <div class="circle-pass circle shadow absolute"></div>
-            <svg class="relative">
-              <circle cx="125" cy="125" r="125"></circle>
-              <circle cx="125" cy="125" r="125"></circle>
-            </svg>
-            <div class="data dataAbility circle shadow-inset absolute">
-              <img class="imgAbility" src="../assets/responsive.svg" alt="" />
-              <span>Responsive</span>
-            </div>
-            <div class="dot absolute"></div>
-          </div>
-        </div>
-        <div class="title">
-          <span>Habilidades</span>
-        </div>
-        <div class="list">
-          <swiper
-            :spaceBetween="30"
-            :hashNavigation="{
-              watchState: true,
-            }"
-            :navigation="true"
-            :modules="modules"
-            class="mySwiper"
-          >
-            <swiper-slide data-hash="slide1">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('scrum')"
-              >
-                <img src="../assets/scrum.svg" alt="SCRUM" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide2">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('ui')"
-              >
-                <img src="../assets/ui.svg" alt="UI" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide3">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('ux')"
-              >
-                <img src="../assets/ux.svg" alt="UX" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide4">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('design')"
-              >
-                <img src="../assets/design.svg" alt="Design" />
-              </button>
-            </swiper-slide>
-            <swiper-slide data-hash="slide5">
-              <button
-                class="btn btnSkills shadow circle"
-                @click="showAbility('responsive')"
-              >
-                <img src="../assets/responsive.svg" alt="Responsive" />
-              </button>
-            </swiper-slide>
-          </swiper>
-        </div>
-      </div>
-      <div class="changeTypeSkill">
-        <button class="btn btnChangeSkill" @click="ability = !ability">
-          {{ ability ? 'Ver Tecnologías' : 'Ver Habilidades' }}
-        </button>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
-
-import 'swiper/css/navigation'
-
-import { Navigation } from 'swiper'
-
-import Title from '../components/global/Title.vue'
-import Spinner from '../components/global/SpringSpinner.vue'
-
-// import { ref, watchEffect } from 'vue'
-
+import titleCustom from '../components/custom/Title.vue'
 export default {
-  components: { Swiper, SwiperSlide, Title, Spinner },
-  data() {
-    return {
-      modules: [Navigation],
-      currentTecnology: 'vue',
-      currentAbility: 'scrum',
-      ability: false,
-    }
-  },
-  methods: {
-    showSkill(e) {
-      this.currentTecnology = e
-      return e
-    },
-    showAbility(e) {
-      this.currentAbility = e
-      return e
-    },
-  },
+  name: 'SkillsPage',
+  components: { titleCustom },
 }
 </script>
 
 <style scoped>
 section {
-  padding: 80px 0 60px;
-  box-sizing: border-box;
-  display: grid;
-  align-items: center;
-  gap: 40px;
-}
-
-.containerS {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-}
-
-.card {
-  height: 100%;
-  display: grid;
-  grid-template-rows: 270px 50px 70px;
-  gap: 10px;
-}
-.cardMobile {
-  display: none;
-}
-
-.detail__tecnology {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.detail__tecnology .percent {
-  width: 265px;
-  height: 265px;
-}
-.detail__tecnology .percent svg {
-  width: 265px;
-  height: 265px;
-  transform: rotate(270deg);
-}
-.detail__tecnology .percent svg circle {
+.container__skills {
+  max-width: 420px;
   width: 100%;
+  max-height: 550px;
   height: 100%;
-  fill: transparent;
-  stroke: var(--bg-5);
-  stroke-width: 12;
-  transform: translate(7px, 7px);
+  display: grid;
+  grid-template-rows: 80px auto 1fr;
+  gap: 30px;
 }
-.detail__tecnology .percent svg circle:nth-child(2) {
-  stroke: var(--clr);
-  stroke-dasharray: 786;
-  stroke-dashoffset: calc(786 - (786 * var(--percentage)) / 100);
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 1.5s;
+section .tecnologies__skills .tecnologies__subtitle,
+section .habilities__skills .habilities__subtitle {
+  color: var(--bg-3);
+  text-align: center;
 }
-@keyframes fadeIn {
+section .tecnologies__skills .tecnologies__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 16px;
+}
+section .tecnologies__skills .tecnologies__content .tecnologies__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+section .tecnologies__skills .tecnologies__content .tecnologies__item::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: var(--neutral);
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(1)::before {
+  animation: 3s changeKillType 0s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(2)::before {
+  animation: 3s changeKillType 0.1s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(3)::before {
+  animation: 3s changeKillType 0.2s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(4)::before {
+  animation: 3s changeKillType 0.3s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(5)::before {
+  animation: 3s changeKillType 0.4s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(6)::before {
+  animation: 3s changeKillType 0.5s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(7)::before {
+  animation: 3s changeKillType 0.6s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(8)::before {
+  animation: 3s changeKillType 0.7s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(9)::before {
+  animation: 3s changeKillType 0.8s ease-in-out infinite;
+}
+section
+  .tecnologies__skills
+  .tecnologies__content
+  .tecnologies__item:nth-child(10)::before {
+  animation: 3s changeKillType 0.9s ease-in-out infinite;
+}
+@keyframes changeKillType {
   0% {
+    -webkit-transform: scale(0) rotate(45deg);
     opacity: 0;
   }
-  100% {
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
     opacity: 1;
   }
-}
-.circle-pass {
-  height: 261px;
-  width: 261px;
-  transform: rotate(-270deg);
-  background-color: var(--bg-5);
-  top: 2px;
-  left: 2px;
-}
-.dot {
-  inset: 1.5px;
-  transform: rotate(calc(3.6deg * var(--percentage)));
-  animation: animationDot1 1.5s ease-in forwards;
-}
-.dot::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--bg-5);
-  border: 4px solid var(--clr);
-  transform: translateX(-50%);
-  box-shadow: var(--shadow);
-}
-
-@keyframes animationDot1 {
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
-    transform: rotate(calc(3.6deg * var(--percentage)));
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
   }
 }
-
-.canva {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: 20px 0px;
+section .tecnologies__skills .tecnologies__content .tecnologies__item svg {
+  margin: 0 auto;
+  transform: scale(0.5);
 }
-.score {
-  transform: rotate(65deg);
+section .habilities__skills {
+  margin-top: 20px;
 }
-
-.data {
-  width: 240px;
-  height: 240px;
-  background-color: var(--bg-5);
+section .habilities__skills .habilities__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 14px;
-  left: 12px;
-}
-
-.dataAbility {
-  gap: 25px;
-}
-
-.data img {
-  width: 140px;
-}
-
-.data .imgAbility {
-  width: 120px;
-}
-
-.data span {
-  font-size: 20px;
-  margin-top: -15px;
-  font-weight: 300;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  font-size: 24px;
+  text-align: center;
+  padding-top: 16px;
   color: var(--bg-3);
+  font-style: oblique;
+  font-size: 14px;
 }
-
-.swiper {
-  width: 260px;
-  height: 100%;
-}
-
-.swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.btnSkills {
-  background-color: var(--bg-5);
-  width: 50px;
-  height: 50px;
-  transition: 0.3s;
-}
-
-.btnSkills:hover {
-  box-shadow: var(--shadow-inset);
-  transition: 0.3s;
-}
-
-.btnSkills img {
-  width: 30px;
-}
-
-.changeTypeSkill {
-  display: none;
-}
-
-@media (max-width: 870px) {
-  section {
-    padding: 80px 0 80px;
-  }
-  .cardMobile {
-    display: grid;
-  }
-  .containerS {
-    grid-template-columns: 1fr;
-    position: relative;
-  }
-  .changeTypeSkill {
-    height: 30px;
-    bottom: -20px;
-    right: 10px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-  }
-  .changeTypeSkill .btnChangeSkill {
-    color: var(--bg-3);
-    font-weight: 300;
-    opacity: 0.3;
-    font-style: oblique;
-    font-size: 14px;
-    border: 0.8px solid var(--bg-3);
-    border-radius: 25px;
-    padding: 0px 20px;
-    position: relative;
-  }
-
-  .btnChangeSkill {
-    border: none;
-    overflow: hidden;
-  }
-  .btnChangeSkill:hover {
-    opacity: 1;
-  }
-  .btnChangeSkill:before {
-    position: absolute;
-    content: '';
-    display: inline-block;
-    top: -180px;
-    left: 0;
-    width: 30px;
-    height: 100%;
-    background-color: var(--bg-4);
-    animation: changeKillType 3s ease-in-out infinite;
-  }
-  .btnChangeSkill:hover {
-    opacity: 0.7;
-  }
-  .btnChangeSkill:active {
-    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
-      -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-      inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
-      inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  @keyframes changeKillType {
-    0% {
-      -webkit-transform: scale(0) rotate(45deg);
-      opacity: 0;
-    }
-    80% {
-      -webkit-transform: scale(0) rotate(45deg);
-      opacity: 0.5;
-    }
-    81% {
-      -webkit-transform: scale(4) rotate(45deg);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(50) rotate(45deg);
-      opacity: 0;
-    }
-  }
-
-  .card {
-    grid-template-rows: 250px 60px 1fr;
+@media screen and (min-width: 870px) {
+  .container__skills {
+    max-height: 550px;
+    max-width: 800px;
+    grid-template-rows: 130px 1fr 1fr;
     gap: 10px;
   }
-
-  .cardDesk {
-    display: none;
+  section .tecnologies__skills .tecnologies__content {
+    column-gap: 50px;
+    row-gap: 20px;
+    padding-top: 20px;
   }
-  .swiper-slide {
-    height: 70%;
-  }
-
-  .data img {
-    width: 120px;
+  section .tecnologies__skills .tecnologies__content .tecnologies__item svg {
+    transform: scale(1);
   }
 }
 </style>
+

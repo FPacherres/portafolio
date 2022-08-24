@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  position: relative;
+  background-color: var(--bg-5);
+}
+
+.container {
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* scroll-snap-type: y proximity; */
+  height: 100vh;
+  width: 100%;
+}
+
+section {
+  margin: 0 auto;
+  height: 100vh;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  padding: 80px 20px 60px;
+  min-height: 650px;
+}
+
+.container::-webkit-scrollbar,
+.container::-webkit-scrollbar-thumb {
+  width: 0px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.is-full-width {
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+.shadow-inset {
+  box-shadow: var(--shadow-inset);
+}
+.shadow-total {
+  box-shadow: var(--shadow-total);
+}
+
+.btnFloat {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  background-color: var(--bg-2);
+  display: none;
+  transition: 0.3s;
+}
+.btnFloat a {
+  color: #fff;
+  margin-top: 4px;
+}
+.btnFloat:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+@keyframes changeKillType {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 870px) {
+  .container::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 4px;
+    background-color: var(--bg-1);
+  }
+
+  .container::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .is-full-width {
+    width: 800px;
+  }
+  .btnFloat {
+    display: flex;
+  }
+}

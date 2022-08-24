@@ -1,91 +1,112 @@
-<script>
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
-import Skills from "./views/Skills.vue";
-import Studies from "./views/Studies.vue";
-import Experience from "./views/Experience.vue";
-import Contact from "./views/Contact.vue";
-import FHeader from "./components/global/FHeader.vue";
-import NavMobile from "./components/global/NavMobile.vue";
-import Loading from "./views/Loading.vue";
-export default {
-  components: { Home, About, Skills, Studies, Experience, FHeader, NavMobile, Loading, Contact },
-  data() {
-    return {
-      MenuMobile: false
-    }
-  },
-  methods: {
-    selectNav(n) {
-      let li = document.querySelectorAll(".liNav")
-      for(let i=0; i <= li.length; i++) {
-        i == n 
-          ? li[i].classList.add('selected')
-          : li[i].classList.remove('selected')
-      }
-    }
-  },
-  mounted() {
-    let searchLi = (id) => {
-      if(id == 'home') return 0
-      if(id == 'about') return 1
-      if(id == 'skills') return 2
-      if(id == 'studies') return 3
-      if(id == 'experience') return 4
-      if(id == 'contact') return 5
-    }
-
-    const $sections = document.querySelectorAll('.view')
-
-    const options = {
-      rootMargin: '0px 0px 0px 0px',
-      threshold: .5,
-    }
-
-    const callback = (entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          let currentLi = searchLi(entry.target.id)
-          this.selectNav(currentLi)
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(callback, options)
-    
-    $sections.forEach( section => observer.observe(section))
-  }
-}
-</script>
-
 <template>
-  <loading />
-  <div class="container relative">
-    <f-header @openMenueMobile="MenuMobile = true" class="is-full-width fixed absolute z-max" />
-    <nav-Mobile v-if="MenuMobile" @close="MenuMobile = false"
-      class="is-full-width-screen is-full-height fixed absolute z-max" />
-    <div id="home" class="item-area view is-full-height is-full-width">
-      <home class="item-area is-full-width is-full-height relative" />
-    </div>
-    <div id="about" class="item-area view is-full-height is-full-width">
-      <about class="item-area is-full-width is-full-height" />
-    </div>
-    <div id="skills" class="item-area view is-full-height is-full-width">
-      <skills class="item-area is-full-width is-full-height" />
-    </div>
-    <div id="studies" class="item-area view is-full-height is-full-width">
-      <studies class="item-area is-full-width is-full-height" />
-    </div>
-    <div id="experience" class="item-area view is-full-height is-full-width">
-      <experience class="item-area is-full-width is-full-height" />
-    </div>
-    <div id="contact" class="item-area view is-full-height is-full-width">
-      <contact class="item-area is-full-width is-full-height" />
-    </div>
+  <div class="container">
+    <!-- <navCustom @toggleMenu="toggleMenu" /> -->
+    <home />
+    <about />
+    <skills />
+    <studies />
+    <experience />
+    <!-- <contact /> -->
+    <button class="btnFloat btn circle shadow">
+      <a href="#contact">
+        <i class="icon icon-message"></i>
+      </a>
+    </button>
+    <modal />
+    <!-- <menuMobile v-if="menuState" @toggleMenu="toggleMenu" /> -->
+    <loading />
   </div>
 </template>
 
+<script>
+import home from './views/Home.vue'
+import about from './views/About.vue'
+import skills from './views/Skills.vue'
+import studies from './views/Studies.vue'
+import experience from './views/Experience.vue'
+// import contact from '../components/sections/contact.vue'
+// import loading from '../components/sections/loading.vue'
+// import navCustom from '../components/custom/navCustom.vue'
+// import modal from '../components/custom/modal.vue'
+// import menuMobile from '../components/custom/menuMobile.vue'
+export default {
+  name: 'IndexPage',
+  components: {
+    home,
+    about,
+    skills,
+    studies,
+    experience,
+    // contact,
+    // navCustom,
+    // modal,
+    // menuMobile,
+    // loading
+  },
+  data() {
+    return {
+      menuState: false,
+    }
+  },
+  mounted() {
+    const sectionObj = {
+      home: 0,
+      about: 1,
+      skills: 2,
+      studies: 3,
+      experience: 4,
+      contact: 5,
+    }
+
+    const $sections = document.querySelectorAll('section')
+
+    const options = {
+      rootMargin: '0px 0px 0px 0px',
+      threshold: 0.5,
+    }
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const currentOption = sectionObj[entry.target.id]
+          this.selectOptionNav(currentOption)
+        }
+      })
+    }
+    const observer = new IntersectionObserver(callback, options)
+
+    $sections.forEach((section) => observer.observe(section))
+  },
+  methods: {
+    selectOptionNav(n) {
+      const options = [
+        document.getElementById('optionNav1'),
+        document.getElementById('optionNav2'),
+        document.getElementById('optionNav3'),
+        document.getElementById('optionNav4'),
+        document.getElementById('optionNav5'),
+      ]
+      for (let i = 0; i <= options.length; i++) {
+        if (i === n) {
+          options[i].classList.add('selected')
+        } else if (options[i].classList.value === 'selected') {
+          options[i].classList.remove('selected')
+        }
+      }
+    },
+    toggleMenu(state) {
+      this.menuState = state
+    },
+  },
+}
+</script>
+
 <style>
+@import url('./assets/styles/styles.css');
+@import url('./assets/styles/colors.css');
+/* @import url('../assets/icons/style.css'); */
+</style>
+
+<!-- <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 #app {
@@ -275,4 +296,4 @@ html {
     height: 70%;
   }
 }
-</style>
+</style> -->
