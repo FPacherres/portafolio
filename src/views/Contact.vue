@@ -25,7 +25,7 @@
         Enviar
       </button>
     </form> -->
-    <div id="containerModal" v-if="showModal" @click="showModal=false">
+    <div id="containerModal" v-if="showModal">
       <form class="contentForm">
         <div class="containerFake"></div>
         <div class="cover">
