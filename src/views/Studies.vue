@@ -112,7 +112,7 @@ section .title__studies {
 }
 section .line__studies {
   grid-area: time;
-  border-right: 2px solid var(--bg-4);
+  border-right: 0.8px solid var(--bg-4);
   display: grid;
   grid-template-rows: 1.4fr 1fr 1.6fr;
   padding-right: 3px;
@@ -242,7 +242,7 @@ section .studies__content .item .item__line-3 {
     max-width: 800px;
   }
   section .line__studies {
-    border-top: 3px solid var(--bg-4);
+    border-top: 2px solid var(--bg-4);
     border-right: none;
     grid-template-columns: repeat(3, 1fr);
     padding-top: 6px;
@@ -295,7 +295,7 @@ section .studies__content .item .item__line-3 {
   }
   section .studies__content .item .item__line-desk {
     display: flex;
-    width: 2px;
+    width: 1px;
     background-color: var(--bg-4);
     position: absolute;
     bottom: -20px;

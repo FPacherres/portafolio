@@ -1,19 +1,25 @@
 <template>
   <div class="container">
-    <!-- <navCustom @toggleMenu="toggleMenu" /> -->
+    <div id="menuMobile">
+      <button class="closeMenuMobile" @click="toggleMenu(false)">x</button>
+        <li id="opNavMobile1" class="selected"><a href="#home" @click="toggleMenu(false)">Home</a></li>
+        <li id="opNavMobile2"><a href="#about" @click="toggleMenu(false)">About</a></li>
+        <li id="opNavMobile3"><a href="#skills" @click="toggleMenu(false)">Skills</a></li>
+        <li id="opNavMobile4"><a href="#studies" @click="toggleMenu(false)">Studies</a></li>
+        <li id="opNavMobile5"><a href="#experience" @click="toggleMenu(false)">Experience</a></li>
+        <li id="opNavMobile6"><a href="#contact" @click="toggleMenu(false)">Contact</a></li>
+    </div>
+    <navCustom @toggleMenu="toggleMenu" />
     <home />
     <about />
     <skills />
     <studies />
     <experience />
-    <!-- <contact /> -->
-    <button class="btnFloat btn circle shadow">
-      <a href="#contact">
-        <i class="icon icon-message"></i>
-      </a>
-    </button>
+    <contact />
+    <a href="#contact" class="btnFloat btn circle shadow">
+      <i class="icon icon-message"></i>
+    </a>
     <modal />
-    <!-- <menuMobile v-if="menuState" @toggleMenu="toggleMenu" /> -->
     <loading />
   </div>
 </template>
@@ -24,11 +30,10 @@ import about from './views/About.vue'
 import skills from './views/Skills.vue'
 import studies from './views/Studies.vue'
 import experience from './views/Experience.vue'
-// import contact from '../components/sections/contact.vue'
-// import loading from '../components/sections/loading.vue'
-// import navCustom from '../components/custom/navCustom.vue'
+import contact from './views/Contact.vue'
+import loading from './components/custom/Loading.vue'
 // import modal from '../components/custom/modal.vue'
-// import menuMobile from '../components/custom/menuMobile.vue'
+import navCustom from './components/custom/NavCustom.vue'
 export default {
   name: 'IndexPage',
   components: {
@@ -37,25 +42,19 @@ export default {
     skills,
     studies,
     experience,
-    // contact,
-    // navCustom,
+    contact,
+    navCustom,
     // modal,
-    // menuMobile,
-    // loading
-  },
-  data() {
-    return {
-      menuState: false,
-    }
+    loading
   },
   mounted() {
     const sectionObj = {
-      home: 0,
-      about: 1,
-      skills: 2,
-      studies: 3,
-      experience: 4,
-      contact: 5,
+      home: 1,
+      about: 2,
+      skills: 3,
+      studies: 4,
+      experience: 5,
+      contact: 6,
     }
 
     const $sections = document.querySelectorAll('section')
@@ -78,23 +77,76 @@ export default {
   },
   methods: {
     selectOptionNav(n) {
-      const options = [
-        document.getElementById('optionNav1'),
-        document.getElementById('optionNav2'),
-        document.getElementById('optionNav3'),
-        document.getElementById('optionNav4'),
-        document.getElementById('optionNav5'),
-      ]
-      for (let i = 0; i <= options.length; i++) {
-        if (i === n) {
-          options[i].classList.add('selected')
-        } else if (options[i].classList.value === 'selected') {
-          options[i].classList.remove('selected')
+      if (
+        navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i)
+      ) {
+        let opNavMobile1 = document.getElementById('opNavMobile1')
+        let opNavMobile2 = document.getElementById('opNavMobile2')
+        let opNavMobile3 = document.getElementById('opNavMobile3')
+        let opNavMobile4 = document.getElementById('opNavMobile4')
+        let opNavMobile5 = document.getElementById('opNavMobile5')
+        let opNavMobile6 = document.getElementById('opNavMobile6')
+        for (let i = 1; i <= 6; i++) {
+          if (n === i) {
+            if (i === 1) opNavMobile1.classList.add('selected')
+            if (i === 2) opNavMobile2.classList.add('selected')
+            if (i === 3) opNavMobile3.classList.add('selected')
+            if (i === 4) opNavMobile4.classList.add('selected')
+            if (i === 5) opNavMobile5.classList.add('selected')
+            if (i === 6) opNavMobile6.classList.add('selected')
+          } else {
+            if (i === 1 && opNavMobile1.classList.contains('selected'))
+              opNav1.classList.remove('selected')
+            if (i === 2 && opNavMobile2.classList.contains('selected'))
+              opNav2.classList.remove('selected')
+            if (i === 3 && opNavMobile3.classList.contains('selected'))
+              opNav3.classList.remove('selected')
+            if (i === 4 && opNavMobile4.classList.contains('selected'))
+              opNav4.classList.remove('selected')
+            if (i === 5 && opNavMobile5.classList.contains('selected'))
+              opNav5.classList.remove('selected')
+            if (i === 6 && opNavMobile6.classList.contains('selected'))
+              opNav6.classList.remove('selected')
+          }
+        }
+      } else {
+        let opNav1 = document.getElementById('opNav1')
+        let opNav2 = document.getElementById('opNav2')
+        let opNav3 = document.getElementById('opNav3')
+        let opNav4 = document.getElementById('opNav4')
+        let opNav5 = document.getElementById('opNav5')
+        for (let i = 1; i <= 5; i++) {
+          if (n === i) {
+            if (i === 1) opNav1.classList.add('selected')
+            if (i === 2) opNav2.classList.add('selected')
+            if (i === 3) opNav3.classList.add('selected')
+            if (i === 4) opNav4.classList.add('selected')
+            if (i === 5) opNav5.classList.add('selected')
+          } else {
+            if (i === 1 && opNav1.classList.contains('selected'))
+              opNav1.classList.remove('selected')
+            if (i === 2 && opNav2.classList.contains('selected'))
+              opNav2.classList.remove('selected')
+            if (i === 3 && opNav3.classList.contains('selected'))
+              opNav3.classList.remove('selected')
+            if (i === 4 && opNav4.classList.contains('selected'))
+              opNav4.classList.remove('selected')
+            if (i === 5 && opNav5.classList.contains('selected'))
+              opNav5.classList.remove('selected')
+          }
         }
       }
     },
     toggleMenu(state) {
-      this.menuState = state
+      let $menuMobile = document.getElementById('menuMobile')
+      $menuMobile.style.transform = state ? 'translateX(0)' : 'translateX(-100vw)'
+      $menuMobile.style.transition = '1s'
     },
   },
 }
@@ -103,197 +155,26 @@ export default {
 <style>
 @import url('./assets/styles/styles.css');
 @import url('./assets/styles/colors.css');
-/* @import url('../assets/icons/style.css'); */
-</style>
+@import url('./assets/icons/style.css');
 
-<!-- <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+#menuMobile li {
+  list-style: none;
+}
 
-#app {
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+#menuMobile li.selected a {
+  color: var(--bg-1);
+}
+
+#menuMobile li a {
+  text-decoration: none;
   color: var(--bg-3);
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-body {
-  margin: 0px;
-  background-color: var(--bg-5);
-}
-
-.container {
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  width: 100%;
-}
-
-.item-area {
-  scroll-snap-align: start;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.container::-webkit-scrollbar {
-  width: 5px;
-}
-
-.container::-webkit-scrollbar-thumb {
-  width: 5px;
-  border-radius: 4px;
-  background-color: var(--bg-1);
-}
-
-.is-full-width-screen {
-  width: 100%;
-}
-
-.is-full-width {
-  width: 800px;
-}
-
-.is-full-height {
-  height: 100vh;
-  min-height: 750px;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.btn {
-  outline: none;
   cursor: pointer;
-  border: none;
-  background: transparent;
-}
-
-h1 {
-  margin: 0px;
-}
-
-.circle {
-  border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.shadow {
-  box-shadow: var(--shadow);
-}
-
-.shadow-inset {
-  box-shadow: var(--shadow-inset);
-}
-
-.shadow-total {
-  box-shadow: var(--shadow-total);
-}
-
-.z-max {
-  z-index: 900;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
+#menuMobile li a:hover {
   color: var(--bg-1);
-  background-color: var(--bg-5);
-  height: 100%;
-  top: 22px;
+  transition: 0.4s;
 }
-
-.swiper-button-prev {
-  left: 0px;
-}
-
-.swiper-button-next {
-  right: 0px;
-}
-
-html {
-  --white: #ffffff;
-  --red: #ff2400;
-
-  --bg-1: #ef0070;
-  --bg-2: #fac20b;
-  --bg-3: #35455E;
-  --bg-4: #666666;
-  --bg-5: #edf1fd;
-  --bg-6: #b4bacb;
-  --shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
-    rgba(255, 255, 255, 0.8) -3px -3px 6px 1px;
-  --shadow-inset: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset;
-  --shadow-total: rgb(204, 219, 232) 3px 3px 6px 0px,
-    rgba(255, 255, 255, 0.8) -3px -3px 6px 1px, rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.8) -3px -3px 6px 1px inset;
-  ;
-  --shadow-btn: #b4911d 3px 3px 6px 0px inset,
-    #ffe180 -3px -3px 6px 1px inset;
-
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    --white: #ffffff;
-    --red: #ff2400;
-
-    --bg-1: #fac20b;
-    --bg-2: #ef0070;
-    --bg-3: #edf1fd;
-    --bg-4: #b3b3b3;
-    --bg-5: #1f2937;
-    --bg-6: #304157;
-    --shadow: #2e3b4c 3px 3px 6px 0px,
-      #161e29 -3px -3px 6px 1px;
-    --shadow-inset: #2e3b4c 3px 3px 6px 0px inset,
-      #161e29 -3px -3px 6px 1px inset;
-    --shadow-total: #161e29 3px 3px 6px 0px,
-      #2e3b4c -3px -3px 6px 1px, #161e29 3px 3px 6px 0px inset,
-      #2e3b4c -3px -3px 6px 1px inset;
-    --shadow-btn: #710d3c 3px 3px 6px 0px inset,
-      #ff55a4 -3px -3px 6px 1px inset;
-  }
-}
-
-@media (max-width: 1090px) {
-  .is-full-width {
-    width: 750px;
-  }
-}
-
-@media (max-width: 870px) {
-  .is-full-width {
-    width: 90vw;
-  }
-
-  .container::-webkit-scrollbar {
-    width: 1px;
-  }
-
-  .container::-webkit-scrollbar-thumb {
-    width: 1px;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    height: 70%;
-  }
-}
-</style> -->
+</style>

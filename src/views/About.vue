@@ -262,7 +262,7 @@ export default {
   methods: {
     downloadCv() {
       const link = document.createElement('a')
-      link.href = '/static/cv-fpacherres.pdf'
+      link.href = '../../public/cv_fabian.pdf'
       link.setAttribute('download', 'cv_fabian.pdf')
       document.body.appendChild(link)
       link.click()
@@ -341,7 +341,7 @@ section {
   }
   .aboutMe {
     font-size: 18px;
-    padding: 30px 30px 30px 0;
+    padding: 15px 30px 30px 0;
     text-align: left;
   }
   .animationLogo__about {

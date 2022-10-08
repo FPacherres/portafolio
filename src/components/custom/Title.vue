@@ -60,21 +60,21 @@ export default {
 @media screen and (min-width: 870px){
   .title__container {
     width: 100%;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
   }
   .title__container h2 {
-    font-size: 83px;
+    font-size: 70px;
     line-height: 62px;
   }
   .title__container span {
-    font-size: 60px;
+    font-size: 40px;
     margin-top: -24px;
-    line-height: 40px;
+    line-height: 30px;
   }
   .title__container span::before {
     height: 3px;
-    width: 120px;
-    bottom: -12px;
+    width: 75px;
+    bottom: -8px;
   }
 }
 </style>

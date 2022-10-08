@@ -1,13 +1,3 @@
-<!-- <VueWriter
-      class="carrer"
-      :array="arr"
-      caret="'|'"
-      start="7000"
-      :typeSpeed="50"
-      :eraseSpeed="100"
-      :delay="2000"
-    
-    /> -->
 <template>
   <section id="home" class="is-full-width">
     <div class="container__home">
@@ -82,12 +72,6 @@ export default {
     return {
       socialNetworks: [
         {
-          id: 1,
-          name: 'Twitter',
-          icon: 'icon-twitter',
-          href: 'https://twitter.com/FabianXRL16',
-        },
-        {
           id: 2,
           name: 'Codepen',
           icon: 'icon-codepen',
@@ -109,7 +93,7 @@ export default {
           id: 5,
           name: 'Behance',
           icon: 'icon-behance',
-          href: 'https://www.behance.net/fabdev',
+          href: 'https://www.behance.net/FabianXRL16',
         },
       ],
       arr: [
@@ -277,7 +261,6 @@ section .mySelf .mainText {
   margin-left: -4px;
 }
 .mainText .carrer {
-  font-weight: 400;
   font-size: 20px;
   margin-top: -8px;
   color: var(--bg-3);
@@ -319,16 +302,16 @@ section .mySelf .mainText {
     left: 0;
   }
   .mainText h2 {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: -8px;
     margin-left: -2.5px;
   }
   .mainText h1 {
-    font-size: 48px;
+    font-size: 46px;
     margin-left: -4px;
   }
   .mainText .carrer {
-    font-size: 30px;
+    font-size: 25px;
     justify-self: start;
   }
   section .socialNetwork .btnSocialNetwork {
