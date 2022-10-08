@@ -25,7 +25,7 @@
         Enviar
       </button>
     </form> -->
-    <div id="containerModal" v-if="showModal">
+    <div id="containerModal" v-if="showModal" @click="showModal=false">
       <form class="contentForm">
         <div class="containerFake"></div>
         <div class="cover">
@@ -45,7 +45,21 @@
             <button class="btn btn__form" type="submit" @click="send">Enviar</button>
           </div>
         </form>
-        <button @click="showModal=false" class="closeBtnModal btn">x</button>
+        <button @click="showModal=false" class="closeBtnModal btn">
+          <svg
+            id="arrow-mobile"
+            width="21"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10.723 8.8c-.07-.043-7.722-7.46-8.216-7.94a1.18 1.18 0 0 0-.882-.358C.955.52.379 1.112.523 1.828c.078.388.3.561.494.748l8.831 8.539c.098.095.2.191.36.265.519.245 1.025.085 1.382-.262l8.836-8.544c.186-.178.413-.366.487-.744.143-.72-.433-1.321-1.117-1.33-.382-.004-.64.146-.878.375l-6.939 6.71-.63.609c-.15.145-.494.49-.627.605h.001z"
+            />
+          </svg>
+        </button>
     </div>
     <div class="container__contact">
       <h2 class="title">Contáctame</h2>
@@ -140,6 +154,14 @@ section {
   gap: 20px;
 }
 
+#arrow-mobile path {
+  fill: var(--bg-1);
+  transition: .3s;
+}
+#arrow-mobile {
+  transform: rotate(-90deg) scale(1.5);
+}
+
 .container__contact {
   width: 100%;
   height: 100%;
@@ -149,7 +171,6 @@ section {
   flex-direction: column;
   color: var(--bg-3);
   box-sizing: border-box;
-  overflow: scroll;
 }
 
 #containerModal {
@@ -294,9 +315,14 @@ textarea::-webkit-scrollbar-thumb {
 
 .closeBtnModal {
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 100px;
+  right: 6%;
   cursor: pointer;
+}
+
+.closeBtnModal:hover #arrow-mobile path {
+  fill: var(--bg-2);
+  transition: .3s;
 }
 
 .containerFake {
@@ -337,6 +363,7 @@ textarea::-webkit-scrollbar-thumb {
   background-color: var(--bg-1);
   border-radius: 0 0 20px 20px;
   height: calc(100% - 250px);
+  min-height: 370px;
   display: flex;
   flex-direction: column;
   align-items: center;
