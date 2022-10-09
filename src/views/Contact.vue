@@ -1,30 +1,5 @@
 <template>
   <section id="contact" class="is-full-width">
-    <!-- <form>
-      <button class="closeBtn btn" @click="showModal = false">x</button>
-      <div>
-        <h2>Hablemos!</h2>
-        <span>
-          Sabías que memorizo rostros, tambíen se pintar paisajes y amo armar
-          cubos de rubik.
-        </span>
-      </div>
-      <div class="input-group">
-        <input id="name" v-model="name" autocomplete="off" class="btn input" required type="text" />
-        <label for="name" class="input-label">Nombre</label>
-      </div>
-      <div class="input-group">
-        <input id="email" v-model="email" autocomplete="off" class="btn input" required type="text" />
-        <label for="email" class="input-label">Correo</label>
-      </div>
-      <div class="input-group group-text">
-        <textarea id="text" v-model="msg" autocomplete="off" class="btn input text-area" rows="2" required></textarea>
-        <label for="text" class="input-label">Hola! dime algo...</label>
-      </div>
-      <button class="btn btn__form" type="submit" @click="send">
-        Enviar
-      </button>
-    </form> -->
     <div id="containerModal" v-if="showModal">
       <form class="contentForm">
         <div class="containerFake"></div>
@@ -99,6 +74,17 @@
         </button>
       </div>
       <span class="nick" :style="`color: #${color}`">{{ nick }}</span>
+      <div class="countLikes">
+        <span v-if="like" style="color: #f20000; font-weight: 600;">18
+          <i class="icon icon-heart"></i>
+            <!-- cuando ya salga el maximo de likes, que al hover salga un tooltips diciendo: le ha gustado a 18 personas -->
+        </span>
+        <span v-else>Si te ha gustado, regálame un 
+          <button class="btn btnHeart" @click="like=true">
+            <i class="icon icon-heart"></i>
+          </button>
+        </span>
+      </div>
     </div>
     <footer><span>© FabianXRL16, 2022 All rights reserved.</span></footer>
   </section>
@@ -114,7 +100,8 @@ export default {
       msg: null,
       nick: "FabianXRL16",
       color: '',
-      showModal: false
+      showModal: false,
+      like: false
     }
   },
   methods: {
@@ -153,6 +140,28 @@ section {
   grid-template-rows: 1fr 20px;
   gap: 20px;
 }
+.countLikes {
+  position: absolute;
+  bottom: 50px;
+}
+.countLikes span {
+  font-size: 14px !important;
+  color: var(--bg-3);
+}
+
+
+.btnHeart {
+  font-size: 16px;
+  color: var(--bg-3);
+  transition: .3s;
+  transform: scale(1);
+}
+
+.btnHeart:hover {
+  color: #f20000;
+  transition: .3s;
+  transform: scale(1.3);
+}
 
 #arrow-mobile path {
   fill: var(--bg-1);
@@ -161,7 +170,6 @@ section {
 #arrow-mobile {
   transform: rotate(-90deg) scale(1.5);
 }
-
 .container__contact {
   width: 100%;
   height: 100%;
@@ -171,8 +179,8 @@ section {
   flex-direction: column;
   color: var(--bg-3);
   box-sizing: border-box;
+  position: relative;
 }
-
 #containerModal {
   width: 100vw;
   height: 100%;
@@ -188,7 +196,6 @@ section {
   justify-content: center;
   align-items: center;
 }
-
 @keyframes modalUp {
   0% {
     transform: scaleY(.005) scaleX(0);
@@ -202,7 +209,6 @@ section {
     transform: scaleY(1) scaleX(1);
   }
 }
-
 .contentForm {
   width: 300px;
   height: 90%;
@@ -213,22 +219,18 @@ section {
   transform: scale(0);
   animation: zoomIn .5s .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
-
 form .grupo{
     position: relative;
 }
-
 form .grupo1 {
   height: 50px;
   margin: 20px 0 40px;
   width: 100%;
 }
-
 form .grupo2 {
   height: 60px;
   width: 100%;
 }
-
 input, textarea{
     background: none;
     color:#ffffff;
@@ -241,12 +243,10 @@ input, textarea{
     resize: none;
     box-sizing: border-box;
 }
-
 input:focus,textarea:focus{
     outline: none;
     color: #ffffff;
 }
-
 input:focus~label, 
 input:valid~label, 
 textarea:focus~label, textarea:valid~label{
@@ -256,7 +256,6 @@ textarea:focus~label, textarea:valid~label{
     color: var(--bg-1);
     filter: brightness(80%);
 }
-
 label{
     color: #ffffff;
     font-size: 16px;
@@ -266,8 +265,6 @@ label{
     transition: 0.5s ease all;
     pointer-events: none;
 }
-
-
 input:focus~.barra::before, textarea:focus~.barra::before{
     width: 100%;
 }
@@ -287,22 +284,17 @@ input:focus~.barra::before, textarea:focus~.barra::before{
     transition: 0.3s ease all;
     left: 0%;
 }
-
 textarea::-webkit-scrollbar {
   width: 3px;
 }
-
 textarea::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 10px #7b7b7b;
   border-radius: 5px;
 }
-
 textarea::-webkit-scrollbar-thumb {
   background-color: #ffffff;
   border-radius: 5px;
 }
-
-
 @keyframes zoomIn {
   0% {
     transform: scale(0);
@@ -312,19 +304,16 @@ textarea::-webkit-scrollbar-thumb {
     transform: scale(1);
   }
 }
-
 .closeBtnModal {
   position: absolute;
   top: 100px;
   right: 6%;
   cursor: pointer;
 }
-
 .closeBtnModal:hover #arrow-mobile path {
   fill: var(--bg-2);
   transition: .3s;
 }
-
 .containerFake {
   width: 300px;
   height: calc(100% - 130px);
@@ -334,7 +323,6 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 22px;
   z-index: -1;
 }
-
 .contentForm .cover {
   width: 100%;
   height: 250px;
@@ -343,13 +331,11 @@ textarea::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
 }
-
 .contentForm .cover img {
   width: 250px;
   position: absolute;
   filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 10px);
 }
-
 .contentForm .cover .img__back {
   width: 100%;
   height: 120px;
@@ -358,7 +344,6 @@ textarea::-webkit-scrollbar-thumb {
   bottom: 0;
   border-radius: 20px 20px 0 0;
 }
-
 .form {
   background-color: var(--bg-1);
   border-radius: 0 0 20px 20px;
@@ -371,16 +356,13 @@ textarea::-webkit-scrollbar-thumb {
   padding: 20px 30px;
   box-sizing: border-box;
 }
-
 .input-group {
   width: 100%;
   position: relative;
 }
-
 .form h2 {
   margin: 15px 0 5px;
 }
-
 .btn__form {
   background-color: #ffffff;
   color: var(--bg-1);
@@ -397,11 +379,9 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
   margin-top: 75px;
 }
-
 .btn__form:hover {
   opacity: 1;
 }
-
 .btn__form:before {
   position: absolute;
   content: '';
@@ -414,18 +394,15 @@ textarea::-webkit-scrollbar-thumb {
   filter: brightness(90%);
   animation: changeKillType 3s ease-in-out infinite;
 }
-
 .btn__form:hover {
   opacity: 0.7;
 }
-
 .btn__form:active {
   box-shadow: 4px 4px 6px 0 rgba(81, 76, 76, 0.3),
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
-
 .socialNetwork {
   display: flex;
   justify-content: center;
@@ -434,26 +411,22 @@ textarea::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   padding: 2% 120px;
 }
-
 .container__contact .title {
   font-size: 38px;
   font-weight: 400;
   margin-top: -20px;
 }
-
 .container__contact .subtitle {
   font-size: 12px;
   margin: 15px 0px 8%;
   font-weight: 200;
 }
-
 .container__contact .nick {
   font-size: 24px;
   margin-top: 5%;
   font-weight: 200;
   transition: .3s;
 }
-
 .btnSN {
   background: var(--bg-5);
   width: 80px;
@@ -467,54 +440,59 @@ textarea::-webkit-scrollbar-thumb {
   transition: .3s;
   box-shadow: var(--bg-3) 0px 5px 30px -10px;
 }
-
 .btn1 .icon-whatsapp:before,
 .btn2 .icon-instagram:before,
 .btn3 .icon-facebook:before,
 .btn4 .icon-telegram:before {
   color: #ffffff;
 }
-
 .btn1 {
   background: linear-gradient(0deg, rgba(13, 152, 38, 1) 0%, rgba(69, 232, 98, 1) 50%, rgba(107, 252, 133, 1) 100%);
   padding: 5px 0px 0px 4px;
 }
-
 .btnSN:hover {
   transition: .3s;
   transform: scale(1.1);
 }
-
 .btn2 {
   background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
   padding: 7px 0px 0px 1px;
 }
-
 .btn3 {
   background-color: #0072ea;
   padding: 7px 0px 0px 2px;
 }
-
 .btn4 {
   background-color: #249dd8;
   padding: 7px 0px 0px 0px;
 }
-
 .btn5 {
   background-color: #1c99e6;
   padding: 7px 0px 0px 3px;
 }
-
 .btn6 {
   background-color: #f2b200;
   padding: 0px 0px 5px 0px;
+  animation: pulse 2s infinite;
 }
-
+.btn6:hover {
+  animation: none;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
 .btn7 {
   background-color: #f20000;
   padding: 6px 0px 0px 1px;
 }
-
 @keyframes changeKillType {
   0% {
     -webkit-transform: scale(0) rotate(45deg);
@@ -536,54 +514,43 @@ textarea::-webkit-scrollbar-thumb {
     opacity: 0;
   }
 }
-
 footer {
   text-align: center;
   color: var(--bg-3);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 200;
 }
-
 #tagA {
   display: none;
 }
-
 .closeBtn {
   position: absolute;
 }
-
 @media screen and (max-width: 870px) {
   .btn__form {
     margin-top: 38px;
   }
-
-
   .container__contact {
     padding-top: 15%;
   }
-
   .socialNetwork {
     row-gap: 30px;
     column-gap: 20px;
     flex-wrap: wrap;
     padding: 0px;
   }
-
   .container__contact .title {
     font-size: 38px;
     margin-top: -20px;
   }
-
   .container__contact .subtitle {
     font-size: 12px;
     margin: 15px 0px 15%;
   }
-
   .container__contact .nick {
     font-size: 24px;
     margin-top: 20%;
   }
-
   .btnSN {
     width: 60px;
     height: 60px;
