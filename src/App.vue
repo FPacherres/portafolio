@@ -16,9 +16,27 @@
     <studies />
     <experience />
     <contact />
-    <a href="#contact" class="btnFloat btn circle shadow">
-      <i class="icon icon-message"></i>
-    </a>
+    <button class="btn" v-if="visibilityBtnFloat">
+      <a v-if="noContact" href="#home" class="btnFloat btn circle shadow">
+        <svg
+            id="arrow"
+            width="21"
+            height="12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              fill="#ffffff"
+              clip-rule="evenodd"
+              d="M10.723 8.8c-.07-.043-7.722-7.46-8.216-7.94a1.18 1.18 0 0 0-.882-.358C.955.52.379 1.112.523 1.828c.078.388.3.561.494.748l8.831 8.539c.098.095.2.191.36.265.519.245 1.025.085 1.382-.262l8.836-8.544c.186-.178.413-.366.487-.744.143-.72-.433-1.321-1.117-1.33-.382-.004-.64.146-.878.375l-6.939 6.71-.63.609c-.15.145-.494.49-.627.605h.001z"
+            />
+          </svg>
+      </a>
+      <a v-else href="#contact" class="btnFloat btn circle shadow">
+        <i class="icon icon-message"></i>
+      </a>
+    </button>
     <modal />
     <loading />
   </div>
@@ -47,6 +65,12 @@ export default {
     // modal,
     loading
   },
+  data() {
+    return {
+      noContact: true,
+      visibilityBtnFloat: true
+    }
+  },
   mounted() {
     const sectionObj = {
       home: 1,
@@ -67,6 +91,8 @@ export default {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const currentOption = sectionObj[entry.target.id]
+          this.noContact = currentOption === 6
+          this.visibilityBtnFloat = currentOption !== 1
           this.selectOptionNav(currentOption)
         }
       })
@@ -176,5 +202,10 @@ export default {
 #menuMobile li a:hover {
   color: var(--bg-1);
   transition: 0.4s;
+}
+
+#arrow {
+  transform: rotate(180deg);
+  margin-bottom: 5px;
 }
 </style>
