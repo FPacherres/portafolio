@@ -128,17 +128,17 @@ export default {
             if (i === 6) opNavMobile6.classList.add('selected')
           } else {
             if (i === 1 && opNavMobile1.classList.contains('selected'))
-              opNav1.classList.remove('selected')
+              opNavMobile1.classList.remove('selected')
             if (i === 2 && opNavMobile2.classList.contains('selected'))
-              opNav2.classList.remove('selected')
+              opNavMobile2.classList.remove('selected')
             if (i === 3 && opNavMobile3.classList.contains('selected'))
-              opNav3.classList.remove('selected')
+              opNavMobile3.classList.remove('selected')
             if (i === 4 && opNavMobile4.classList.contains('selected'))
-              opNav4.classList.remove('selected')
+              opNavMobile4.classList.remove('selected')
             if (i === 5 && opNavMobile5.classList.contains('selected'))
-              opNav5.classList.remove('selected')
+              opNavMobile5.classList.remove('selected')
             if (i === 6 && opNavMobile6.classList.contains('selected'))
-              opNav6.classList.remove('selected')
+              opNavMobile6.classList.remove('selected')
           }
         }
       } else {
