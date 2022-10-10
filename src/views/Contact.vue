@@ -74,16 +74,11 @@
         </button>
       </div>
       <span class="nick" :style="`color: #${color}`">{{ nick }}</span>
-      <div class="countLikes">
-        <span v-if="like" style="color: #f20000; font-weight: 600;">18
-          <i class="icon icon-heart"></i>
-            <!-- cuando ya salga el maximo de likes, que al hover salga un tooltips diciendo: le ha gustado a 18 personas -->
-        </span>
-        <span v-else>Si te ha gustado, regálame un 
-          <button class="btn btnHeart" @click="like=true">
-            <i class="icon icon-heart"></i>
-          </button>
-        </span>
+      <div class="countLikes heart-btn btn">
+        <button id="contentLike" class="contentLike btn" @click="like">
+          <span id="numb" class="numb">{{ likes }}</span>
+          <span id="heart" class="heart"></span>
+        </button>
       </div>
     </div>
     <footer><span>© FabianXRL16, 2022 All rights reserved.</span></footer>
@@ -101,7 +96,7 @@ export default {
       nick: "FabianXRL16",
       color: '',
       showModal: false,
-      like: false
+      likes: 0
     }
   },
   methods: {
@@ -128,7 +123,22 @@ export default {
       let $menuMobile = document.getElementById('containerModal')
       $menuMobile.style.transform = 'scale(0)'
       $menuMobile.style.transition = '1s'
-
+    },
+    like() {
+      let $content = document.getElementById('contentLike')
+      let $heart = document.getElementById('heart')
+      let $numb = document.getElementById('numb')
+      if($content.classList.contains('heart-active')){
+        $content.classList.remove('heart-active')
+        $heart.classList.remove('heart-active')
+        $numb.classList.remove('heart-active')
+        this.likes--
+      } else {
+        $content.classList.add('heart-active')
+        $heart.classList.add('heart-active')
+        $numb.classList.add('heart-active')
+        this.likes++
+      }
     }
   },
 }
@@ -142,25 +152,48 @@ section {
 }
 .countLikes {
   position: absolute;
-  bottom: 50px;
-}
-.countLikes span {
-  font-size: 14px !important;
-  color: var(--bg-3);
+  bottom: 20px;
 }
 
-
-.btnHeart {
+.contentLike{
+  padding: 8px 12px;
+  display: flex;
+  align-items: flex-end;
+}
+.heart{
+  position: absolute;
+  background: url("../assets/img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 45px;
+  width: 45px;
+  top: 50%;
+  right: -26px;
+  transform: translate(-50%,-50%);
+}
+.numb {
+  margin-right: 18px;
+  color: #aab8c2;
+  transition: .3s;
   font-size: 16px;
-  color: var(--bg-3);
-  transition: .3s;
-  transform: scale(1);
+  font-weight: 200;
 }
-
-.btnHeart:hover {
-  color: #f20000;
+.numb.heart-active {
+  color: #e2264d;
   transition: .3s;
-  transform: scale(1.3);
+  font-weight: 600;
+}
+.heart.heart-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
 }
 
 #arrow-mobile path {
@@ -556,6 +589,9 @@ footer {
     height: 60px;
     font-size: 28px;
     transform: scale(.9);
+  }
+  .countLikes {
+    bottom: 10px;
   }
 }
 </style>
