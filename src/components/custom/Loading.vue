@@ -39,7 +39,7 @@ export default {
       setTimeout(() => {
         const container = document.querySelector('.loading__container')
         const height = screen.height + 20
-        container.style.transform = `translateY(-${height}px)`
+        container.style.transform = `translateY(-100vh)`
         container.style.transition = '1.5s'
       }, 1000)
     }
