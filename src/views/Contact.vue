@@ -109,9 +109,6 @@ export default {
       )
       $tagA.click()
     },
-    changeNick(nick) {
-      console.log(nick)
-    },
     modalUp() {
       // const $btnUpModal = document.querySelector('.btn6')
       // $btnUpModal.classList.add('modalAnimationUp')
@@ -152,7 +149,7 @@ section {
 }
 .countLikes {
   position: absolute;
-  bottom: 20px;
+  bottom: 2%;
 }
 
 .contentLike{
@@ -339,7 +336,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 .closeBtnModal {
   position: absolute;
-  top: 100px;
+  top: 8%;
   right: 6%;
   cursor: pointer;
 }
@@ -456,7 +453,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 .container__contact .nick {
   font-size: 24px;
-  margin-top: 5%;
+  margin-top: 3%;
   font-weight: 200;
   transition: .3s;
 }
@@ -567,8 +564,8 @@ footer {
     padding-top: 15%;
   }
   .socialNetwork {
-    row-gap: 30px;
-    column-gap: 20px;
+    row-gap: 20px;
+    column-gap: 30px;
     flex-wrap: wrap;
     padding: 0px;
   }
