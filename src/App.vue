@@ -50,7 +50,6 @@ import studies from './views/Studies.vue'
 import experience from './views/Experience.vue'
 import contact from './views/Contact.vue'
 import loading from './components/custom/Loading.vue'
-// import modal from '../components/custom/modal.vue'
 import navCustom from './components/custom/NavCustom.vue'
 export default {
   name: 'IndexPage',
@@ -62,7 +61,6 @@ export default {
     experience,
     contact,
     navCustom,
-    // modal,
     loading
   },
   data() {
