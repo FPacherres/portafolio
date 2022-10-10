@@ -10,16 +10,16 @@
         <div class="form">
           <h2>Vamos!</h2>
           <div class="grupo grupo1">
-            <input type="email" name="" id="" required><span class="barra"></span>
+            <input type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required><span class="barra"></span>
             <label>Correo</label>
-            </div>
-            <div class="grupo grupo2">
-              <textarea name="" id="" rows="3" required></textarea><span class="barra"></span>
-              <label>Mensaje</label>
-            </div>
-            <button class="btn btn__form" type="submit" @click="send">Enviar</button>
           </div>
-        </form>
+          <div class="grupo grupo2">
+            <textarea name="" id="" rows="3" required></textarea><span class="barra"></span>
+            <label>Mensaje</label>
+          </div>
+          <button class="btn btn__form" type="submit" @click="send">Enviar</button>
+        </div>
+      </form>
         <button @click="showModal=false" class="closeBtnModal btn">
           <svg
             id="arrow-mobile"
