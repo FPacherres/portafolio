@@ -74,14 +74,16 @@
         </button>
       </div>
       <span class="nick" :style="`color: #${color}`">{{ nick }}</span>
+    </div>
+    <footer>
       <div class="countLikes heart-btn btn">
         <button id="contentLike" class="contentLike btn" @click="like">
           <span id="numb" class="numb">{{ likes }}</span>
           <span id="heart" class="heart"></span>
         </button>
       </div>
-    </div>
-    <footer><span>© FabianXRL16, 2022 All rights reserved.</span></footer>
+      <span>© FabianXRL16, 2022 All rights reserved.</span>
+    </footer>
   </section>
 </template>
 
@@ -144,18 +146,12 @@ export default {
 <style scoped>
 section {
   display: grid;
-  grid-template-rows: 1fr 20px;
+  grid-template-rows: 1fr 50px;
   gap: 20px;
 }
 .countLikes {
-  position: absolute;
-  bottom: 2%;
-}
-
-.contentLike{
-  padding: 8px 12px;
-  display: flex;
-  align-items: flex-end;
+  position: relative;
+  width: 60px;
 }
 .heart{
   position: absolute;
@@ -165,15 +161,15 @@ section {
   height: 45px;
   width: 45px;
   top: 50%;
-  right: -26px;
+  right: -25px;
   transform: translate(-50%,-50%);
 }
 .numb {
-  margin-right: 18px;
   color: #aab8c2;
   transition: .3s;
   font-size: 16px;
   font-weight: 200;
+  margin-right: 18px;
 }
 .numb.heart-active {
   color: #e2264d;
@@ -453,7 +449,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 .container__contact .nick {
   font-size: 24px;
-  margin-top: 3%;
+  margin-top: 5%;
   font-weight: 200;
   transition: .3s;
 }
@@ -549,6 +545,14 @@ footer {
   color: var(--bg-3);
   font-size: 11.5px;
   font-weight: 200;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer span {
+  margin-top: auto;
 }
 #tagA {
   display: none;
