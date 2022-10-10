@@ -25,6 +25,7 @@ body {
 section {
   margin: 0 auto;
   height: 100vh;
+  min-height: 500px;
   scroll-snap-align: start;
   box-sizing: border-box;
   padding: 80px 20px 60px;
