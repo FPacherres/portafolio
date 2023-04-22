@@ -276,7 +276,7 @@ input:focus,textarea:focus{
     color: #ffffff;
 }
 input:focus~label, 
-input:valid~label, 
+input:valid~label,
 textarea:focus~label, textarea:valid~label{
     position: absolute;
     top: -14px;
@@ -387,9 +387,6 @@ textarea::-webkit-scrollbar-thumb {
 .input-group {
   width: 100%;
   position: relative;
-}
-.form h2 {
-  margin: 15px 0 5px;
 }
 .btn__form {
   background-color: #ffffff;
