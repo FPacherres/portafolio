@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="is-full-width">
     <div id="containerModal" v-if="showModal">
-      <form class="contentForm">
+      <form class="contentForm" id="form">
         <div class="containerFake"></div>
         <div class="cover">
           <div class="img__back"></div>
@@ -10,33 +10,23 @@
         <div class="form">
           <h2>Vamos!</h2>
           <div class="grupo grupo1">
-            <input type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required><span class="barra"></span>
+            <input type="email" name="from_name" id="from_name" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required><span class="barra"></span>
             <label>Correo</label>
           </div>
           <div class="grupo grupo2">
-            <textarea name="" id="" rows="3" required></textarea><span class="barra"></span>
+            <textarea  name="message" id="message" rows="3" required></textarea><span class="barra"></span>
             <label>Mensaje</label>
           </div>
-          <button class="btn btn__form btn__form__send" type="submit" @click="send">
-            <span>Enviar</span>
-          </button>
+          <span class="msgAlert" v-if="showAlert">Completar los campos.</span>
+          <input :disabled="disabled" class="btn btn__form btn__form__send" id="buttonSend" type="submit" @click="send" value="Enviar" />
         </div>
       </form>
-        <button @click="showModal=false" class="closeBtnModal btn">
-          <svg
-            id="arrow-mobile"
-            width="21"
-            height="12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.723 8.8c-.07-.043-7.722-7.46-8.216-7.94a1.18 1.18 0 0 0-.882-.358C.955.52.379 1.112.523 1.828c.078.388.3.561.494.748l8.831 8.539c.098.095.2.191.36.265.519.245 1.025.085 1.382-.262l8.836-8.544c.186-.178.413-.366.487-.744.143-.72-.433-1.321-1.117-1.33-.382-.004-.64.146-.878.375l-6.939 6.71-.63.609c-.15.145-.494.49-.627.605h.001z"
-            />
-          </svg>
-        </button>
+      <button @click="showModal = false" class="closeBtnModal btn">
+        <svg id="arrow-mobile" width="21" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M10.723 8.8c-.07-.043-7.722-7.46-8.216-7.94a1.18 1.18 0 0 0-.882-.358C.955.52.379 1.112.523 1.828c.078.388.3.561.494.748l8.831 8.539c.098.095.2.191.36.265.519.245 1.025.085 1.382-.262l8.836-8.544c.186-.178.413-.366.487-.744.143-.72-.433-1.321-1.117-1.33-.382-.004-.64.146-.878.375l-6.939 6.71-.63.609c-.15.145-.494.49-.627.605h.001z" />
+        </svg>
+      </button>
     </div>
     <div class="container__contact">
       <h2 class="title">Contáctame</h2>
@@ -90,28 +80,57 @@
 </template>
 
 <script>
+import validator from 'email-validator';
 export default {
   name: 'ContactPage',
   data() {
     return {
       name: null,
-      email: null,
-      msg: null,
+      email: '',
+      msg: '',
       nick: "FabianXRL16",
       color: '',
       showModal: false,
-      likes: 0
+      likes: 0,
+      showAlert: false,
+      disabled: false
     }
   },
   methods: {
-    send(event) {
-      event.preventDefault()
-      const $tagA = document.querySelector('#tagA')
-      $tagA.setAttribute(
-        'href',
-        `mailto:fabianpacherres@gmail.com?subject=Nombre: ${this.name} Correo: ${this.email}&body=${this.msg}`
-      )
-      $tagA.click()
+    send() {
+      if (true) {
+
+        const btn = document.getElementById('buttonSend');
+
+        document.getElementById('form')
+          .addEventListener('submit', function (event) {
+            event.preventDefault();
+            this.disabled = true
+            btn.value = 'Enviando...';
+            
+            const serviceID = 'default_service';
+            const templateID = 'template_j9kqp3p';
+            
+            emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+              btn.value = 'Enviado';
+              setTimeout(()=> this.showModal = false, 1500)
+              this.disabled = false
+            }, (err) => {
+              btn.value = 'No se Envio';
+              this.disabled = false
+            });
+          });
+      } else {
+        setTimeout(() => {this.showAlert = false}, 1500)
+      }
+      // event.preventDefault()
+      // const $tagA = document.querySelector('#tagA')
+      // $tagA.setAttribute(
+      //   'href',
+      //   `mailto:fabianpacherres@gmail.com?subject=Nombre: ${this.name} Correo: ${this.email}&body=${this.msg}`
+      // )
+      // $tagA.click()
     },
     modalUp() {
       // const $btnUpModal = document.querySelector('.btn6')
@@ -129,7 +148,7 @@ export default {
       let $content = document.getElementById('contentLike')
       let $heart = document.getElementById('heart')
       let $numb = document.getElementById('numb')
-      if($content.classList.contains('heart-active')){
+      if ($content.classList.contains('heart-active')) {
         $content.classList.remove('heart-active')
         $heart.classList.remove('heart-active')
         $numb.classList.remove('heart-active')
@@ -140,6 +159,13 @@ export default {
         $numb.classList.add('heart-active')
         this.likes++
       }
+    },
+    validateForm() {
+      this.showAlert = !(validator.validate(this.email) && this.msg !== '')
+      // console.log(REGEX_MAIL.test(this.email.trim()) && this.msg.trim() !== '')
+      console.log(validator.validate(this.email))
+      console.log(this.msg !== '')
+      return validator.validate(this.email.trim()) && this.msg.trim() !== ''
     }
   },
 }
@@ -151,11 +177,20 @@ section {
   grid-template-rows: 1fr 50px;
   gap: 20px;
 }
+
+.msgAlert {
+  color: var(--bg-2);
+  font-size: 12px;
+  position: absolute;
+  bottom: 110px;
+}
+
 .countLikes {
   position: relative;
   width: 60px;
 }
-.heart{
+
+.heart {
   position: absolute;
   background: url("../assets/img.png") no-repeat;
   background-position: left;
@@ -164,8 +199,9 @@ section {
   width: 45px;
   top: 50%;
   right: -25px;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .numb {
   color: #aab8c2;
   transition: .3s;
@@ -173,20 +209,24 @@ section {
   font-weight: 200;
   margin-right: 18px;
 }
+
 .numb.heart-active {
   color: #e2264d;
   transition: .3s;
   font-weight: 600;
 }
-.heart.heart-active{
+
+.heart.heart-active {
   animation: animate .8s steps(28) 1;
   background-position: right;
 }
+
 @keyframes animate {
-  0%{
+  0% {
     background-position: left;
   }
-  100%{
+
+  100% {
     background-position: right;
   }
 }
@@ -195,9 +235,11 @@ section {
   fill: var(--bg-1);
   transition: .3s;
 }
+
 #arrow-mobile {
   transform: rotate(-90deg) scale(1.5);
 }
+
 .container__contact {
   width: 100%;
   height: 100%;
@@ -209,6 +251,7 @@ section {
   box-sizing: border-box;
   position: relative;
 }
+
 #containerModal {
   width: 100vw;
   height: 100%;
@@ -224,6 +267,7 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 @keyframes modalUp {
   0% {
     transform: scaleY(.005) scaleX(0);
@@ -237,6 +281,7 @@ section {
     transform: scaleY(1) scaleX(1);
   }
 }
+
 .contentForm {
   width: 300px;
   height: 90%;
@@ -247,82 +292,100 @@ section {
   transform: scale(0);
   animation: zoomIn .5s .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 }
-form .grupo{
-    position: relative;
+
+form .grupo {
+  position: relative;
 }
+
 form .grupo1 {
   height: 50px;
-  margin: 20px 0 40px;
+  margin: 40px 0 40px;
   width: 100%;
 }
+
 form .grupo2 {
   height: 60px;
   width: 100%;
 }
-input, textarea{
-    background: none;
-    color:#ffffff;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border:none;
-    border-bottom: 1px solid #ffffff;
-    resize: none;
-    box-sizing: border-box;
+
+input,
+textarea {
+  background: none;
+  color: #ffffff;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  resize: none;
+  box-sizing: border-box;
 }
-input:focus,textarea:focus{
-    outline: none;
-    color: #ffffff;
+
+input:focus,
+textarea:focus {
+  outline: none;
+  color: #ffffff;
 }
-input:focus~label, 
+
+input:focus~label,
 input:valid~label,
-textarea:focus~label, textarea:valid~label{
-    position: absolute;
-    top: -14px;
-    font-size: 12px;
-    color: var(--bg-1);
-    filter: brightness(80%);
+textarea:focus~label,
+textarea:valid~label {
+  position: absolute;
+  top: -14px;
+  font-size: 12px;
+  color: var(--bg-1);
+  filter: brightness(80%);
 }
-label{
-    color: #ffffff;
-    font-size: 16px;
-    position: absolute;
-    left: 5px;
-    top:10px;
-    transition: 0.5s ease all;
-    pointer-events: none;
+
+label {
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease all;
+  pointer-events: none;
 }
-input:focus~.barra::before, textarea:focus~.barra::before{
-    width: 100%;
+
+input:focus~.barra::before,
+textarea:focus~.barra::before {
+  width: 100%;
 }
-.barra{
-    position: relative;
-    display: block;
-    width: 100%;
+
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
 }
-.barra::before{
-    content: '';
-    height: 1px;
-    width: 0%;
-    bottom: 0;
-    position: absolute;
-    background: var(--bg-1);
-    filter: brightness(80%);
-    transition: 0.3s ease all;
-    left: 0%;
+
+.barra::before {
+  content: '';
+  height: 1px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: var(--bg-1);
+  filter: brightness(80%);
+  transition: 0.3s ease all;
+  left: 0%;
 }
+
 textarea::-webkit-scrollbar {
   width: 3px;
 }
+
 textarea::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 10px #7b7b7b;
   border-radius: 5px;
 }
+
 textarea::-webkit-scrollbar-thumb {
   background-color: #ffffff;
   border-radius: 5px;
 }
+
 @keyframes zoomIn {
   0% {
     transform: scale(0);
@@ -332,16 +395,19 @@ textarea::-webkit-scrollbar-thumb {
     transform: scale(1);
   }
 }
+
 .closeBtnModal {
   position: absolute;
   top: 8%;
   right: 6%;
   cursor: pointer;
 }
+
 .closeBtnModal:hover #arrow-mobile path {
   fill: var(--bg-2);
   transition: .3s;
 }
+
 .containerFake {
   width: 300px;
   height: calc(100% - 130px);
@@ -351,6 +417,7 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 22px;
   z-index: -1;
 }
+
 .contentForm .cover {
   width: 100%;
   height: 250px;
@@ -359,11 +426,13 @@ textarea::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
 }
+
 .contentForm .cover img {
   width: 250px;
   position: absolute;
   filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 10px);
 }
+
 .contentForm .cover .img__back {
   width: 100%;
   height: 120px;
@@ -372,6 +441,7 @@ textarea::-webkit-scrollbar-thumb {
   bottom: 0;
   border-radius: 20px 20px 0 0;
 }
+
 .form {
   background-color: var(--bg-1);
   border-radius: 0 0 20px 20px;
@@ -384,29 +454,32 @@ textarea::-webkit-scrollbar-thumb {
   padding: 20px 30px;
   box-sizing: border-box;
 }
+
 .input-group {
   width: 100%;
   position: relative;
 }
+
 .btn__form {
   background-color: #ffffff;
   color: var(--bg-1);
   font-weight: 600;
-  padding: 15px 60px;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: none;
+  height: 50px;
   overflow: hidden;
   width: 100%;
-  margin-top: 0px;
   /* filter: brightness(90%); */
   border-radius: 10px;
   position: relative;
   margin-top: 75px;
 }
+
 .btn__form__send:hover {
   opacity: 1;
 }
+
 .btn__form__send:before {
   position: absolute;
   content: '';
@@ -419,15 +492,18 @@ textarea::-webkit-scrollbar-thumb {
   filter: brightness(90%);
   animation: changeKillType 3s ease-in-out infinite;
 }
+
 .btn__form:hover {
   opacity: 0.7;
 }
+
 .btn__form:active {
   box-shadow: 4px 4px 6px 0 rgba(81, 76, 76, 0.3),
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
+
 .socialNetwork {
   display: flex;
   justify-content: center;
@@ -436,22 +512,26 @@ textarea::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   padding: 2% 120px;
 }
+
 .container__contact .title {
   font-size: 38px;
   font-weight: 400;
   margin-top: -20px;
 }
+
 .container__contact .subtitle {
   font-size: 12px;
   margin: 15px 0px 8%;
   font-weight: 200;
 }
+
 .container__contact .nick {
   font-size: 24px;
   margin-top: 5%;
   font-weight: 200;
   transition: .3s;
 }
+
 .btnSN {
   background: var(--bg-5);
   width: 80px;
@@ -465,59 +545,73 @@ textarea::-webkit-scrollbar-thumb {
   transition: .3s;
   box-shadow: var(--bg-3) 0px 5px 30px -10px;
 }
+
 .btn1 .icon-whatsapp:before,
 .btn2 .icon-instagram:before,
 .btn3 .icon-facebook:before,
 .btn4 .icon-telegram:before {
   color: #ffffff;
 }
+
 .btn1 {
   background: linear-gradient(0deg, rgba(13, 152, 38, 1) 0%, rgba(69, 232, 98, 1) 50%, rgba(107, 252, 133, 1) 100%);
   padding: 5px 0px 0px 4px;
 }
+
 .btnSN:hover {
   transition: .3s;
   transform: scale(1.1);
 }
+
 .btn2 {
   background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
   padding: 7px 0px 0px 1px;
 }
+
 .btn3 {
   background-color: #0072ea;
   padding: 7px 0px 0px 2px;
 }
+
 .btn4 {
   background-color: #249dd8;
   padding: 7px 0px 0px 0px;
 }
+
 .btn5 {
   background-color: #1c99e6;
   padding: 7px 0px 0px 3px;
 }
+
 .btn6 {
   background-color: #f2b200;
   padding: 0px 0px 5px 0px;
   animation: pulse 2s infinite;
 }
+
 .btn6:hover {
   animation: none;
 }
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   }
+
   70% {
     -webkit-box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
   }
+
   100% {
     -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
+
 .btn7 {
   background-color: #f20000;
   padding: 6px 0px 0px 1px;
 }
+
 @keyframes changeKillType {
   0% {
     -webkit-transform: scale(0) rotate(45deg);
@@ -539,6 +633,7 @@ textarea::-webkit-scrollbar-thumb {
     opacity: 0;
   }
 }
+
 footer {
   text-align: center;
   color: var(--bg-3);
@@ -550,46 +645,57 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 footer span {
   margin-top: auto;
 }
+
 #tagA {
   display: none;
 }
+
 .closeBtn {
   position: absolute;
 }
+
 @media screen and (max-width: 870px) {
   .btn__form {
     margin-top: 38px;
   }
+
   .container__contact {
     padding-top: 15%;
   }
+
   .socialNetwork {
     row-gap: 20px;
     column-gap: 30px;
     flex-wrap: wrap;
     padding: 0px;
   }
+
   .container__contact .title {
     font-size: 38px;
     margin-top: -20px;
   }
+
   .container__contact .subtitle {
     font-size: 12px;
     margin: 15px 0px 15%;
   }
+
   .container__contact .nick {
     font-size: 24px;
     margin-top: 20%;
   }
+
   .btnSN {
     width: 60px;
     height: 60px;
     font-size: 28px;
     transform: scale(.9);
   }
+
   .countLikes {
     bottom: 10px;
   }
