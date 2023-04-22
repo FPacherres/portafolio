@@ -553,9 +553,9 @@ export default {
       cards: [
         {
           type: 'Proyecto Laboral',
-          title: 'Software Consultancy',
+          title: 'Consultora de Software',
           description:
-            'Esta aplicación trabaja bajo las normas de la DIAN (entidad de hacienda en Colombia) para regularizar los procesos de las empresas.',
+            'Pertenezco al equipo de ISA (empresa de Telecomunicaciones) donde mi rol es de Lead Developer. Optimizo, desarollo y doy soporte de la aplicación.',
           state: 'Presente',
           year: 2022,
           video: 'https://youtu.be/iVKQyt31kYY',

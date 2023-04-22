@@ -17,7 +17,9 @@
             <textarea name="" id="" rows="3" required></textarea><span class="barra"></span>
             <label>Mensaje</label>
           </div>
-          <button class="btn btn__form" type="submit" @click="send">Enviar</button>
+          <button class="btn btn__form btn__form__send" type="submit" @click="send">
+            <span>Enviar</span>
+          </button>
         </div>
       </form>
         <button @click="showModal=false" class="closeBtnModal btn">
@@ -396,19 +398,19 @@ textarea::-webkit-scrollbar-thumb {
   padding: 15px 60px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  position: relative;
   border: none;
   overflow: hidden;
   width: 100%;
   margin-top: 0px;
   /* filter: brightness(90%); */
   border-radius: 10px;
+  position: relative;
   margin-top: 75px;
 }
-.btn__form:hover {
+.btn__form__send:hover {
   opacity: 1;
 }
-.btn__form:before {
+.btn__form__send:before {
   position: absolute;
   content: '';
   display: inline-block;
