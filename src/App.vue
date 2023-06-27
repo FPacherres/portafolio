@@ -1,13 +1,18 @@
 <template>
   <div class="container">
     <div id="menuMobile">
-      <button class="closeMenuMobile" @click="toggleMenu(false)">x</button>
-        <li id="opNavMobile1" class="selected"><a href="#home" @click="toggleMenu(false)">Home</a></li>
-        <li id="opNavMobile2"><a href="#about" @click="toggleMenu(false)">About</a></li>
-        <li id="opNavMobile3"><a href="#skills" @click="toggleMenu(false)">Skills</a></li>
-        <li id="opNavMobile4"><a href="#studies" @click="toggleMenu(false)">Studies</a></li>
-        <li id="opNavMobile5"><a href="#experience" @click="toggleMenu(false)">Experience</a></li>
-        <li id="opNavMobile6"><a href="#contact" @click="toggleMenu(false)">Contact</a></li>
+      <button class="closeMenuMobile btn" @click="toggleMenu(false)">
+        <svg id="arrow-mobile-nav" width="21" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M10.723 8.8c-.07-.043-7.722-7.46-8.216-7.94a1.18 1.18 0 0 0-.882-.358C.955.52.379 1.112.523 1.828c.078.388.3.561.494.748l8.831 8.539c.098.095.2.191.36.265.519.245 1.025.085 1.382-.262l8.836-8.544c.186-.178.413-.366.487-.744.143-.72-.433-1.321-1.117-1.33-.382-.004-.64.146-.878.375l-6.939 6.71-.63.609c-.15.145-.494.49-.627.605h.001z" />
+        </svg>
+      </button>
+      <li id="opNavMobile1" class="selected"><a href="#home" @click="toggleMenu(false)">Home</a></li>
+      <li id="opNavMobile2"><a href="#about" @click="toggleMenu(false)">About</a></li>
+      <li id="opNavMobile3"><a href="#skills" @click="toggleMenu(false)">Skills</a></li>
+      <li id="opNavMobile4"><a href="#studies" @click="toggleMenu(false)">Studies</a></li>
+      <li id="opNavMobile5"><a href="#experience" @click="toggleMenu(false)">Experience</a></li>
+      <li id="opNavMobile6"><a href="#contact" @click="toggleMenu(false)">Contact</a></li>
     </div>
     <navCustom @toggleMenu="toggleMenu" />
     <home />
@@ -205,5 +210,14 @@ export default {
 #arrow {
   transform: rotate(180deg);
   margin-bottom: 5px;
+}
+
+#arrow-mobile-nav path {
+  fill: var(--bg-1);
+  transition: 0.3s;
+}
+
+#arrow-mobile-nav {
+  transform: rotate(90deg) scale(1.5);
 }
 </style>

@@ -305,7 +305,7 @@ section {
 }
 
 #arrow-mobile {
-  transform: rotate(-90deg) scale(1.5);
+  transform: rotate(90deg) scale(1.5);
 }
 
 .container__contact {
