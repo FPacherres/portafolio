@@ -231,14 +231,9 @@ export default {
       let $content = document.getElementById("contentLike");
       let $heart = document.getElementById("heart");
       let $numb = document.getElementById("numb");
-      setTimeout(() => {
-        $content.classList.add("heart-active");
-        $heart.classList.add("heart-active");
-        $numb.classList.add("heart-active");
-      }, 100)
-      $content.classList.remove("heart-active");
-      $heart.classList.remove("heart-active");
-      $numb.classList.remove("heart-active");
+      $content.classList.add("heart-active");
+      $heart.classList.add("heart-active");
+      $numb.classList.add("heart-active");
     }
   }
 };
