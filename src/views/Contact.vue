@@ -1,27 +1,31 @@
 <template>
   <section id="contact" class="is-full-width">
     <div id="containerModal" v-if="showModal">
-      <form class="contentForm" id="form">
+      <div class="contentForm" id="form">
         <div class="containerFake"></div>
         <div class="cover">
           <div class="img__back"></div>
-          <img src="../assets/photo.png" alt="Fabian Pacherres">
+          <img src="../assets/photo.png" alt="Fabian Pacherres" />
         </div>
         <div class="form">
           <h2>Vamos!</h2>
           <div class="grupo grupo1">
-            <input type="email" name="from_name" id="from_name" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required><span class="barra"></span>
-            <label>Correo</label>
+            <input type="email" name="from_name" v-model="email" id="from_name" required autocomplete="off" /><span class="barra"></span>
+            <label style="font-weight: bold;">Correo</label>
           </div>
           <div class="grupo grupo2">
-            <textarea  name="message" id="message" rows="3" required></textarea><span class="barra"></span>
-            <label>Mensaje</label>
+            <textarea name="message" v-model="message" id="message" rows="3" required></textarea><span
+              class="barra"></span>
+            <label style="font-weight: bold;">Mensaje</label>
           </div>
-          <span class="msgAlert" v-if="showAlert">Completar los campos.</span>
-          <input :disabled="disabled" class="btn btn__form btn__form__send" id="buttonSend" type="submit" @click="send" value="Enviar" />
+          <span class="msgAlert" v-if="showAlert">{{ msgAlert }}</span>
+          <button :disabled="disabled" class="btn btn__form btn__form__send" id="buttonSend" type="submit"
+            @click="send()">
+            {{ msg }}
+          </button>
         </div>
-      </form>
-      <button @click="showModal = false" class="closeBtnModal btn">
+      </div>
+      <button @click="showModal = false, clear()" class="closeBtnModal btn">
         <svg id="arrow-mobile" width="21" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M10.723 8.8c-.07-.043-7.722-7.46-8.216-7.94a1.18 1.18 0 0 0-.882-.358C.955.52.379 1.112.523 1.828c.078.388.3.561.494.748l8.831 8.539c.098.095.2.191.36.265.519.245 1.025.085 1.382-.262l8.836-8.544c.186-.178.413-.366.487-.744.143-.72-.433-1.321-1.117-1.33-.382-.004-.64.146-.878.375l-6.939 6.71-.63.609c-.15.145-.494.49-.627.605h.001z" />
@@ -32,34 +36,56 @@
       <h2 class="title">Contáctame</h2>
       <span class="subtitle">Sería un placer conocerte!</span>
       <div class="socialNetwork">
-        <button class="btn btnSN btn1" @mouseover="nick = '+51 953 ### ###'; color = '35c651'">
+        <button class="btn btnSN btn1" @mouseover="
+          nick = '+51 953 ### ###';
+        color = '35c651';
+        ">
           <a target="_blank" href="https://wa.me/51953172725?text=Hola%20Fabi%C3%A1n!%20un%20gusto...">
             <i class="icon icon-whatsapp"></i>
           </a>
         </button>
-        <button class="btn btnSN btn5" @mouseover="nick = '@FabianXRL16'; color = '1c93e4'">
+        <button class="btn btnSN btn5" @mouseover="
+          nick = '@FabianXRL16';
+        color = '1c93e4';
+        ">
           <a target="_blank" href="https://twitter.com/FabianXRL16">
             <i class="icon icon-twitter"></i>
           </a>
         </button>
-        <button class="btn btnSN btn2" @mouseover="nick = '@fabian.xrl16'; color = 'c104b6'">
+        <button class="btn btnSN btn2" @mouseover="
+          nick = '@fabian.xrl16';
+        color = 'c104b6';
+        ">
           <a target="_blank" href="https://www.instagram.com/fabian.xrl16/">
             <i class="icon icon-instagram"></i>
           </a>
         </button>
-        <button class="btn btnSN btn3" @mouseover="nick = '/fabian.fxrl16'; color = '1871e7'">
+        <button class="btn btnSN btn3" @mouseover="
+          nick = '/fabian.fxrl16';
+        color = '1871e7';
+        ">
           <a target="_blank" href="https://www.facebook.com/fabian.fxrl16/">
             <i class="icon icon-facebook"></i>
           </a>
         </button>
-        <button class="btn btnSN btn4" @mouseover="nick = '+51 953 ### ###'; color = '2f9fd5'">
+        <button class="btn btnSN btn4" @mouseover="
+          nick = '+51 953 ### ###';
+        color = '2f9fd5';
+        ">
           <a target="_blank" href="https://t.me/FXRL16">
             <i class="icon icon-telegram"></i>
           </a>
         </button>
-        <button class="btn btnSN btn6" @mouseover="nick = 'fa*****@gmail.com'; color = 'f2b200'"
-          @click="modalUp">@</button>
-        <button class="btn btnSN btn7" @mouseover="nick = 'FXRL16'; color = 'f20000'">
+        <button class="btn btnSN btn6" @mouseover="
+          nick = 'fa*****@gmail.com';
+        color = 'f2b200';
+        " @click="modalUp">
+          @
+        </button>
+        <button class="btn btnSN btn7" @mouseover="
+          nick = 'FXRL16';
+        color = 'f20000';
+        ">
           <a target="_blank" href="https://www.youtube.com/channel/UCSZpIcOVvATn_WFVg2qHmNQ">
             <i class="icon icon-youtube"></i>
           </a>
@@ -80,95 +106,93 @@
 </template>
 
 <script>
-import validator from 'email-validator';
+import { validate } from "email-validator";
 export default {
-  name: 'ContactPage',
+  name: "ContactPage",
   data() {
     return {
       name: null,
-      email: '',
-      msg: '',
+      email: "",
+      message: "",
       nick: "FabianXRL16",
-      color: '',
+      color: "",
       showModal: false,
       likes: 0,
       showAlert: false,
-      disabled: false
-    }
+      msgAlert: 'Completar campos.',
+      disabled: false,
+      msg: "Enviar",
+    };
   },
   methods: {
-    send() {
-      if (true) {
-
-        const btn = document.getElementById('buttonSend');
-
-        document.getElementById('form')
-          .addEventListener('submit', function (event) {
-            event.preventDefault();
-            this.disabled = true
-            btn.value = 'Enviando...';
-            
-            const serviceID = 'default_service';
-            const templateID = 'template_j9kqp3p';
-            
-            emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-              btn.value = 'Enviado';
-              setTimeout(()=> this.showModal = false, 1500)
-              this.disabled = false
-            }, (err) => {
-              btn.value = 'No se Envio';
-              this.disabled = false
-            });
-          });
-      } else {
-        setTimeout(() => {this.showAlert = false}, 1500)
+    async send() {
+      if (!this.email || !this.message) {
+        this.msgAlert = "Completar campos"
+        this.showAlert = true;
+        return;
       }
-      // event.preventDefault()
-      // const $tagA = document.querySelector('#tagA')
-      // $tagA.setAttribute(
-      //   'href',
-      //   `mailto:fabianpacherres@gmail.com?subject=Nombre: ${this.name} Correo: ${this.email}&body=${this.msg}`
-      // )
-      // $tagA.click()
+      
+      if (!validate(this.email)) {
+        this.msgAlert = "Correo no válido"
+        this.showEmailAlert = true;
+        return;
+      }
+
+      this.disabled = true;
+      this.msg = "Enviando...";
+
+      const userID = 'MrbRhMxQ5gONSWDva';
+      const templateID = 'template_j9kqp3p';
+
+      const templateParams = {
+        from_name: this.email,
+        message: this.message
+      };
+
+      try {
+        const response = await emailjs.send('default_service', templateID, templateParams, userID);
+        this.msg = "Enviado";
+      } catch (error) {
+        this.msg = "Volver a intentar";
+      } finally {
+        setTimeout(() => {
+          this.showModal = false;
+          this.disabled = false;
+          this.clear()
+        }, 1500);
+      }
+    },
+    validarCorreo(correo) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(correo);
     },
     modalUp() {
-      // const $btnUpModal = document.querySelector('.btn6')
-      // $btnUpModal.classList.add('modalAnimationUp')
-      // console.log($btnUpModal)
       this.showModal = true
     },
-    modalDown() {
-      // this.showModal = false
-      let $menuMobile = document.getElementById('containerModal')
-      $menuMobile.style.transform = 'scale(0)'
-      $menuMobile.style.transition = '1s'
-    },
     like() {
-      let $content = document.getElementById('contentLike')
-      let $heart = document.getElementById('heart')
-      let $numb = document.getElementById('numb')
-      if ($content.classList.contains('heart-active')) {
-        $content.classList.remove('heart-active')
-        $heart.classList.remove('heart-active')
-        $numb.classList.remove('heart-active')
-        this.likes--
+      let $content = document.getElementById("contentLike");
+      let $heart = document.getElementById("heart");
+      let $numb = document.getElementById("numb");
+      if ($content.classList.contains("heart-active")) {
+        $content.classList.remove("heart-active");
+        $heart.classList.remove("heart-active");
+        $numb.classList.remove("heart-active");
+        this.likes--;
       } else {
-        $content.classList.add('heart-active')
-        $heart.classList.add('heart-active')
-        $numb.classList.add('heart-active')
-        this.likes++
+        $content.classList.add("heart-active");
+        $heart.classList.add("heart-active");
+        $numb.classList.add("heart-active");
+        this.likes++;
       }
     },
-    validateForm() {
-      this.showAlert = !(validator.validate(this.email) && this.msg !== '')
-      // console.log(REGEX_MAIL.test(this.email.trim()) && this.msg.trim() !== '')
-      console.log(validator.validate(this.email))
-      console.log(this.msg !== '')
-      return validator.validate(this.email.trim()) && this.msg.trim() !== ''
+    clear() {
+      this.msg = "Enviar";
+      this.email = ""
+      this.message = ""
+      this.showAlert = false;
     }
   },
-}
+};
 </script>
 
 <style scoped>
@@ -204,7 +228,7 @@ section {
 
 .numb {
   color: #aab8c2;
-  transition: .3s;
+  transition: 0.3s;
   font-size: 16px;
   font-weight: 200;
   margin-right: 18px;
@@ -212,12 +236,12 @@ section {
 
 .numb.heart-active {
   color: #e2264d;
-  transition: .3s;
+  transition: 0.3s;
   font-weight: 600;
 }
 
 .heart.heart-active {
-  animation: animate .8s steps(28) 1;
+  animation: animate 0.8s steps(28) 1;
   background-position: right;
 }
 
@@ -233,7 +257,7 @@ section {
 
 #arrow-mobile path {
   fill: var(--bg-1);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 #arrow-mobile {
@@ -256,13 +280,13 @@ section {
   width: 100vw;
   height: 100%;
   min-height: 650px;
-  background-color: var(--bg-3);
+  background-color: #10161d;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 10000;
-  transform: scaleY(.01) scaleX(0);
-  animation: modalUp 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+  transform: scaleY(0.01) scaleX(0);
+  animation: modalUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,15 +294,29 @@ section {
 
 @keyframes modalUp {
   0% {
-    transform: scaleY(.005) scaleX(0);
+    transform: scaleY(0.005) scaleX(0);
   }
 
   50% {
-    transform: scaleY(.005) scaleX(1);
+    transform: scaleY(0.005) scaleX(1);
   }
 
   100% {
     transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes modalDown {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(0.005) scaleX(0);
   }
 }
 
@@ -290,20 +328,20 @@ section {
   position: relative;
   border-radius: 20px;
   transform: scale(0);
-  animation: zoomIn .5s .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+  animation: zoomIn 0.5s 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-form .grupo {
+.contentForm .grupo {
   position: relative;
 }
 
-form .grupo1 {
+.contentForm .grupo1 {
   height: 50px;
   margin: 40px 0 40px;
   width: 100%;
 }
 
-form .grupo2 {
+.contentForm .grupo2 {
   height: 60px;
   width: 100%;
 }
@@ -322,21 +360,32 @@ textarea {
   box-sizing: border-box;
 }
 
+textarea {
+  height: 70%;
+  margin-top: 5%;
+  padding-bottom: 10px;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
   color: #ffffff;
 }
 
-input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label {
+input:focus  label,
+textarea:focus  label {
   position: absolute;
   top: -14px;
   font-size: 12px;
-  color: var(--bg-1);
+  color: #fff;
   filter: brightness(80%);
+}
+
+input:not(:placeholder-shown) ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  top: -14px;
+  font-size: 16px;
+  color: #fff;
 }
 
 label {
@@ -361,7 +410,7 @@ textarea:focus~.barra::before {
 }
 
 .barra::before {
-  content: '';
+  content: "";
   height: 1px;
   width: 0%;
   bottom: 0;
@@ -405,7 +454,7 @@ textarea::-webkit-scrollbar-thumb {
 
 .closeBtnModal:hover #arrow-mobile path {
   fill: var(--bg-2);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .containerFake {
@@ -470,10 +519,11 @@ textarea::-webkit-scrollbar-thumb {
   height: 50px;
   overflow: hidden;
   width: 100%;
-  /* filter: brightness(90%); */
+  filter: brightness(90%);
   border-radius: 10px;
   position: relative;
   margin-top: 75px;
+  opacity: 0.8;
 }
 
 .btn__form__send:hover {
@@ -482,7 +532,7 @@ textarea::-webkit-scrollbar-thumb {
 
 .btn__form__send:before {
   position: absolute;
-  content: '';
+  content: "";
   display: inline-block;
   top: -180px;
   left: 0;
@@ -494,7 +544,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .btn__form:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .btn__form:active {
@@ -529,7 +579,7 @@ textarea::-webkit-scrollbar-thumb {
   font-size: 24px;
   margin-top: 5%;
   font-weight: 200;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .btnSN {
@@ -541,8 +591,8 @@ textarea::-webkit-scrollbar-thumb {
   font-size: 36px;
   position: relative;
   overflow: hidden;
-  transform: scale(.9);
-  transition: .3s;
+  transform: scale(0.9);
+  transition: 0.3s;
   box-shadow: var(--bg-3) 0px 5px 30px -10px;
 }
 
@@ -554,17 +604,25 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .btn1 {
-  background: linear-gradient(0deg, rgba(13, 152, 38, 1) 0%, rgba(69, 232, 98, 1) 50%, rgba(107, 252, 133, 1) 100%);
+  background: linear-gradient(0deg,
+      rgba(13, 152, 38, 1) 0%,
+      rgba(69, 232, 98, 1) 50%,
+      rgba(107, 252, 133, 1) 100%);
   padding: 5px 0px 0px 4px;
 }
 
 .btnSN:hover {
-  transition: .3s;
+  transition: 0.3s;
   transform: scale(1.1);
 }
 
 .btn2 {
-  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+  background: radial-gradient(circle at 33% 100%,
+      #fed373 4%,
+      #f15245 30%,
+      #d92e7f 62%,
+      #9b36b7 85%,
+      #515ecf);
   padding: 7px 0px 0px 1px;
 }
 
@@ -595,15 +653,15 @@ textarea::-webkit-scrollbar-thumb {
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
   }
 
   70% {
-    -webkit-box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
+    -webkit-box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
   }
 
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 
@@ -659,8 +717,18 @@ footer span {
 }
 
 @media screen and (max-width: 870px) {
+  .contentForm {
+    width: 90%;
+    max-height: 800px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
   .btn__form {
-    margin-top: 38px;
+    margin-top: 100px;
+    opacity: 1;
   }
 
   .container__contact {
@@ -693,7 +761,7 @@ footer span {
     width: 60px;
     height: 60px;
     font-size: 28px;
-    transform: scale(.9);
+    transform: scale(0.9);
   }
 
   .countLikes {

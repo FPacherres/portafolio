@@ -261,8 +261,9 @@ export default {
   components: { titleCustom },
   methods: {
     downloadCv() {
+      const URL = import.meta.env.VITE_BASE_URL || '/'
       const link = document.createElement('a')
-      link.href = '../../public/cv_fabian.pdf'
+      link.href = `${URL}/public/cv_fabian.pdf}`
       link.setAttribute('download', 'cv_fabian.pdf')
       document.body.appendChild(link)
       link.click()

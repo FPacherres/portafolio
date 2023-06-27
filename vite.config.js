@@ -15,4 +15,10 @@ export default defineConfig({
       plugins: [dynamicImportVariables()],
     },
   },
+  env: {
+    VITE_BASE_URL:
+      process.env.NODE_ENV === 'production'
+        ? 'https://fabdev.netlify.app/'
+        : '/',
+  },
 })
