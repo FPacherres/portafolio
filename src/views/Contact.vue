@@ -101,7 +101,7 @@
           <span id="heart" class="heart"></span>
         </button>
       </div>
-      <span>© FabianXRL16, 2022 All rights reserved.</span>
+      <span>© FabianXRL16, {{ year }} todos los derechos reservados.</span>
     </footer>
   </section>
 </template>
@@ -125,7 +125,8 @@ export default {
       msgAlert: 'Completar campos.',
       disabled: false,
       msg: "Enviar",
-      btnCounter: 'true'
+      btnCounter: 'true',
+      year: ''
     };
   },
   methods: {
@@ -213,6 +214,9 @@ export default {
     }
   },
   mounted() {
+    const date = new Date();
+    this.year = date.getFullYear();
+
     const db = getFirestore(app);
     const likesCollectionRef = collection(db, "likes");
 
