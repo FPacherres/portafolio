@@ -10,7 +10,8 @@
         <div class="form">
           <h2>Vamos!</h2>
           <div class="grupo grupo1">
-            <input type="email" name="from_name" v-model="email" id="from_name" required autocomplete="off" /><span class="barra"></span>
+            <input type="email" name="from_name" v-model="email" id="from_name" required autocomplete="off" /><span
+              class="barra"></span>
             <label style="font-weight: bold;">Correo</label>
           </div>
           <div class="grupo grupo2">
@@ -106,6 +107,8 @@
 </template>
 
 <script>
+import { app } from "../utils/firebase";
+import { getFirestore, doc, updateDoc, collection, getDocs, increment } from "firebase/firestore";
 import { validate } from "email-validator";
 export default {
   name: "ContactPage",
@@ -122,6 +125,7 @@ export default {
       msgAlert: 'Completar campos.',
       disabled: false,
       msg: "Enviar",
+      btnCounter: 'true'
     };
   },
   methods: {
@@ -131,7 +135,7 @@ export default {
         this.showAlert = true;
         return;
       }
-      
+
       if (!validate(this.email)) {
         this.msgAlert = "Correo no válido"
         this.showEmailAlert = true;
@@ -169,20 +173,36 @@ export default {
     modalUp() {
       this.showModal = true
     },
-    like() {
-      let $content = document.getElementById("contentLike");
-      let $heart = document.getElementById("heart");
-      let $numb = document.getElementById("numb");
-      if ($content.classList.contains("heart-active")) {
-        $content.classList.remove("heart-active");
-        $heart.classList.remove("heart-active");
-        $numb.classList.remove("heart-active");
-        this.likes--;
-      } else {
-        $content.classList.add("heart-active");
-        $heart.classList.add("heart-active");
-        $numb.classList.add("heart-active");
-        this.likes++;
+    async like() {
+      if (this.btnCounter) {
+        this.btnCounter = false
+        try {
+          const db = getFirestore(app);
+          const counterDocRef = doc(db, "likes", "Nge7Kr99JJs467fERmIw");
+          await updateDoc(counterDocRef, { counter: increment(1) });
+          this.likes++
+
+          const liked = localStorage.getItem("liked");
+          if (!liked) {
+            localStorage.setItem("liked", "true");
+          }
+
+          let $content = document.getElementById("contentLike");
+          let $heart = document.getElementById("heart");
+          let $numb = document.getElementById("numb");
+          setTimeout(() => {
+            $content.classList.add("heart-active");
+            $heart.classList.add("heart-active");
+            $numb.classList.add("heart-active");
+          }, 100)
+          $content.classList.remove("heart-active");
+          $heart.classList.remove("heart-active");
+          $numb.classList.remove("heart-active");
+        } catch (error) {
+          console.error("Error al actualizar el contador en Firebase:", error);
+        } finally {
+          this.btnCounter = true
+        }
       }
     },
     clear() {
@@ -192,6 +212,35 @@ export default {
       this.showAlert = false;
     }
   },
+  mounted() {
+    const db = getFirestore(app);
+    const likesCollectionRef = collection(db, "likes");
+
+    getDocs(likesCollectionRef)
+      .then((snapshot) => {
+        snapshot.forEach((doc) => {
+          this.likes = doc.data().counter;
+        });
+      })
+      .catch((error) => {
+        console.error("Error getting documents: ", error);
+      });
+
+    const liked = localStorage.getItem("liked");
+    if (liked && liked === "true") {
+      let $content = document.getElementById("contentLike");
+      let $heart = document.getElementById("heart");
+      let $numb = document.getElementById("numb");
+      setTimeout(() => {
+        $content.classList.add("heart-active");
+        $heart.classList.add("heart-active");
+        $numb.classList.add("heart-active");
+      }, 100)
+      $content.classList.remove("heart-active");
+      $heart.classList.remove("heart-active");
+      $numb.classList.remove("heart-active");
+    }
+  }
 };
 </script>
 
@@ -372,8 +421,8 @@ textarea:focus {
   color: #ffffff;
 }
 
-input:focus  label,
-textarea:focus  label {
+input:focus label,
+textarea:focus label {
   position: absolute;
   top: -14px;
   font-size: 12px;
@@ -381,8 +430,8 @@ textarea:focus  label {
   filter: brightness(80%);
 }
 
-input:not(:placeholder-shown) ~ label,
-textarea:not(:placeholder-shown) ~ label {
+input:not(:placeholder-shown)~label,
+textarea:not(:placeholder-shown)~label {
   top: -14px;
   font-size: 16px;
   color: #fff;
