@@ -163,20 +163,20 @@ export default {
       }
       this.colorScheme = !this.colorScheme
     },
-    // selectNav(n) {
-    //   const options = [
-    //     document.getElementById('optionNav1'),
-    //     document.getElementById('optionNav2'),
-    //     document.getElementById('optionNav3'),
-    //     document.getElementById('optionNav4'),
-    //     document.getElementById('optionNav5')
-    //   ]
-    //   for (let i = 0; i <= options.length; i++) {
-    //     i === n
-    //       ? options[i].classList.add('selected')
-    //       : options[i].classList.remove('selected')
-    //   }
-    // },
+    selectNav(n) {
+      const options = [
+        document.getElementById('optionNav1'),
+        document.getElementById('optionNav2'),
+        document.getElementById('optionNav3'),
+        document.getElementById('optionNav4'),
+        document.getElementById('optionNav5')
+      ]
+      for (let i = 0; i <= options.length; i++) {
+        i === n
+          ? options[i].classList.add('selected')
+          : options[i].classList.remove('selected')
+      }
+    },
   },
 }
 </script>
