@@ -143,7 +143,7 @@ export default {
         newStyle.setProperty('--bg-2', '#fac20b')
         newStyle.setProperty('--bg-3', '#35455E')
         newStyle.setProperty('--bg-4', '#666666')
-        newStyle.setProperty('--bg-5', '#d5dfff')
+        newStyle.setProperty('--bg-5', '#edf1fd')
         newStyle.setProperty('--neutral', '#ffffff')
         newStyle.setProperty(
           '--shadow',
