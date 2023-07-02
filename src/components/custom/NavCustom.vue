@@ -90,7 +90,7 @@
         </a>
       </li>
     </ul>
-    <button class="btn circle shadow theme" @click="changeTheme">
+    <button class="btn circle shadow theme" @click="changeTheme" aria-label="Cambiar tema">
       <i v-if="colorScheme" class="icon icon-sun"></i>
       <i v-else class="icon icon-moon"></i>
     </button>

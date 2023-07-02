@@ -37,56 +37,42 @@
       <h2 class="title">Contáctame</h2>
       <span class="subtitle">Sería un placer conocerte!</span>
       <div class="socialNetwork">
-        <button class="btn btnSN btn1" @mouseover="
-          nick = '+51 953 ### ###';
-        color = '35c651';
-        ">
+        <button class="btn btnSN btn1" @mouseover=" nick = '+51 953 ### ###'; color = '35c651';"
+          aria-label="Abrir chat de WhatsApp con Fabián">
           <a target="_blank" href="https://wa.me/51953172725?text=Hola%20Fabi%C3%A1n!%20un%20gusto...">
             <i class="icon icon-whatsapp"></i>
           </a>
         </button>
-        <button class="btn btnSN btn5" @mouseover="
-          nick = '@FabianXRL16';
-        color = '1c93e4';
-        ">
+        <button class="btn btnSN btn5" @mouseover="nick = '@FabianXRL16'; color = '1c93e4';"
+          aria-label="Ir al Twitter">
           <a target="_blank" href="https://twitter.com/FabianXRL16">
             <i class="icon icon-twitter"></i>
           </a>
         </button>
-        <button class="btn btnSN btn2" @mouseover="
-          nick = '@fabian.xrl16';
-        color = 'c104b6';
-        ">
+        <button class="btn btnSN btn2" @mouseover="nick = '@fabian.xrl16';color = 'c104b6';"
+          aria-label="Ir al Instagram">
           <a target="_blank" href="https://www.instagram.com/fabian.xrl16/">
             <i class="icon icon-instagram"></i>
           </a>
         </button>
-        <button class="btn btnSN btn3" @mouseover="
-          nick = '/fabian.fxrl16';
-        color = '1871e7';
-        ">
+        <button class="btn btnSN btn3" @mouseover=" nick = '/fabian.fxrl16'; color = '1871e7';"
+          aria-label="Ir al Facebook">
           <a target="_blank" href="https://www.facebook.com/fabian.fxrl16/">
             <i class="icon icon-facebook"></i>
           </a>
         </button>
-        <button class="btn btnSN btn4" @mouseover="
-          nick = '+51 953 ### ###';
-        color = '2f9fd5';
-        ">
+        <button class="btn btnSN btn4" @mouseover=" nick = '+51 953 ### ###'; color = '2f9fd5';"
+          aria-label="Abrir chat de Telegram con Fabián">
           <a target="_blank" href="https://t.me/FXRL16">
             <i class="icon icon-telegram"></i>
           </a>
         </button>
-        <button class="btn btnSN btn6" @mouseover="
-          nick = 'fa*****@gmail.com';
-        color = 'f2b200';
-        " @click="modalUp">
+        <button class="btn btnSN btn6" @mouseover=" nick = 'fa*****@gmail.com'; color = 'f2b200'; "
+          aria-label="Abrir modal para enviar un correo a Fabian" @click="modalUp">
           @
         </button>
-        <button class="btn btnSN btn7" @mouseover="
-          nick = 'FXRL16';
-        color = 'f20000';
-        ">
+        <button class="btn btnSN btn7" @mouseover=" nick = 'FXRL16'; color = 'f20000';"
+          aria-label="Ir al canal de Youtube">
           <a target="_blank" href="https://www.youtube.com/channel/UCSZpIcOVvATn_WFVg2qHmNQ">
             <i class="icon icon-youtube"></i>
           </a>
@@ -96,12 +82,13 @@
     </div>
     <footer>
       <div class="countLikes heart-btn btn">
-        <button id="contentLike" class="contentLike btn" @click="like">
+        <button id="contentLike" class="contentLike btn" 
+          @click="like" :aria-label="`Dar like al portafolio de Fabián, voy ${likes} likes`">
           <span id="numb" class="numb">{{ likes }}</span>
           <span id="heart" class="heart"></span>
         </button>
       </div>
-      <span>© FabianXRL16, {{ year }} todos los derechos reservados.</span>
+      <span :aria-label="`FabianXRL16, ${ year } todos los derechos reservados.`">© FabianXRL16, {{ year }} todos los derechos reservados.</span>
     </footer>
   </section>
 </template>
